@@ -4,22 +4,27 @@ import { storiesOf } from '@storybook/react'
 
 import { Button } from './index'
 
-const TYPES = ['primary', 'success', 'danger', 'link']
+const SOLID_COLOURS = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'link']
+const OUTLINE_COLOURS = ['primary', 'secondary', 'success', 'danger', 'warning', 'info']
 
-storiesOf('Button', module)
-  .add('normal', () => (
+storiesOf('Buttons', module)
+  .add('solid', () => (
     <div>
-      {TYPES.map(type => <Button color={type} onClick={action(type)}>{type}</Button>)}
+      {SOLID_COLOURS.map(colour =>
+        <Button colour={colour} onClick={action(colour)}>{colour}</Button>
+      )}
     </div>
   ))
   .add('outline', () => (
     <div>
-      {TYPES.map(type => <Button color={type} onClick={action(type)} outline>{type}</Button>)}
+      {OUTLINE_COLOURS.map(colour =>
+        <Button colour={colour} onClick={action(colour)} outline>{colour}</Button>
+      )}
     </div>
   ))
   .add('size', () => (
     <div>
-      <Button onClick={action('large')} size="lg">Large Button</Button>
-      <Button onClick={action('small')} size="sm">Small Button</Button>
+      <Button colour="primary" onClick={action('large')} size="large">Large Button</Button>
+      <Button colour="primary" onClick={action('small')} size="small">Small Button</Button>
     </div>
   ))
