@@ -1,6 +1,6 @@
 import { configure } from '@storybook/react'
 
-import 'bootstrap/dist/css/bootstrap.css'
+import '../src/style.scss'
 
 function loadStories () {
   importAll(require.context('../src', true, /.stories.jsx?$/))
