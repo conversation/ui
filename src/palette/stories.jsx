@@ -11,9 +11,9 @@ const GridDecorator = story => (
   </Grid>
 )
 
-storiesOf('Colors', module)
+storiesOf('Palette', module)
   .addDecorator(GridDecorator)
-  .add('palette', () => (
+  .add('colours', () => (
     colors.map((color, index) =>
       <Grid item>
         <Swatch key={index} color={color} />
