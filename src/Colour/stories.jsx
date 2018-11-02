@@ -1,8 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Swatch from './Swatch'
-import { Grid } from '../index'
+import { Grid, Swatch } from '../index'
 
 const colors = ['primary', 'secondary', 'error']
 
