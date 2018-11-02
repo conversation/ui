@@ -12,6 +12,9 @@ dist:
 test:
 	@node_modules/.bin/jest
 
+watch:
+	@node_modules/.bin/jest --watch
+
 release: dist doc deploy
 
 doc:
