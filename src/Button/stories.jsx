@@ -16,7 +16,14 @@ const GridDecorator = story => (
 
 storiesOf('Buttons', module)
   .addDecorator(GridDecorator)
-  .add('solid', () => (
+  .add('text', () => (
+    COLORS.map((color, index) =>
+      <Grid item>
+        <Button key={index} variant="text" color={color} onClick={action(color)}>{color}</Button>
+      </Grid>
+    )
+  ))
+  .add('contained', () => (
     COLORS.map((color, index) =>
       <Grid item>
         <Button key={index} variant="contained" color={color} onClick={action(color)}>{color}</Button>

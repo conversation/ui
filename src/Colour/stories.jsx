@@ -4,34 +4,35 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import { storiesOf } from '@storybook/react'
 
-import { withTheme } from '../styles'
+import { withStyles } from '../styles'
 
 const COLORS = ['primary', 'secondary', 'error']
 
-const Swatch = ({ color, theme }) => {
-  const variant = theme.palette[color]
-  const styles = {
-    paper: {
-      backgroundColor: variant.main,
-      width: 120,
-      paddingTop: 50,
-      paddingBottom: 50
-    },
-    typography: {
-      color: variant.contrastText
-    }
+const styles = theme => ({
+  root: {
+    width: 120,
+    paddingTop: 50,
+    paddingBottom: 50
+  },
+  label: {
+    ...theme.typography.button,
+    textAlign: 'center'
   }
+})
+
+const Swatch = ({ classes, color, theme }) => {
+  const variant = theme.palette[color]
 
   return (
-    <Paper style={styles.paper}>
-      <Typography align="center" style={styles.typography} variant="button">
+    <Paper classes={{ root: classes.root }} style={{ backgroundColor: variant.main }}>
+      <Typography classes={{ root: classes.label }} style={{ color: variant.contrastText }}>
         {color}
       </Typography>
     </Paper>
   )
 }
 
-const ExampleSwatch = withTheme()(Swatch)
+const ExampleSwatch = withStyles(styles, { withTheme: true })(Swatch)
 
 const GridDecorator = story => (
   <Grid container justify="center" spacing={16}>
