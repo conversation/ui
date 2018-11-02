@@ -1,18 +1,50 @@
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper'
 import React from 'react'
-import { action } from '@storybook/addon-actions'
+import Typography from '@material-ui/core/Typography'
 import { storiesOf } from '@storybook/react'
 
-const TEXT_COLOURS = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'body']
-const BACKGROUND_COLOURS = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
+import { withTheme } from '../styles'
 
-storiesOf('Colours', module)
-  .add('text', () => (
-    <div>
-      {TEXT_COLOURS.map(colour => <p className={ 'text-' + colour }>{colour}</p>)}
-    </div>
-  ))
-  .add('background', () => (
-    <div>
-      {BACKGROUND_COLOURS.map(colour => <div className={ 'bg-' + colour }>{colour}</div>)}
-    </div>
+const COLORS = ['primary', 'secondary', 'error']
+
+const Swatch = ({ color, theme }) => {
+  const variant = theme.palette[color]
+  const styles = {
+    paper: {
+      backgroundColor: variant.main,
+      width: 120,
+      paddingTop: 50,
+      paddingBottom: 50
+    },
+    typography: {
+      color: variant.contrastText
+    }
+  }
+
+  return (
+    <Paper style={styles.paper}>
+      <Typography align="center" style={styles.typography} variant="button">
+        {color}
+      </Typography>
+    </Paper>
+  )
+}
+
+const ExampleSwatch = withTheme()(Swatch)
+
+const GridDecorator = story => (
+  <Grid container justify="center" spacing={16}>
+    {story()}
+  </Grid>
+)
+
+storiesOf('Colors', module)
+  .addDecorator(GridDecorator)
+  .add('palette', () => (
+    COLORS.map((color, index) =>
+      <Grid item>
+        <ExampleSwatch key={index} color={color} />
+      </Grid>
+    )
   ))

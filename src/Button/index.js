@@ -1,19 +1,9 @@
 import React from 'react'
 
-import { Button as BootstrapButton } from 'reactstrap'
+import MaterialButton from '@material-ui/core/Button'
 
-const SIZES_MAP = {
-  "small": "sm",
-  "large": "lg"
-}
+const Button = ({ children, colour, ...props }) => (
+  <MaterialButton color={colour} {...props}>{children}</MaterialButton>
+)
 
-export const Button = ({ colour, children, onClick, outline, size }) => {
-  return (
-    <BootstrapButton
-      color={colour}
-      onClick={onClick}
-      outline={outline}
-      size={SIZES_MAP[size]}
-    >{children}</BootstrapButton>
-  )
-}
+export default Button
