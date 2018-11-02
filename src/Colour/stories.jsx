@@ -1,10 +1,7 @@
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper'
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
 import { storiesOf } from '@storybook/react'
 
-import { withStyles } from '../styles'
+import { Grid, Paper, Typography, withStyles } from '../index'
 
 const COLORS = ['primary', 'secondary', 'error']
 

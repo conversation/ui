@@ -1,6 +1,6 @@
 import 'typeface-roboto';
 import React from 'react'
-import { ThemeProvider, getDefaultTheme } from '../src/styles'
+import { ThemeProvider, getDefaultTheme } from '../src'
 import { addDecorator, configure } from '@storybook/react'
 
 function loadStories () {

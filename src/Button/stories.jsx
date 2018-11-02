@@ -1,9 +1,8 @@
-import Grid from '@material-ui/core/Grid';
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 
-import Button from './index'
+import { Button, Grid } from '../index';
 
 const COLORS = ['default', 'primary', 'secondary']
 const SIZES = ['small', 'medium', 'large']
