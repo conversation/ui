@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Button from './index'
+import Button from './Button'
 
 describe('<Button />', () => {
   describe('when clicked', () => {
