@@ -1,9 +1,10 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import React from 'react'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
-export { MuiThemeProvider as ThemeProvider, withStyles, withTheme } from '@material-ui/core/styles'
+export { withStyles, withTheme } from '@material-ui/core/styles'
 
 // Returns the default TC theme.
-export function getDefaultTheme () {
+function defaultTheme () {
   return createMuiTheme({
     typography: {
       // Enable v2 variants.
@@ -11,4 +12,19 @@ export function getDefaultTheme () {
       useNextVariants: true
     }
   })
+}
+
+export class ThemeProvider extends React.Component {
+  constructor(props) {
+    super(props)
+    this.theme = this.props.theme || defaultTheme()
+  }
+
+  render() {
+    return (
+      <MuiThemeProvider theme={this.theme}>
+        {this.props.children}
+      </MuiThemeProvider>
+    )
+  }
 }

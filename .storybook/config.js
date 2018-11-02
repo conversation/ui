@@ -1,6 +1,6 @@
 import 'typeface-roboto';
 import React from 'react'
-import { ThemeProvider, getDefaultTheme } from '../src'
+import { ThemeProvider } from '../src'
 import { addDecorator, configure } from '@storybook/react'
 
 function loadStories () {
@@ -11,10 +11,8 @@ function importAll (r) {
   r.keys().forEach(r)
 }
 
-const theme = getDefaultTheme();
-
 const CenterDecorator = story => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     {story()}
   </ThemeProvider>
 )
