@@ -4,4 +4,4 @@ export { default as Typography } from '@material-ui/core/Typography'
 
 export { ThemeProvider, defaultTheme, withStyles, withTheme } from './styles'
 export { default as Button } from './Button'
-export { default as Swatch } from './colors/Swatch'
+export { default as Swatch } from './colours/Swatch'

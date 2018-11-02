@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Button, Grid } from '../index';
 
-const colors = ['default', 'primary', 'secondary']
+const colours = ['default', 'primary', 'secondary']
 const sizes = ['small', 'medium', 'large']
 
 const GridDecorator = story => (
@@ -16,23 +16,23 @@ const GridDecorator = story => (
 storiesOf('Buttons', module)
   .addDecorator(GridDecorator)
   .add('text', () => (
-    colors.map((color, index) =>
+    colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="text" color={color} onClick={action(color)}>{color}</Button>
+        <Button key={index} variant="text" colour={colour} onClick={action(colour)}>{colour}</Button>
       </Grid>
     )
   ))
   .add('contained', () => (
-    colors.map((color, index) =>
+    colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="contained" color={color} onClick={action(color)}>{color}</Button>
+        <Button key={index} variant="contained" colour={colour} onClick={action(colour)}>{colour}</Button>
       </Grid>
     )
   ))
   .add('outlined', () => (
-    colors.map((color, index) =>
+    colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="outlined" color={color} onClick={action(color)}>{color}</Button>
+        <Button key={index} variant="outlined" colour={colour} onClick={action(colour)}>{colour}</Button>
       </Grid>
     )
   ))

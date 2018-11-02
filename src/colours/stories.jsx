@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Grid, Swatch } from '../index'
 
-const colors = ['primary', 'secondary', 'error']
+const colours = ['primary', 'secondary', 'error']
 
 const GridDecorator = story => (
   <Grid container justify="center" spacing={16}>
@@ -14,9 +14,9 @@ const GridDecorator = story => (
 storiesOf('Colours', module)
   .addDecorator(GridDecorator)
   .add('palette', () => (
-    colors.map((color, index) =>
+    colours.map((colour, index) =>
       <Grid item>
-        <Swatch key={index} color={color} />
+        <Swatch key={index} colour={colour} />
       </Grid>
     )
   ))
