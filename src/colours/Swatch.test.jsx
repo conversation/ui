@@ -1,22 +1,30 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Swatch from './Swatch'
-import { Paper, Typography, defaultTheme } from '../index'
+import { Paper, ThemeProvider, Typography, defaultTheme } from '../index'
 
 describe('<Swatch />', () => {
   const theme = defaultTheme()
 
   it('renders a <Paper> element', () => {
-    const wrapper = shallow(<Swatch colour="primary" />).dive()
-    expect(wrapper.type()).toBe(Paper)
-    expect(wrapper.props().style).toEqual({ backgroundColor: theme.palette.primary.main })
+    const wrapper = mount(
+      <ThemeProvider theme={theme}>
+        <Swatch colour="primary" />
+      </ThemeProvider>
+    ).find(Paper)
+    const backgroundColor = theme.palette.primary.main
+    expect(wrapper.props().style).toEqual({ backgroundColor })
   })
 
   it('renders a <Typography> element', () => {
-    const wrapper = shallow(<Swatch colour="primary" />).dive().childAt(0)
-    expect(wrapper.type()).toBe(Typography)
+    const wrapper = mount(
+      <ThemeProvider theme={theme}>
+        <Swatch colour="primary" />
+      </ThemeProvider>
+    ).find(Typography)
+    const color = theme.palette.primary.contrastText
     expect(wrapper.props().children).toBe('primary')
-    expect(wrapper.props().style).toEqual({ color: theme.palette.primary.contrastText })
+    expect(wrapper.props().style).toEqual({ color })
   })
 })

@@ -9,6 +9,11 @@ export default function defaultTheme () {
   }
 
   theme = createMuiTheme({
+    palette: {
+      primary: { main: '#29339b' },
+      secondary: { main: '#006060' },
+      error: { main: '#aa1155' }
+    },
     typography: {
       // Enable v2 variants.
       // https://material-ui.com/style/typography/#migration-to-typography-v2
