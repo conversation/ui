@@ -1,4 +1,7 @@
-import 'typeface-roboto';
+import 'typeface-libre-baskerville'
+import 'typeface-montserrat'
+import 'typeface-noto-sans'
+
 import React from 'react'
 import { ThemeProvider } from '../src'
 import { addDecorator, configure } from '@storybook/react'

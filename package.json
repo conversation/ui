@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.3.2",
-    "typeface-roboto": "0.0.54"
+    "typeface-libre-baskerville": "0.0.54",
+    "typeface-montserrat": "0.0.54",
+    "typeface-noto-sans": "0.0.54"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

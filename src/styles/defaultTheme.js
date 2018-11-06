@@ -17,7 +17,21 @@ export default function defaultTheme () {
     typography: {
       // Enable v2 variants.
       // https://material-ui.com/style/typography/#migration-to-typography-v2
-      useNextVariants: true
+      useNextVariants: true,
+
+      fontFamily: "Montserrat",
+
+      body1: {
+        fontFamily: "Libre Baskerville"
+      },
+
+      body2: {
+        fontFamily: "Libre Baskerville"
+      },
+
+      caption: {
+        fontFamily: "Noto Sans"
+      }
     }
   })
 
