@@ -17,6 +17,8 @@ storiesOf('Colours', module)
     colours.map((colour, index) =>
       <Grid item>
         <Swatch key={index} colour={colour} />
+        <Swatch key={index} colour={colour} variant="dark" />
+        <Swatch key={index} colour={colour} variant="light" />
       </Grid>
     )
   ))

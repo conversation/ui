@@ -10,8 +10,8 @@ export default function defaultTheme () {
 
   theme = createMuiTheme({
     palette: {
-      primary: { main: '#29339b' },
-      secondary: { main: '#006060' },
+      primary: { main: '#29339b', light: '#48509e' },
+      secondary: { main: '#006060', light: '#5dd39e' },
       error: { main: '#aa1155' }
     },
     typography: {
