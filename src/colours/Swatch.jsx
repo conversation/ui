@@ -2,22 +2,23 @@ import React from 'react'
 
 import { Paper, Typography, withStyles } from '../index'
 
+const size = 120
+const margin = 16
 const styles = {
   root: {
-    width: 120,
-    height: 120,
-    marginBottom: 16
+    width: size,
+    height: size,
+    marginBottom: margin
   },
   label: {
-    paddingTop: 8,
-    paddingLeft: 8,
-    textTransform: 'capitalize'
+    paddingTop: margin / 2,
+    paddingLeft: margin / 2
   }
 }
 
 /**
- * The Swatch component is used in our styleguide to show examples of colours
- * used in our palette.
+ * The Swatch component is used in our styleguide to show examples of the
+ * colours used in our palette.
  */
 const Swatch = ({ classes, colour, theme, variant }) => {
   const value = theme.palette[colour]
@@ -26,7 +27,7 @@ const Swatch = ({ classes, colour, theme, variant }) => {
   return (
     <Paper className={classes.root} style={{ backgroundColor: value[variant] }}>
       <div className={classes.label}>
-        <Typography style={{ color: value.contrastText }}>
+        <Typography style={{ color: value.contrastText }} variant="button">
           {colour}
         </Typography>
         <Typography style={{ color: value.contrastText }} variant="caption">
