@@ -12,9 +12,16 @@ const styles = {
   },
   label: {
     paddingTop: margin / 2,
-    paddingLeft: margin / 2
+    paddingLeft: margin / 2,
+    textTransform: "capitalize"
   }
 }
+
+const ColourLabel = ({ label, colour, variant }) => (
+  <Typography style={{ color: colour.contrastText }} variant={variant}>
+    {label}
+  </Typography>
+)
 
 /**
  * The Swatch component is used in our styleguide to show examples of the
@@ -22,17 +29,12 @@ const styles = {
  */
 const Swatch = ({ classes, colour, theme, variant }) => {
   const value = theme.palette[colour]
-  const variantName = variant !== 'main' ? variant : ''
 
   return (
     <Paper className={classes.root} style={{ backgroundColor: value[variant] }}>
       <div className={classes.label}>
-        <Typography style={{ color: value.contrastText }} variant="button">
-          {colour}
-        </Typography>
-        <Typography style={{ color: value.contrastText }} variant="caption">
-          {variantName}
-        </Typography>
+        <ColourLabel label={colour} colour={value} variant="button" />
+        {variant !== 'main' ? <ColourLabel label={variant} colour={value} variant="caption" /> : null }
       </div>
     </Paper>
   )

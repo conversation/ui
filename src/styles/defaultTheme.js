@@ -29,6 +29,11 @@ export default function defaultTheme () {
         fontFamily: "Libre Baskerville"
       },
 
+      button: {
+        fontFamily: "Noto Sans",
+        textTransform: "capitalize"
+      },
+
       caption: {
         fontFamily: "Noto Sans"
       }
