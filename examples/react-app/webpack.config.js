@@ -13,13 +13,13 @@ module.exports = {
           }
         }
       }, {
+        test: /\.(woff|woff2)$/,
+        loader: "file-loader"
+      }, {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader'
-          }
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
         ]
       }
     ]

@@ -1,11 +1,15 @@
+import 'typeface-libre-baskerville'
+import 'typeface-montserrat'
+import 'typeface-noto-sans'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Button } from '@theconversation/ui'
-
-import 'bootstrap/dist/css/bootstrap.css'
+import { Button, ThemeProvider } from '@theconversation/ui'
 
 const Index = () => (
-  <Button>Hello World!</Button>
+  <ThemeProvider>
+    <Button colour="primary" variant="contained">Hello World!</Button>
+  </ThemeProvider>
 )
 
 

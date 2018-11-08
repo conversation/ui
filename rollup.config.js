@@ -13,7 +13,7 @@ const plugins = [
 ]
 
 export default {
-  external: ['prop-types', 'react', 'react-dom', 'react-lifecycles-compat', 'react-popper', 'react-transition-group'],
+  external: ['prop-types', 'react', 'react-dom'],
   input: 'src/index.js',
   output: [
     { file: pkg.main, format: 'cjs' },
