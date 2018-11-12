@@ -10,10 +10,10 @@ describe('<Button />', () => {
   })
 
   describe('when clicked', () => {
-    it('calls the callback', () => {
+    it('calls the onClick handler', () => {
       const onClick = jest.fn()
       const wrapper = mount(<Button onClick={onClick}>Click Me!</Button>)
-      wrapper.find("button").simulate("click")
+      wrapper.find('button').simulate('click')
       expect(onClick).toHaveBeenCalled()
     })
   })
