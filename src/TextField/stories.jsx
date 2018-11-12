@@ -23,10 +23,10 @@ storiesOf('Text Fields', module)
         <TextField helperText="Helper text" id="required" label="Required" onChange={action('change')} placeholder="Placeholder text" required />
       </Grid>
       <Grid item>
-        <TextField error helperText="Helper text" id="error" label="Error" onChange={action('change')} />
+        <TextField error helperText="Helper text" id="error" label="Error" onChange={action('change')} placeholder="Placeholder text" />
       </Grid>
       <Grid item>
-        <TextField disabled helperText="Helper text" id="disabled" label="Disabled" onChange={action('change')} />
+        <TextField disabled helperText="Helper text" id="disabled" label="Disabled" onChange={action('change')} placeholder="Placeholder text" />
       </Grid>
     </React.Fragment>
   ))
