@@ -17,13 +17,13 @@ storiesOf('Text Fields', module)
   .add('normal', () => (
     <React.Fragment>
       <Grid item>
-        <TextField id="foo" label="Label" onChange={action('change')} placeholder="placeholder" />
+        <TextField helperText="Helper text" id="foo" label="Normal" onChange={action('change')} placeholder="Placeholder text" />
       </Grid>
       <Grid item>
-        <TextField error id="bar" label="Error" onChange={action('change')} placeholder="placeholder" />
+        <TextField error helperText="Helper text" id="bar" label="Error" onChange={action('change')} />
       </Grid>
       <Grid item>
-        <TextField disabled id="baz" label="Disabled" onChange={action('change')} placeholder="placeholder" />
+        <TextField disabled helperText="Helper text" id="baz" label="Disabled" onChange={action('change')} />
       </Grid>
     </React.Fragment>
   ))
