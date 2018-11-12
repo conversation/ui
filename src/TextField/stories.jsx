@@ -20,6 +20,9 @@ storiesOf('Text Fields', module)
         <TextField helperText="Helper text" id="default" label="Default" onChange={action('change')} placeholder="Placeholder text" />
       </Grid>
       <Grid item>
+        <TextField helperText="Helper text" id="required" label="Required" onChange={action('change')} placeholder="Placeholder text" required />
+      </Grid>
+      <Grid item>
         <TextField error helperText="Helper text" id="error" label="Error" onChange={action('change')} />
       </Grid>
       <Grid item>

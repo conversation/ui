@@ -39,13 +39,13 @@ const styles = theme => {
  * The TextField component basically re-exports the Material TextField
  * component, with a few tweaks.
  */
-const TextField = ({ classes, error, helperText, id, label, ...other }) => {
+const TextField = ({ classes, error, helperText, id, label, required, ...other }) => {
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
 
   return (
     <FormControl aria-describedby={helperTextId} error={error}>
       {label && (
-        <InputLabel htmlFor={id} shrink>
+        <InputLabel htmlFor={id} required={required} shrink>
           {label}
         </InputLabel>
       )}
