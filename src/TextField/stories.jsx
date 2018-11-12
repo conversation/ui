@@ -12,12 +12,12 @@ const GridDecorator = story => (
   </Grid>
 )
 
-storiesOf('Text fields', module)
+storiesOf('Text Fields', module)
   .addDecorator(GridDecorator)
   .add('normal', () => (
     <React.Fragment>
       <Grid item>
-        <TextField id="foo" label="Normal" onChange={action('change')} placeholder="placeholder" />
+        <TextField id="foo" label="Label" onChange={action('change')} placeholder="placeholder" />
       </Grid>
       <Grid item>
         <TextField error id="bar" label="Error" onChange={action('change')} placeholder="placeholder" />
