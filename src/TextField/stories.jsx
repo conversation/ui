@@ -14,8 +14,16 @@ const GridDecorator = story => (
 
 storiesOf('Text fields', module)
   .addDecorator(GridDecorator)
-  .add('text', () => (
-    <Grid item>
-      <TextField helperText="hint" onChange={action('change')} placeholder="placeholder" required />
-    </Grid>
+  .add('normal', () => (
+    <React.Fragment>
+      <Grid item>
+        <TextField id="foo" label="Normal" onChange={action('change')} placeholder="placeholder" />
+      </Grid>
+      <Grid item>
+        <TextField error id="bar" label="Error" onChange={action('change')} placeholder="placeholder" />
+      </Grid>
+      <Grid item>
+        <TextField disabled id="baz" label="Disabled" onChange={action('change')} placeholder="placeholder" />
+      </Grid>
+    </React.Fragment>
   ))
