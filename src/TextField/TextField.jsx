@@ -1,8 +1,9 @@
 import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
-import FormLabel from '@material-ui/core/FormLabel'
 import React from 'react'
+
+import FormLabel from './FormLabel'
 import { withStyles } from '../index'
 
 const styles = theme => {
@@ -35,12 +36,6 @@ const styles = theme => {
   }
 }
 
-const StyledFormLabel = withStyles(theme => ({
-  root: {
-    fontSize: theme.typography.pxToRem(14)
-  }
-}))(FormLabel)
-
 /**
  * The TextField component basically re-exports the Material TextField
  * component, with a few tweaks.
@@ -51,9 +46,9 @@ const TextField = ({ classes, error, helperText, id, label, required, ...other }
   return (
     <FormControl aria-describedby={helperTextId} error={error}>
       {label && (
-        <StyledFormLabel htmlFor={id} required={required}>
+        <FormLabel htmlFor={id} required={required}>
           {label}
-        </StyledFormLabel>
+        </FormLabel>
       )}
       <InputBase {...other} classes={classes} id={id} />
       {helperText && (

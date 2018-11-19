@@ -2,8 +2,7 @@ import MaterialButton from '@material-ui/core/Button'
 import React from 'react'
 
 /**
- * The Button component basically re-exports the Material Button component,
- * with a few tweaks.
+ * Overrides the Material Button component with some custom styles.
  */
 const Button = ({ children, colour, ...other }) => (
   <MaterialButton color={colour} {...other}>
