@@ -1,4 +1,4 @@
-.PHONY: clean deploy dev dist doc node_modules release storybook test
+.PHONY: clean deploy dev dist doc node_modules publish release storybook test
 
 node_modules:
 	@npm install
@@ -15,13 +15,16 @@ test:
 watch:
 	@node_modules/.bin/jest --watch
 
-release: dist doc deploy
+release: dist doc deploy publish
 
 doc:
 	@node_modules/.bin/build-storybook -c .storybook -o doc
 
 storybook:
 	@node_modules/.bin/start-storybook -p 9001 -c .storybook
+
+publish:
+	@npm publish --access=public
 
 deploy:
 	@aws s3 sync ./doc/ s3://styleguide.theconversation.com/ --acl public-read --delete --cache-control 'max-age=300'

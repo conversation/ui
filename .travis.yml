@@ -8,6 +8,7 @@ before_install: pip install --user awscli
 deploy:
   on:
     branch: master
+    tags: true
   provider: script
-  script: make release
+  script: "cp .npmrc.template $HOME/.npmrc && make release"
   skip_cleanup: true
