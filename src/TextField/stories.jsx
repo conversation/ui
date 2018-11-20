@@ -7,7 +7,7 @@ import { TextField, Grid, withStyles } from '../index';
 const spacing = 16
 
 const GridDecorator = story => (
-  <Grid container justify="center" spacing={spacing}>
+  <Grid container justify="left" spacing={spacing}>
     {story()}
   </Grid>
 )
@@ -27,6 +27,9 @@ storiesOf('Text Fields', module)
       </Grid>
       <Grid item>
         <TextField disabled helperText="Helper text" id="disabled" label="Disabled" onChange={action('change')} placeholder="Placeholder text" />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField helperText="Helper text" id="default" label="Full width" onChange={action('change')} placeholder="Placeholder text" fullWidth />
       </Grid>
     </React.Fragment>
   ))
