@@ -27,7 +27,7 @@
     "url": "https://github.com/conversation/ui/issues"
   },
   "dependencies": {
-    "@material-ui/core": "^3.3.2",
+    "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
     "typeface-libre-baskerville": "0.0.54",
     "typeface-montserrat": "0.0.54",
