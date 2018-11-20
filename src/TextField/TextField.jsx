@@ -40,7 +40,16 @@ const styles = theme => {
  * The TextField component basically re-exports the Material TextField
  * component, with a few tweaks.
  */
-const TextField = ({ classes, error, helperText, id, label, required, fullWidth, ...other }) => {
+const TextField = ({
+  classes,
+  error,
+  fullWidth,
+  helperText,
+  id,
+  label,
+  required,
+  ...other
+}) => {
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
 
   return (
