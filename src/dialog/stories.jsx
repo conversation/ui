@@ -6,7 +6,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, T
 
 const styles = theme => ({
   root: {
-    marginTop: theme.spacing.unit
+    marginTop: theme.spacing.unit * 3
   }
 })
 
