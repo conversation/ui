@@ -23,9 +23,12 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "@theconversation/ui": "file:../..",
+    "@theconversation/ui": "^1.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "typeface-libre-baskerville": "0.0.54",
+    "typeface-montserrat": "0.0.54",
+    "typeface-noto-sans": "0.0.54"
   }
 }

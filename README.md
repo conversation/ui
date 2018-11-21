@@ -9,6 +9,7 @@ UI](https://material-ui.com) library.
 ## Table of Contents
 
 * [Getting Started](#getting-started)
+* [Examples](#examples)
 * [Publishing a Release](#publishing-a-release)
 * [Licence](#licence)
 
@@ -35,6 +36,16 @@ const App = () => (
     <Button>Hello World!</Button>
   </ThemeProvider>
 )
+```
+
+## Examples
+
+To run the example react app:
+
+```sh
+> cd examples/react-app
+> npm i
+> npm start
 ```
 
 ## Publishing a Release
