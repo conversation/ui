@@ -8,8 +8,34 @@ UI](https://material-ui.com) library.
 
 ## Table of Contents
 
+* [Getting Started](#getting-started)
 * [Publishing a Release](#publishing-a-release)
 * [Licence](#licence)
+
+## Getting Started
+
+You need to wrap all your react components in a top-level `ThemeProvider`
+component. This will provide the correct theme to all of the components in this
+library.
+
+You will also need to install the typeface packages and import them into your
+project.
+
+For example:
+
+```js
+import 'typeface-libre-baskerville'
+import 'typeface-montserrat'
+import 'typeface-noto-sans'
+
+import { Button, ThemeProvider } from '@theconversation/ui'
+
+const App = () => (
+  <ThemeProvider>
+    <Button>Hello World!</Button>
+  </ThemeProvider>
+)
+```
 
 ## Publishing a Release
 
@@ -18,8 +44,10 @@ build pipeline on Travis CI.
 
 To release a new (major/minor/patch) version, on the master branch:
 
-    > npm version minor
-    > git push --follow-tags
+```sh
+> npm version minor
+> git push --follow-tags
+```
 
 ## Licence
 
