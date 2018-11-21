@@ -28,10 +28,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.5.1",
-    "@material-ui/icons": "^3.0.1",
-    "typeface-libre-baskerville": "0.0.54",
-    "typeface-montserrat": "0.0.54",
-    "typeface-noto-sans": "0.0.54"
+    "@material-ui/icons": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -51,11 +48,17 @@
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-filesize": "^5.0.1",
-    "rollup-plugin-node-resolve": "^3.4.0"
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "typeface-libre-baskerville": "0.0.54",
+    "typeface-montserrat": "0.0.54",
+    "typeface-noto-sans": "0.0.54"
   },
   "peerDependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "typeface-libre-baskerville": "0.0.54",
+    "typeface-montserrat": "0.0.54",
+    "typeface-noto-sans": "0.0.54"
   }
 }
