@@ -19,23 +19,23 @@ export default function defaultTheme () {
       // https://material-ui.com/style/typography/#migration-to-typography-v2
       useNextVariants: true,
 
-      fontFamily: "Montserrat",
+      fontFamily: 'Montserrat',
 
       body1: {
-        fontFamily: "Libre Baskerville"
+        fontFamily: 'Libre Baskerville'
       },
 
       body2: {
-        fontFamily: "Libre Baskerville"
+        fontFamily: 'Libre Baskerville'
       },
 
       button: {
-        fontFamily: "Noto Sans",
-        textTransform: "capitalize"
+        fontFamily: 'Noto Sans',
+        textTransform: 'capitalize'
       },
 
       caption: {
-        fontFamily: "Noto Sans"
+        fontFamily: 'Noto Sans'
       }
     }
   })

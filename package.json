@@ -8,7 +8,7 @@
   "keywords": [
     "theconversation",
     "react",
-    "components",
+    "component",
     "ui"
   ],
   "main": "dist/ui.cjs.js",
@@ -60,5 +60,8 @@
     "typeface-libre-baskerville": "0.0.54",
     "typeface-montserrat": "0.0.54",
     "typeface-noto-sans": "0.0.54"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

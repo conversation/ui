@@ -24,7 +24,7 @@ storybook:
 	@node_modules/.bin/start-storybook -p 9001 -c .storybook
 
 publish:
-	@npm publish --access=public
+	@npm publish
 
 deploy:
 	@aws s3 sync ./doc/ s3://styleguide.theconversation.com/ --acl public-read --delete --cache-control 'max-age=300'
