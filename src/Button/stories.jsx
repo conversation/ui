@@ -38,19 +38,19 @@ storiesOf('Buttons', module)
       </Grid>
     )
   ))
-  .add('contained', () => (
+  .add('outlined', () => (
     colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="contained" colour={colour} onClick={action(colour)}>
+        <Button key={index} variant="outlined" colour={colour} onClick={action(colour)}>
           {colour}
         </Button>
       </Grid>
     )
   ))
-  .add('outlined', () => (
+  .add('contained', () => (
     colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="outlined" colour={colour} onClick={action(colour)}>
+        <Button key={index} variant="contained" colour={colour} onClick={action(colour)}>
           {colour}
         </Button>
       </Grid>
