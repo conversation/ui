@@ -5,7 +5,7 @@ import { withStyles } from '../index'
 
 const styles = {
   root: {
-    margin: '20px 20px'
+    margin: 20
   }
 }
 
