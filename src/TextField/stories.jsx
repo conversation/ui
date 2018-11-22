@@ -7,7 +7,7 @@ import { TextField, Grid, withStyles } from '../index';
 const spacing = 16
 
 const GridDecorator = story => (
-  <Grid container justify="left" spacing={spacing}>
+  <Grid container justify="flex-start" spacing={spacing}>
     {story()}
   </Grid>
 )
