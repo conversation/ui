@@ -2,7 +2,7 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Typography, withStyles } from '../index';
+import { Button, Dialog, DialogActions, DialogButton, DialogContent, DialogTitle, TextField, Typography, withStyles } from '../index';
 
 const styles = theme => ({
   root: {
@@ -25,8 +25,8 @@ storiesOf('Dialogs', module)
         <Form />
       </DialogContent>
       <DialogActions>
-        <Button colour="primary">Cancel</Button>
-        <Button colour="primary" variant="outlined">Subscribe</Button>
+        <DialogButton>Cancel</DialogButton>
+        <DialogButton variant="primary">Subscribe</DialogButton>
       </DialogActions>
     </Dialog>
   ))
