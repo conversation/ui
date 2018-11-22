@@ -15,10 +15,10 @@ storiesOf('Colours', module)
   .addDecorator(GridDecorator)
   .add('palette', () => (
     colours.map((colour, index) =>
-      <Grid item>
-        <Swatch key={index} colour={colour} />
-        <Swatch key={index} colour={colour} variant="dark" />
-        <Swatch key={index} colour={colour} variant="light" />
+      <Grid item key={index}>
+        <Swatch colour={colour} />
+        <Swatch colour={colour} variant="dark" />
+        <Swatch colour={colour} variant="light" />
       </Grid>
     )
   ))

@@ -27,7 +27,7 @@ const ColourLabel = ({ label, colour, variant }) => (
  * The Swatch component is used in our styleguide to show examples of the
  * colours used in our palette.
  */
-const Swatch = ({ classes, colour, theme, variant }) => {
+const Swatch = ({ classes, colour, theme, variant, ...other }) => {
   const value = theme.palette[colour]
 
   return (
