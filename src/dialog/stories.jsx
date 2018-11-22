@@ -16,17 +16,34 @@ const Form = withStyles(styles)(({ classes }) => (
   </div>
 ))
 
+class ExampleDialog extends React.Component {
+	state = {
+    open: true
+  }
+
+  handleClose = event => {
+    action('close')(event)
+    this.setState({ open: false })
+  }
+
+  render() {
+    return (
+      <Dialog onClose={this.handleClose} open={this.state.open}>
+        <DialogTitle>Subscribe</DialogTitle>
+        <DialogContent>
+          <Typography>To subscribe to this website, please enter your email address here. We will send updates occasionally.</Typography>
+          <Form />
+        </DialogContent>
+        <DialogActions>
+          <DialogButton onClick={this.handleClose}>Cancel</DialogButton>
+          <DialogButton onClick={this.handleClose} variant="primary">Subscribe</DialogButton>
+        </DialogActions>
+      </Dialog>
+    )
+  }
+}
+
 storiesOf('Dialogs', module)
   .add('basic', () => (
-    <Dialog open>
-      <DialogTitle>Subscribe</DialogTitle>
-      <DialogContent>
-        <Typography>To subscribe to this website, please enter your email address here. We will send updates occasionally.</Typography>
-        <Form />
-      </DialogContent>
-      <DialogActions>
-        <DialogButton>Cancel</DialogButton>
-        <DialogButton variant="primary">Subscribe</DialogButton>
-      </DialogActions>
-    </Dialog>
+    <ExampleDialog />
   ))
