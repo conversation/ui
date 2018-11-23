@@ -68,7 +68,12 @@ const Dropdown = ({
         {...other}
         input={InputElement}
         MenuProps={{
-          transitionDuration: theme.transitions.duration.shortest // The 'auto' value is too slow.
+          // Allow the popover to appear above the Select component, even if
+          // it's close to the margin.
+          marginThreshold: 0,
+
+          // The 'auto' value is too slow.
+          transitionDuration: theme.transitions.duration.shortest
         }}
       >
         {children}
