@@ -9,7 +9,7 @@ dev:
 dist:
 	@node_modules/.bin/rollup -c
 
-test: lint
+test:
 	@node_modules/.bin/jest
 
 watch:
