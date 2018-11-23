@@ -8,9 +8,8 @@ import { Button, ThemeProvider } from '@theconversation/ui'
 
 const Index = () => (
   <ThemeProvider>
-    <Button colour="primary" variant="contained">Hello World!</Button>
+    <Button colour='primary' variant='contained'>Hello World!</Button>
   </ThemeProvider>
 )
-
 
 ReactDOM.render(<Index />, document.getElementById('root'))

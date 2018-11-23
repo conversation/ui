@@ -13,7 +13,7 @@ const styles = {
   label: {
     paddingTop: margin / 2,
     paddingLeft: margin / 2,
-    textTransform: "capitalize"
+    textTransform: 'capitalize'
   }
 }
 
@@ -33,8 +33,8 @@ const Swatch = ({ classes, colour, theme, variant, ...other }) => {
   return (
     <Paper className={classes.root} style={{ backgroundColor: value[variant] }}>
       <div className={classes.label}>
-        <ColourLabel label={colour} colour={value} variant="button" />
-        {variant !== 'main' ? <ColourLabel label={variant} colour={value} variant="caption" /> : null }
+        <ColourLabel label={colour} colour={value} variant='button' />
+        {variant !== 'main' ? <ColourLabel label={variant} colour={value} variant='caption' /> : null }
       </div>
     </Paper>
   )
@@ -42,6 +42,6 @@ const Swatch = ({ classes, colour, theme, variant, ...other }) => {
 
 Swatch.defaultProps = {
   variant: 'main'
-};
+}
 
 export default withStyles(styles, { withTheme: true })(Swatch)

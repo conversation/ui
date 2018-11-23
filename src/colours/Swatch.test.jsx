@@ -10,7 +10,7 @@ describe('<Swatch />', () => {
   it('renders a <Paper> element', () => {
     const wrapper = mount(
       <ThemeProvider theme={theme}>
-        <Swatch colour="primary" variant="main" />
+        <Swatch colour='primary' variant='main' />
       </ThemeProvider>
     ).find(Paper)
     const backgroundColor = theme.palette.primary.main
@@ -20,7 +20,7 @@ describe('<Swatch />', () => {
   it('renders a <Typography> element', () => {
     const wrapper = mount(
       <ThemeProvider theme={theme}>
-        <Swatch colour="primary" variant="light" />
+        <Swatch colour='primary' variant='light' />
       </ThemeProvider>
     ).find(Typography)
     const color = theme.palette.primary.contrastText

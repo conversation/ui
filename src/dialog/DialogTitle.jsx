@@ -15,7 +15,7 @@ const styles = theme => ({
  */
 const DialogTitle = ({ children, ...other }) => (
   <MaterialDialogTitle disableTypography {...other}>
-    <Typography color="inherit" variant="h6">
+    <Typography color='inherit' variant='h6'>
       {children}
     </Typography>
   </MaterialDialogTitle>

@@ -3,14 +3,14 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 
-import { Button, Grid, withStyles } from '../index';
+import { Button, Grid, withStyles } from '../index'
 
 const colours = ['default', 'primary', 'secondary']
 const sizes = ['small', 'medium', 'large']
 const spacing = 16
 
 const GridDecorator = story => (
-  <Grid container justify="center" spacing={spacing}>
+  <Grid container justify='center' spacing={spacing}>
     {story()}
   </Grid>
 )
@@ -22,7 +22,7 @@ const styles = theme => ({
 })
 
 const IconButton = withStyles(styles)(({ classes }) => (
-  <Button colour="primary" variant="text">
+  <Button colour='primary' variant='text'>
     Primary <Icon className={classes.rightIcon} />
   </Button>
 ))
@@ -32,7 +32,7 @@ storiesOf('Buttons', module)
   .add('text', () => (
     colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="text" colour={colour} onClick={action(colour)}>
+        <Button key={index} variant='text' colour={colour} onClick={action(colour)}>
           {colour}
         </Button>
       </Grid>
@@ -41,7 +41,7 @@ storiesOf('Buttons', module)
   .add('outlined', () => (
     colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="outlined" colour={colour} onClick={action(colour)}>
+        <Button key={index} variant='outlined' colour={colour} onClick={action(colour)}>
           {colour}
         </Button>
       </Grid>
@@ -50,7 +50,7 @@ storiesOf('Buttons', module)
   .add('contained', () => (
     colours.map((colour, index) =>
       <Grid item>
-        <Button key={index} variant="contained" colour={colour} onClick={action(colour)}>
+        <Button key={index} variant='contained' colour={colour} onClick={action(colour)}>
           {colour}
         </Button>
       </Grid>
@@ -59,7 +59,7 @@ storiesOf('Buttons', module)
   .add('sizes', () => (
     sizes.map((size, index) =>
       <Grid item>
-        <Button key={index} variant="contained" size={size} onClick={action(size)}>
+        <Button key={index} variant='contained' size={size} onClick={action(size)}>
           {size}
         </Button>
       </Grid>

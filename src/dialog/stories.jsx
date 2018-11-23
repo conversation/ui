@@ -2,7 +2,7 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 
-import { Button, Dialog, DialogActions, DialogButton, DialogContent, DialogTitle, TextField, Typography, withStyles } from '../index';
+import { Dialog, DialogActions, DialogButton, DialogContent, DialogTitle, TextField, Typography, withStyles } from '../index'
 
 const styles = theme => ({
   root: {
@@ -12,7 +12,7 @@ const styles = theme => ({
 
 const Form = withStyles(styles)(({ classes }) => (
   <div className={classes.root}>
-    <TextField fullWidth label="Email Address" placeholder="foo@bar.com" />
+    <TextField fullWidth label='Email Address' placeholder='foo@bar.com' />
   </div>
 ))
 
@@ -26,7 +26,7 @@ storiesOf('Dialogs', module)
       </DialogContent>
       <DialogActions>
         <DialogButton onClick={action('click')}>Cancel</DialogButton>
-        <DialogButton onClick={action('click')} variant="primary">Subscribe</DialogButton>
+        <DialogButton onClick={action('click')} variant='primary'>Subscribe</DialogButton>
       </DialogActions>
     </Dialog>
   ))

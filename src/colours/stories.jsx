@@ -6,7 +6,7 @@ import { Grid, Swatch } from '../index'
 const colours = ['primary', 'secondary', 'error']
 
 const GridDecorator = story => (
-  <Grid container justify="center" spacing={16}>
+  <Grid container justify='center' spacing={16}>
     {story()}
   </Grid>
 )
@@ -17,8 +17,8 @@ storiesOf('Colours', module)
     colours.map((colour, index) =>
       <Grid item key={index}>
         <Swatch colour={colour} />
-        <Swatch colour={colour} variant="dark" />
-        <Swatch colour={colour} variant="light" />
+        <Swatch colour={colour} variant='dark' />
+        <Swatch colour={colour} variant='light' />
       </Grid>
     )
   ))

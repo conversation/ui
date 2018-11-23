@@ -8,8 +8,8 @@ import FormLabel from '../TextField/FormLabel'
 import { withStyles } from '../index'
 
 const styles = theme => {
-  const light = theme.palette.type === 'light';
-  const borderColor = light ? 'rgba(0, 0, 0, 0.42)' : 'rgba(255, 255, 255, 0.7)';
+  const light = theme.palette.type === 'light'
+  const borderColor = light ? 'rgba(0, 0, 0, 0.42)' : 'rgba(255, 255, 255, 0.7)'
 
   return {
     root: {
@@ -17,7 +17,7 @@ const styles = theme => {
       border: `1px solid ${borderColor}`,
       borderRadius: 4,
       transition: theme.transitions.create('border-color', {
-        duration: theme.transitions.duration.shorter,
+        duration: theme.transitions.duration.shorter
       })
     },
     formControl: {
