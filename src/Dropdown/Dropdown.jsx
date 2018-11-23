@@ -51,6 +51,7 @@ const Dropdown = ({
   id,
   label,
   required,
+  theme,
   ...other
 }) => {
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
@@ -63,7 +64,13 @@ const Dropdown = ({
           {label}
         </FormLabel>
       )}
-      <Select {...other} input={InputElement}>
+      <Select
+        {...other}
+        input={InputElement}
+        MenuProps={{
+          transitionDuration: theme.transitions.duration.shortest // The 'auto' value is too slow.
+        }}
+      >
         {children}
       </Select>
       {helperText && (
@@ -75,4 +82,4 @@ const Dropdown = ({
   )
 }
 
-export default withStyles(styles)(Dropdown)
+export default withStyles(styles, { withTheme: true })(Dropdown)
