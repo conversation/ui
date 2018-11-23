@@ -14,7 +14,7 @@ module.exports = {
         }
       }, {
         test: /\.(woff|woff2)$/,
-        loader: "file-loader"
+        loader: 'file-loader'
       }, {
         test: /\.css$/,
         use: [

@@ -1,4 +1,4 @@
-.PHONY: clean deploy dev dist doc node_modules publish release storybook test
+.PHONY: clean deploy dev dist doc lint node_modules publish release storybook test
 
 node_modules:
 	@npm install
@@ -9,11 +9,14 @@ dev:
 dist:
 	@node_modules/.bin/rollup -c
 
-test:
+test: lint
 	@node_modules/.bin/jest
 
 watch:
 	@node_modules/.bin/jest --watch
+
+lint:
+	@node_modules/.bin/standard
 
 release: dist doc deploy publish
 
