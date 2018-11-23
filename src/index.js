@@ -9,6 +9,7 @@
 // ourselves a head start with a few MUI components.
 export { default as Dialog } from '@material-ui/core/Dialog'
 export { default as Grid } from '@material-ui/core/Grid'
+export { default as MenuItem } from '@material-ui/core/MenuItem'
 export { default as Paper } from '@material-ui/core/Paper'
 export { default as Typography } from '@material-ui/core/Typography'
 
@@ -19,5 +20,6 @@ export { default as DialogActions } from './dialog/DialogActions'
 export { default as DialogButton } from './dialog/DialogButton'
 export { default as DialogContent } from './dialog/DialogContent'
 export { default as DialogTitle } from './dialog/DialogTitle'
+export { default as Dropdown } from './Dropdown'
 export { default as Swatch } from './colours/Swatch'
 export { default as TextField } from './TextField'
