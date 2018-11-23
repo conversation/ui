@@ -17,26 +17,66 @@ storiesOf('Text Fields', module)
   .add('text', () => (
     <React.Fragment>
       <Grid item>
-        <TextField helperText="Helper text" id="default" label="Default" onChange={action('change')} placeholder="Placeholder text" />
+        <TextField
+          helperText="Helper text"
+          id="default"
+          label="Default"
+          onChange={action('change')}
+          placeholder="Placeholder text"
+        />
       </Grid>
       <Grid item>
-        <TextField helperText="Helper text" id="required" label="Required" onChange={action('change')} placeholder="Placeholder text" required />
+        <TextField
+          helperText="Helper text"
+          id="required"
+          label="Required"
+          onChange={action('change')}
+          placeholder="Placeholder text"
+          required
+        />
       </Grid>
       <Grid item>
-        <TextField error helperText="Helper text" id="error" label="Error" onChange={action('change')} placeholder="Placeholder text" />
+        <TextField
+          error
+          helperText="Helper text"
+          id="error"
+          label="Error"
+          onChange={action('change')}
+          placeholder="Placeholder text"
+        />
       </Grid>
       <Grid item>
-        <TextField disabled helperText="Helper text" id="disabled" label="Disabled" onChange={action('change')} placeholder="Placeholder text" />
+        <TextField
+          disabled
+          helperText="Helper text"
+          id="disabled"
+          label="Disabled"
+          onChange={action('change')}
+          placeholder="Placeholder text"
+        />
       </Grid>
       <Grid item xs={12}>
-        <TextField helperText="Helper text" id="default" label="Full width" onChange={action('change')} placeholder="Placeholder text" fullWidth />
+        <TextField
+          helperText="Helper text"
+          id="default"
+          label="Full width"
+          onChange={action('change')}
+          placeholder="Placeholder text"
+          fullWidth
+        />
       </Grid>
     </React.Fragment>
   ))
   .add('password', () => (
     <React.Fragment>
       <Grid item>
-        <TextField helperText="Enter your secret password" id="password" label="Password" onChange={action('change')} type="password" />
+        <TextField
+          helperText="Enter your secret password"
+          id="password"
+          label="Password"
+          onChange={action('change')}
+          type="password"
+        />
       </Grid>
     </React.Fragment>
   ))

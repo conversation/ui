@@ -41,7 +41,7 @@ const styles = theme => {
  * component, with a few tweaks.
  */
 const TextField = ({
-  classes,
+  disabled,
   error,
   fullWidth,
   helperText,
@@ -53,13 +53,13 @@ const TextField = ({
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
 
   return (
-    <FormControl aria-describedby={helperTextId} error={error} fullWidth={fullWidth}>
+    <FormControl aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}>
       {label && (
         <FormLabel htmlFor={id} required={required}>
           {label}
         </FormLabel>
       )}
-      <InputBase {...other} classes={classes} id={id} />
+      <InputBase {...other} id={id} />
       {helperText && (
         <FormHelperText id={helperTextId}>
           {helperText}
