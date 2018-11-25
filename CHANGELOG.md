@@ -1,3 +1,8 @@
+## Unreleasesd
+
+* Fix popover margin for dropdowns
+* Server-side rendering support
+
 ## 1.5.1 (2018-11-23)
 
 * Add linting.
