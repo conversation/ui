@@ -1,3 +1,4 @@
+import JssProvider from 'react-jss/lib/JssProvider'
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import React from 'react'
 
@@ -11,9 +12,11 @@ export default class ThemeProvider extends React.Component {
 
   render () {
     return (
-      <MuiThemeProvider theme={this.theme}>
-        {this.props.children}
-      </MuiThemeProvider>
+      <JssProvider registry={this.props.sheetsRegistry}>
+        <MuiThemeProvider theme={this.theme} sheetsManager={this.props.sheetsManager}>
+          {this.props.children}
+        </MuiThemeProvider>
+      </JssProvider>
     )
   }
 }

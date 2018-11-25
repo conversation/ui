@@ -9,6 +9,7 @@ UI](https://material-ui.com) library.
 ## Table of Contents
 
 * [Getting Started](#getting-started)
+* [Server-side Rendering](#server-side-rendering)
 * [Examples](#examples)
 * [Publishing a Release](#publishing-a-release)
 * [Licence](#licence)
@@ -36,6 +37,27 @@ const App = () => (
     <Button>Hello World!</Button>
   </ThemeProvider>
 )
+```
+
+## Server-side Rendering
+
+`<ThemeProvider>` supports two optional props, `sheetsRegistry` and `sheetsManager`. These can be used to keep track of the JSS so it can be rendered inline when doing server side rendering.
+
+You can then call `sheetsRegistry.toString()` to get a string containing the CSS in order to render the current page server side.
+
+```js
+const sheetsRegistry = new SheetsRegistry();
+const sheetsManager = new Map();
+
+const App = () => (
+  <ThemeProvider sheetsRegistry={sheetsRegistry} sheetsManager={sheetsManager}>
+    <Button>Hello World!</Button>
+  </ThemeProvider>
+)
+```
+
+```html
+<style type="text/css" id="ssr-styles">${sheetsRegistry.toString()}</style>
 ```
 
 ## Examples
