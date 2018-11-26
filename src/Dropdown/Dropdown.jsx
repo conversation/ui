@@ -87,4 +87,8 @@ const Dropdown = ({
   )
 }
 
+Dropdown.defaultProps = {
+  value: ''
+}
+
 export default withStyles(styles, { withTheme: true })(Dropdown)
