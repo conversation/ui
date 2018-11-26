@@ -4,7 +4,8 @@
 
 This library contains a collection of React components used to build our apps
 at The Conversation. It is based on the excellent [Material
-UI](https://material-ui.com) library.
+UI](https://material-ui.com) library. Examples of the available components can
+be viewed in our [styleguide](http://styleguide.theconversation.com).
 
 ## Table of Contents
 
@@ -41,9 +42,12 @@ const App = () => (
 
 ## Server-side Rendering
 
-`<ThemeProvider>` supports two optional props, `sheetsRegistry` and `sheetsManager`. These can be used to keep track of the JSS so it can be rendered inline when doing server side rendering.
+`<ThemeProvider>` supports two optional props, `sheetsRegistry` and
+`sheetsManager`. These can be used to keep track of the JSS so it can be
+rendered inline when doing server side rendering.
 
-You can then call `sheetsRegistry.toString()` to get a string containing the CSS in order to render the current page server side.
+You can then call `sheetsRegistry.toString()` to get a string containing the
+CSS in order to render the current page server side.
 
 ```js
 const sheetsRegistry = new SheetsRegistry();
