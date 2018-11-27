@@ -1,24 +1,36 @@
 import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
-import InputBase from '@material-ui/core/InputBase'
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import Select from '@material-ui/core/Select'
+import { shallow } from 'enzyme'
 
+import Dropdown from './Dropdown'
 import FormLabel from '../form/FormLabel'
-import TextField from './TextField'
+import { MenuItem } from '../index'
 
-describe('<TextField />', () => {
-  it('passes props to the InputBase component', () => {
+describe('<Dropdown />', () => {
+  it('renders the children', () => {
     const wrapper = shallow(
-      <TextField value='foo' />
-    ).dive().find(InputBase)
+      <Dropdown>
+        <MenuItem value='1'>one</MenuItem>
+        <MenuItem value='2'>two</MenuItem>
+      </Dropdown>
+    ).dive().find(Select)
+    expect(wrapper.childAt(0).props().value).toBe('1')
+    expect(wrapper.childAt(1).props().value).toBe('2')
+  })
+
+  it('passes props to the Select component', () => {
+    const wrapper = shallow(
+      <Dropdown value='foo' />
+    ).dive().find(Select)
     expect(wrapper.props().value).toBe('foo')
   })
 
   describe('when disabled', () => {
     it('disables the form control', () => {
       const wrapper = shallow(
-        <TextField disabled />
+        <Dropdown disabled />
       ).dive().find(FormControl)
       expect(wrapper.props().disabled).toBe(true)
     })
@@ -27,14 +39,14 @@ describe('<TextField />', () => {
   describe('with label', () => {
     it('renders a label', () => {
       const wrapper = shallow(
-        <TextField label='lorem' />
+        <Dropdown label='lorem' />
       ).dive().find(FormLabel)
       expect(wrapper.contains('lorem')).toBe(true)
     })
 
     it('sets the htmlFor prop', () => {
       const wrapper = shallow(
-        <TextField id='foo' label='lorem' />
+        <Dropdown id='foo' label='lorem' />
       ).dive().find(FormLabel)
       expect(wrapper.props().htmlFor).toBe('foo')
     })
@@ -43,25 +55,16 @@ describe('<TextField />', () => {
   describe('with helper text', () => {
     it('renders helper text', () => {
       const wrapper = shallow(
-        <TextField helperText='lorem' />
+        <Dropdown helperText='lorem' />
       ).dive().find(FormHelperText)
       expect(wrapper.contains('lorem')).toBe(true)
     })
 
     it('sets the helper text ID', () => {
       const wrapper = shallow(
-        <TextField helperText='lorem' id='foo' />
+        <Dropdown helperText='lorem' id='foo' />
       ).dive().find(FormHelperText)
       expect(wrapper.props().id).toBe('foo-helper-text')
-    })
-  })
-
-  describe('when changed', () => {
-    it('calls the callback', () => {
-      const onChange = jest.fn()
-      const wrapper = mount(<TextField onChange={onChange} />)
-      wrapper.find('input').simulate('change')
-      expect(onChange).toHaveBeenCalled()
     })
   })
 })

@@ -3,7 +3,7 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
 import React from 'react'
 
-import FormLabel from './FormLabel'
+import FormLabel from '../form/FormLabel'
 import { withStyles } from '../index'
 
 const styles = theme => {
