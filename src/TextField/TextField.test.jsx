@@ -4,7 +4,7 @@ import InputBase from '@material-ui/core/InputBase'
 import React from 'react'
 import { mount, shallow } from 'enzyme'
 
-import FormLabel from './FormLabel'
+import FormLabel from '../form/FormLabel'
 import TextField from './TextField'
 
 describe('<TextField />', () => {

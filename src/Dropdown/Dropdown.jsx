@@ -4,7 +4,7 @@ import InputBase from '@material-ui/core/InputBase'
 import React from 'react'
 import Select from '@material-ui/core/Select'
 
-import FormLabel from '../TextField/FormLabel'
+import FormLabel from '../form/FormLabel'
 import { withStyles } from '../index'
 
 const styles = theme => {

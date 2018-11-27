@@ -5,7 +5,7 @@ import Select from '@material-ui/core/Select'
 import { shallow } from 'enzyme'
 
 import Dropdown from './Dropdown'
-import FormLabel from '../TextField/FormLabel'
+import FormLabel from '../form/FormLabel'
 import { MenuItem } from '../index'
 
 describe('<Dropdown />', () => {
