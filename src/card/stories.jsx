@@ -1,4 +1,5 @@
 import React from 'react'
+import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 
 import { Card, CardAction, CardActions, CardContent, Grid, Typography, withStyles } from '../index'
@@ -23,7 +24,7 @@ const CardExample = withStyles(styles)((props) => (
       <Typography>lorem ipsum</Typography>
     </CardContent>
     <CardActions>
-      <CardAction variant='primary'>More</CardAction>
+      <CardAction onClick={action('click')} variant='primary'>Learn More</CardAction>
     </CardActions>
   </Card>
 ))

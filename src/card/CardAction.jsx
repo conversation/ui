@@ -5,7 +5,7 @@ import React from 'react'
  * The CardAction component is preferred when adding buttons to a CardActions
  * component.
  *
- * Rather than leave it up to each dialog to define the correct variants and
+ * Rather than leave it up to each card to define the correct variants and
  * colours to use for the action buttons (e.g. save, cancel, etc.), this
  * component ensures consistency by abstracting the action buttons based on the
  * type of action that they perform.
