@@ -7,6 +7,8 @@
 //
 // While we are actively developing this library, it does makes sense to give
 // ourselves a head start with a few MUI components.
+export { default as CardActions } from '@material-ui/core/CardActions'
+export { default as CardContent } from '@material-ui/core/CardContent'
 export { default as Dialog } from '@material-ui/core/Dialog'
 export { default as Grid } from '@material-ui/core/Grid'
 export { default as MenuItem } from '@material-ui/core/MenuItem'
@@ -16,6 +18,8 @@ export { default as Typography } from '@material-ui/core/Typography'
 // Our API.
 export { ThemeProvider, defaultTheme, withStyles, withTheme } from './styles'
 export { default as Button } from './Button'
+export { default as Card } from './card/Card'
+export { default as CardAction } from './card/CardAction'
 export { default as DialogActions } from './dialog/DialogActions'
 export { default as DialogButton } from './dialog/DialogButton'
 export { default as DialogContent } from './dialog/DialogContent'
