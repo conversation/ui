@@ -2,7 +2,7 @@ import Button from '@material-ui/core/Button'
 import React from 'react'
 
 /**
- * The DialogButton component is preferred when adding buttons to a
+ * The DialogAction component is preferred when adding buttons to a
  * DialogActions component.
  *
  * Rather than leave it up to each dialog to define the correct variants and
@@ -15,7 +15,7 @@ import React from 'react'
  * buttons (e.g. delete, etc.) should be given a different emphasis to indicate
  * to the user that they perform a different action.
  */
-const DialogButton = ({ children, variant, ...other }) => {
+const DialogAction = ({ children, variant, ...other }) => {
   const buttonVariant = variant === 'primary' || variant === 'secondary' ? 'contained' : 'text'
   const buttonColour = variant === 'secondary' ? 'secondary' : 'primary'
   return (
@@ -25,4 +25,4 @@ const DialogButton = ({ children, variant, ...other }) => {
   )
 }
 
-export default DialogButton
+export default DialogAction
