@@ -34,7 +34,7 @@ export default function defaultTheme () {
 
       button: {
         fontFamily: 'Noto Sans',
-        textTransform: 'capitalize'
+        textTransform: 'none'
       },
 
       caption: {
