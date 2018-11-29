@@ -24,7 +24,7 @@ doc:
 	@node_modules/.bin/build-storybook -c .storybook -o doc
 
 storybook:
-	@node_modules/.bin/start-storybook -p 9001 -c .storybook
+	@node_modules/.bin/start-storybook -p 9001 -c .storybook --ci
 
 publish:
 	@npm publish
