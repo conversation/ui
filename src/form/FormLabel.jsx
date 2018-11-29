@@ -4,7 +4,8 @@ import { withStyles } from '../index'
 
 const styles = theme => ({
   root: {
-    fontSize: theme.typography.pxToRem(14)
+    fontSize: theme.typography.pxToRem(14),
+    textAlign: 'left'
   }
 })
 
