@@ -28,14 +28,12 @@ const IconButton = withStyles(styles)(({ classes }) => (
 ))
 
 storiesOf('Buttons', module)
-  .addDecorator(GridDecorator)
+  // .addDecorator(GridDecorator)
   .add('text', () => (
     colours.map((colour, index) =>
-      <Grid item>
-        <Button key={index} variant='text' colour={colour} onClick={action(colour)}>
-          {colour}
-        </Button>
-      </Grid>
+      <Button key={index} variant='text' colour={colour} onClick={action(colour)}>
+        {colour}
+      </Button>
     )
   ))
   .add('outlined', () => (

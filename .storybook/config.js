@@ -5,6 +5,7 @@ import 'typeface-noto-sans'
 import React from 'react'
 import { ThemeProvider } from '../src'
 import { addDecorator, configure } from '@storybook/react'
+import { withInfo } from '@storybook/addon-info'
 
 function loadStories () {
   importAll(require.context('../src', true, /.stories.jsx?$/))
@@ -20,6 +21,7 @@ const CenterDecorator = story => (
   </ThemeProvider>
 )
 
+addDecorator(withInfo({ inline: true }))
 addDecorator(CenterDecorator)
 
 configure(loadStories, module)
