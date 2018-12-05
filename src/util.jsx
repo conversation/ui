@@ -14,3 +14,19 @@ export const item = as => () => (
     {as()}
   </Grid>
 )
+
+export const propDefinitions = component =>
+  Object
+    .keys(component.__docgenInfo.props)
+    .sort()
+    .reduce((result, property) => {
+      const prop = component.__docgenInfo.props[property]
+      result.push({
+        property,
+        propType: prop.flowType || prop.type,
+        defaultValue: prop.defaultValue && prop.defaultValue.value,
+        description: prop.description,
+        required: prop.required
+      })
+      return result
+    }, [])
