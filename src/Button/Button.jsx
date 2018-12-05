@@ -2,8 +2,19 @@ import MaterialButton from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-/** The `<Button>` component represents a clickable button. */
-const Button = ({ children, colour, ...other }) => (
+/**
+  * The `<Button>` component allows users to take actions, by tapping or
+  * clicking a button.
+  *
+  * ```js
+  * import { Button } from '@theconversation/ui'
+  *
+  * <Button onClick={alert("click")}>
+  *   Click Me!
+  * </Button>
+  * ```
+  */
+export const Button = ({ children, colour, ...other }) => (
   <MaterialButton color={colour} {...other}>
     {children}
   </MaterialButton>
@@ -20,22 +31,37 @@ Button.propTypes = {
    */
   colour: PropTypes.oneOf(['default', 'primary', 'secondary']),
 
-  /** If `true`, the button will be disabled. */
+  /**
+   * A boolean value indicating whether the button is disabled.
+   */
   disabled: PropTypes.bool,
 
-  /** The callback function called when the button is clicked. */
+  /**
+   * A boolean value indicating whether the button should take up the full
+   * width of its container.
+   */
+  fullWidth: PropTypes.bool,
+
+  /**
+   * The callback function called when the button is clicked.
+   */
   onClick: PropTypes.func,
 
-  /** The size of the button. */
+  /**
+   * The size of the button.
+   */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 
-  /** The variant of the button. */
+  /**
+   * The variant of the button.
+   */
   variant: PropTypes.oneOf(['text', 'outlined', 'contained'])
 }
 
 Button.defaultProps = {
   colour: 'default',
   disabled: false,
+  fullWidth: false,
   size: 'medium',
   variant: 'contained'
 }

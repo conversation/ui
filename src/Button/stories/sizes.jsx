@@ -8,8 +8,8 @@ import { item, grid } from '../../util'
 const md = `
 # Sizes
 
-The \`Button\` component has three different sizes: \`small\`, \`medium\`, and
-\`large\`.
+The \`<Button>\` component has three different sizes: \`small\`, \`medium\`,
+and \`large\`.
 
 You can set the size of a button using the \`size\` prop:
 
@@ -18,6 +18,10 @@ You can set the size of a button using the \`size\` prop:
   Click Me!
 </Button>
 ~~~
+
+## Example
+
+<!-- STORY -->
 `
 
 const SIZES = ['small', 'medium', 'large']

@@ -8,8 +8,8 @@ import { item, grid } from '../../util'
 const md = `
 # Variants
 
-The \`Button\` component has three different variants: \`text\`, \`outlined\`, and
-\`contained\`.
+The \`<Button>\` component has three different variants: \`text\`,
+\`outlined\`, and \`contained\`.
 
 You can set the variant of a button using the \`variant\` prop:
 
@@ -18,6 +18,10 @@ You can set the variant of a button using the \`variant\` prop:
   Click Me!
 </Button>
 ~~~
+
+## Example
+
+<!-- STORY -->
 `
 
 const VARIANTS = ['text', 'outlined', 'contained']
