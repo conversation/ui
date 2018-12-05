@@ -34,7 +34,11 @@ const PropDefinitionsTable = ({ propDefinitions }) => {
   )
 }
 
-const Overview = ({ component }) => (
+/**
+ * The <ComponentOverview> component renders an overview of a react component
+ * based on the docgen data.
+ */
+const ComponentOverview = ({ component }) => (
   <div className='markdown-body'>
     <h1>Overview</h1>
     <Marked md={component.__docgenInfo.description} />
@@ -43,4 +47,4 @@ const Overview = ({ component }) => (
   </div>
 )
 
-export default Overview
+export default ComponentOverview
