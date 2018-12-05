@@ -7,7 +7,7 @@ import { ThemeProvider } from '../src'
 import { addDecorator, configure } from '@storybook/react'
 
 function loadStories () {
-  importAll(require.context('../src', true, /.stories.jsx?$/))
+  importAll(require.context('../src', true, /.stories.jsx?$|stories\/index.jsx?$/))
 }
 
 function importAll (r) {
