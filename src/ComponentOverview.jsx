@@ -1,5 +1,6 @@
 import Marked from 'storybook-readme/components/Marked'
 import React from 'react'
+import { get } from 'lodash'
 
 import { propDefinitions } from './util'
 
@@ -41,7 +42,7 @@ const PropDefinitionsTable = ({ propDefinitions }) => {
 const ComponentOverview = ({ component }) => (
   <div className='markdown-body'>
     <h1>Overview</h1>
-    <Marked md={component.__docgenInfo.description} />
+    <Marked md={get(component, '__docgenInfo.description', '')} />
     <h2>Props</h2>
     <PropDefinitionsTable propDefinitions={propDefinitions(component)} />
   </div>

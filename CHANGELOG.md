@@ -3,6 +3,7 @@
 * Don't capitalise button text
 * Ensure form labels are left aligned
 * Add `Button` prop types
+* Add `TextField` prop types
 
 ## 1.6.0 (2018-11-28)
 

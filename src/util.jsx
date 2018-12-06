@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from './index'
+import { get } from 'lodash'
 
 const SPACING = 16
 
@@ -17,7 +18,7 @@ export const item = as => () => (
 
 export const propDefinitions = component =>
   Object
-    .keys(component.__docgenInfo.props)
+    .keys(get(component, '__docgenInfo.props', []))
     .sort()
     .reduce((result, property) => {
       const prop = component.__docgenInfo.props[property]
