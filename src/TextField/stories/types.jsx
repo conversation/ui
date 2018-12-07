@@ -2,8 +2,8 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
+import { GridLayout } from '../../util'
 import { TextField } from '../../index'
-import { item, grid } from '../../util'
 
 const md = `
 # Types
@@ -25,22 +25,20 @@ You can set the type of a text field using the \`type\` prop:
 <!-- STORY -->
 `
 
-const textFields = [
-  <TextField
-    helperText='Enter your full name'
-    label='Name'
-    onChange={action('change')}
-    placeholder='Jane Doe'
-    type='text'
-  />,
-  <TextField
-    helperText='Enter your secret password'
-    label='Password'
-    onChange={action('change')}
-    type='password'
-  />
-]
-
-export default withDocs(md, grid(
-  textFields.map(textField => item(() => textField))
-))
+export default withDocs(md, () =>
+  <GridLayout>
+    <TextField
+      helperText='Enter your full name'
+      label='Name'
+      onChange={action('change')}
+      placeholder='Jane Doe'
+      type='text'
+    />
+    <TextField
+      helperText='Enter your secret password'
+      label='Password'
+      onChange={action('change')}
+      type='password'
+    />
+  </GridLayout>
+)

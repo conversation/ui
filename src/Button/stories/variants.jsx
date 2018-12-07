@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
 import { Button } from '../../index'
-import { item, grid } from '../../util'
+import { GridLayout } from '../../util'
 
 const md = `
 # Variants
@@ -26,10 +26,12 @@ You can set the variant of a button using the \`variant\` prop:
 
 const VARIANTS = ['text', 'outlined', 'contained']
 
-export default withDocs(md, grid(
-  VARIANTS.map((variant, index) => item(() =>
-    <Button key={index} variant={variant} onClick={action(variant)}>
-      {variant}
-    </Button>
-  ))
-))
+export default withDocs(md, () =>
+  <GridLayout>
+    {VARIANTS.map(variant =>
+      <Button key={variant} variant={variant} onClick={action(variant)}>
+        {variant}
+      </Button>
+    )}
+  </GridLayout>
+)

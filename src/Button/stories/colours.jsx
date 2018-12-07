@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
 import { Button } from '../../index'
-import { item, grid } from '../../util'
+import { GridLayout } from '../../util'
 
 const md = `
 # Colours
@@ -30,10 +30,12 @@ You can set the colour of a button using the \`colour\` prop:
 
 const COLOURS = ['default', 'primary', 'secondary']
 
-export default withDocs(md, grid(
-  COLOURS.map((colour, index) => item(() =>
-    <Button key={index} variant='contained' colour={colour} onClick={action(colour)}>
-      {colour}
-    </Button>
-  ))
-))
+export default withDocs(md, () =>
+  <GridLayout>
+    {COLOURS.map(colour =>
+      <Button key={colour} colour={colour} onClick={action(colour)}>
+        {colour}
+      </Button>
+    )}
+  </GridLayout>
+)

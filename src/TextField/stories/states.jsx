@@ -2,8 +2,8 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
+import { GridLayout } from '../../util'
 import { TextField } from '../../index'
-import { item, grid } from '../../util'
 
 const md = `
 # States
@@ -26,34 +26,31 @@ You can set the state of a text field using one (or more) boolean flags:
 
 <!-- STORY -->
 `
-
-const textFields = [
-  <TextField
-    helperText='Helper text'
-    label='Default'
-    onChange={action('change')}
-    placeholder='Placeholder text'
-  />,
-  <TextField required
-    helperText='Helper text'
-    label='Required'
-    onChange={action('change')}
-    placeholder='Placeholder text'
-  />,
-  <TextField disabled
-    helperText='Helper text'
-    label='Disabled'
-    onChange={action('change')}
-    placeholder='Placeholder text'
-  />,
-  <TextField error
-    helperText='Helper text'
-    label='Error'
-    onChange={action('change')}
-    placeholder='Placeholder text'
-  />
-]
-
-export default withDocs(md, grid(
-  textFields.map(textField => item(() => textField))
-))
+export default withDocs(md, () =>
+  <GridLayout>
+    <TextField
+      helperText='Helper text'
+      label='Default'
+      onChange={action('change')}
+      placeholder='Placeholder text'
+    />
+    <TextField required
+      helperText='Helper text'
+      label='Required'
+      onChange={action('change')}
+      placeholder='Placeholder text'
+    />
+    <TextField disabled
+      helperText='Helper text'
+      label='Disabled'
+      onChange={action('change')}
+      placeholder='Placeholder text'
+    />
+    <TextField error
+      helperText='Helper text'
+      label='Error'
+      onChange={action('change')}
+      placeholder='Placeholder text'
+    />
+  </GridLayout>
+)

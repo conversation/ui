@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
 import { Button } from '../../index'
-import { item, grid } from '../../util'
+import { GridLayout } from '../../util'
 
 const md = `
 # Sizes
@@ -26,10 +26,12 @@ You can set the size of a button using the \`size\` prop:
 
 const SIZES = ['small', 'medium', 'large']
 
-export default withDocs(md, grid(
-  SIZES.map((size, index) => item(() =>
-    <Button key={index} variant='contained' size={size} onClick={action(size)}>
-      {size}
-    </Button>
-  ))
-))
+export default withDocs(md, () =>
+  <GridLayout>
+    {SIZES.map(size =>
+      <Button key={size} size={size} onClick={action(size)}>
+        {size}
+      </Button>
+    )}
+  </GridLayout>
+)

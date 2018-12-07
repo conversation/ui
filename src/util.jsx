@@ -4,18 +4,22 @@ import { get } from 'lodash'
 
 const SPACING = 16
 
-export const grid = as => () => (
-  <Grid container justify='center' spacing={SPACING}>
-    {Array.isArray(as) ? as.map(a => a()) : as()}
+/**
+ * The `<GridLayout>` component automatically renders its children in a grid
+ * layout.
+ */
+export const GridLayout = ({ children, ...other }) => (
+  <Grid container {...other} justify='center' spacing={SPACING}>
+    {children.map((child, index) =>
+      <Grid item key={index}>{child}</Grid>
+    )}
   </Grid>
 )
 
-export const item = as => () => (
-  <Grid item>
-    {as()}
-  </Grid>
-)
-
+/**
+ * Returns an array of prop definitions, based on the docgen info for the given
+ * component.
+ */
 export const propDefinitions = component =>
   Object
     .keys(get(component, '__docgenInfo.props', []))
