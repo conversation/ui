@@ -4,36 +4,34 @@ import { get } from 'lodash'
 
 import { propDefinitions } from './util'
 
-const PropDefinitionsTable = ({ propDefinitions }) => {
-  const props = propDefinitions.map(
-    ({ property, propType, required, description, defaultValue }) => {
-      return (
-        <tr key={property}>
-          <td>
-            {required ? <strong>{property}</strong> : property}
-          </td>
-          <td>{propType.name}</td>
-          <td>{defaultValue}</td>
-          <td><Marked md={description} /></td>
-        </tr>
-      )
-    }
-  )
+const Row = ({ property, propType, required, description, defaultValue }) => (
+  <tr key={property}>
+    <td>
+      {required ? <strong>{property}</strong> : property}
+    </td>
+    <td>{get(propType, 'name')}</td>
+    <td>{defaultValue}</td>
+    <td><Marked md={description || ''} /></td>
+  </tr>
+)
 
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>{props}</tbody>
-    </table>
-  )
-}
+const PropDefinitionsTable = ({ propDefinitions }) => (
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {propDefinitions.map(propDefinition =>
+        <Row {...propDefinition} />
+      )}
+    </tbody>
+  </table>
+)
 
 /**
  * The <ComponentOverview> component renders an overview of a react component
