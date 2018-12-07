@@ -8,13 +8,17 @@ const SPACING = 16
  * The `<GridLayout>` component automatically renders its children in a grid
  * layout.
  */
-export const GridLayout = ({ children, ...other }) => (
-  <Grid container {...other} justify='center' spacing={SPACING}>
-    {children.map((child, index) =>
-      <Grid item key={index}>{child}</Grid>
-    )}
-  </Grid>
-)
+export const GridLayout = ({ children, ...other }) => {
+  children = Array.isArray(children) ? children : [children]
+
+  return (
+    <Grid container {...other} justify='center' spacing={SPACING}>
+      {children.map((child, index) =>
+        <Grid item key={index}>{child}</Grid>
+      )}
+    </Grid>
+  )
+}
 
 /**
  * Returns an array of prop definitions, based on the docgen info for the given
