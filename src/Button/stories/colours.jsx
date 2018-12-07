@@ -18,7 +18,7 @@ emphasis to indicate to the user that they perform an auxilary action.
 You can set the colour of a button using the \`colour\` prop:
 
 ~~~js
-<Button colour="primary">
+<Button colour='primary'>
   Click Me!
 </Button>
 ~~~

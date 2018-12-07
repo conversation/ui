@@ -44,10 +44,10 @@ const styles = theme => {
   * import { TextField } from '@theconversation/ui'
   *
  * <TextField
- *   helperText="Enter your full name"
- *   label="Name"
- *   onChange={alert("change")}
- *   placeholder="Jane Doe"
+ *   helperText='Enter your full name'
+ *   label='Name'
+ *   onChange={alert('change')}
+ *   placeholder='Jane Doe'
  * />
  * ```
  */
@@ -131,7 +131,12 @@ TextField.propTypes = {
   /**
    * The type of the text field.
    */
-  type: PropTypes.oneOf(['text', 'password'])
+  type: PropTypes.oneOf(['text', 'password']),
+
+  /**
+   * The value of the text field.
+   */
+  value: PropTypes.string
 }
 
 TextField.defaultProps = {

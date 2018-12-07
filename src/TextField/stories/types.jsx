@@ -16,8 +16,8 @@ The \`<TextField>\` component has multiple types:
 You can set the type of a text field using the \`type\` prop:
 
 ~~~js
-<TextField type="text" />
-<TextField type="password" />
+<TextField type='text' />
+<TextField type='password' />
 ~~~
 
 ## Example
