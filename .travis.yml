@@ -15,7 +15,7 @@ jobs:
       script: make lint test
 
     - stage: api
-      if: branch = master
+      if: branch = master AND type = push
       script: make publish
 
     - stage: npm release
