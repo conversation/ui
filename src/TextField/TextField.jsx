@@ -3,9 +3,9 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
 import PropTypes from 'prop-types'
 import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 import FormLabel from '../form/FormLabel'
-import { withStyles } from '../index'
 
 const styles = theme => {
   const light = theme.palette.type === 'light'
@@ -51,7 +51,7 @@ const styles = theme => {
  * />
  * ```
  */
-const TextField = ({
+export const TextField = ({
   disabled,
   error,
   fullWidth,

@@ -1,6 +1,7 @@
 import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import { Paper, Typography, withStyles } from '../index'
+import { Paper, Typography } from '../index'
 
 const size = 120
 const margin = 16

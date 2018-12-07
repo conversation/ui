@@ -1,7 +1,6 @@
 import MaterialDialogActions from '@material-ui/core/DialogActions'
 import React from 'react'
-
-import { withStyles } from '../index'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = {
   root: {

@@ -14,9 +14,11 @@ export { default as Grid } from '@material-ui/core/Grid'
 export { default as MenuItem } from '@material-ui/core/MenuItem'
 export { default as Paper } from '@material-ui/core/Paper'
 export { default as Typography } from '@material-ui/core/Typography'
+export { default as withStyles } from '@material-ui/core/styles/withStyles'
+export { default as withTheme } from '@material-ui/core/styles/withTheme'
 
 // Our API.
-export { ThemeProvider, defaultTheme, withStyles, withTheme } from './styles'
+export { ThemeProvider, defaultTheme } from './styles'
 export { default as Button } from './Button'
 export { default as Card } from './card/Card'
 export { default as CardAction } from './card/CardAction'

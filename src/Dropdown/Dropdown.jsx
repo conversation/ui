@@ -3,9 +3,9 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
 import React from 'react'
 import Select from '@material-ui/core/Select'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 import FormLabel from '../form/FormLabel'
-import { withStyles } from '../index'
 
 const styles = theme => {
   const light = theme.palette.type === 'light'

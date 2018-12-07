@@ -1,6 +1,5 @@
 import FormLabel from '@material-ui/core/FormLabel'
-
-import { withStyles } from '../index'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
   root: {
