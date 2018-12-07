@@ -14,7 +14,7 @@ The \`<Button>\` component has three different variants: \`text\`,
 You can set the variant of a button using the \`variant\` prop:
 
 ~~~js
-<Button variant="contained">
+<Button variant='contained'>
   Click Me!
 </Button>
 ~~~

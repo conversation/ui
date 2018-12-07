@@ -9,7 +9,7 @@ import React from 'react'
   * ```js
   * import { Button } from '@theconversation/ui'
   *
-  * <Button onClick={alert("click")}>
+  * <Button onClick={alert('click')}>
   *   Click Me!
   * </Button>
   * ```

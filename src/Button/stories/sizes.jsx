@@ -14,7 +14,7 @@ and \`large\`.
 You can set the size of a button using the \`size\` prop:
 
 ~~~js
-<Button size="large">
+<Button size='large'>
   Click Me!
 </Button>
 ~~~

@@ -44,10 +44,10 @@ const styles = theme => {
   * import { TextField } from '@theconversation/ui'
   *
  * <TextField
- *   helperText="Enter your full name"
- *   label="Name"
- *   onChange={alert("change")}
- *   placeholder="Jane Doe"
+ *   helperText='Enter your full name'
+ *   label='Name'
+ *   onChange={alert('change')}
+ *   placeholder='Jane Doe'
  * />
  * ```
  */
