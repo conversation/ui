@@ -14,7 +14,7 @@ import React from 'react'
   * </Button>
   * ```
   */
-export const Button = ({ children, colour, ...other }) => (
+const Button = ({ children, colour, ...other }) => (
   <MaterialButton color={colour} {...other}>
     {children}
   </MaterialButton>

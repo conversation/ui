@@ -2,7 +2,7 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
-import TextField from '../TextField'
+import { TextField } from '../../index'
 import { item, grid } from '../../util'
 
 const md = `

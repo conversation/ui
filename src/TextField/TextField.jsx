@@ -51,7 +51,7 @@ const styles = theme => {
  * />
  * ```
  */
-export const TextField = ({
+const TextField = ({
   disabled,
   error,
   fullWidth,
