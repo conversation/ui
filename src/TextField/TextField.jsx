@@ -131,7 +131,12 @@ TextField.propTypes = {
   /**
    * The type of the text field.
    */
-  type: PropTypes.oneOf(['text', 'password'])
+  type: PropTypes.oneOf(['text', 'password']),
+
+  /**
+   * The value of the text field.
+   */
+  value: PropTypes.string
 }
 
 TextField.defaultProps = {
