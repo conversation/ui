@@ -1,6 +1,7 @@
 import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
+import PropTypes from 'prop-types'
 import React from 'react'
 import Select from '@material-ui/core/Select'
 import withStyles from '@material-ui/core/styles/withStyles'
@@ -38,10 +39,9 @@ const styles = theme => {
 }
 
 /**
- * The Dropdown component provides a dropdown menu which displays a list of
- * items to the user.
+ * The `<Dropdown>` component allows users to select from a list of items.
  */
-const Dropdown = ({
+export const Dropdown = ({
   children,
   classes,
   disabled,
@@ -87,8 +87,60 @@ const Dropdown = ({
   )
 }
 
+Dropdown.propTypes = {
+  /**
+   * A boolean value indicating whether the dropdown is disabled.
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * A boolean value indicating whether the dropdown is in an error state.
+   */
+  error: PropTypes.bool,
+
+  /**
+   * A boolean value indicating whether the dropdown should take up the full
+   * width of its container.
+   */
+  fullWidth: PropTypes.bool,
+
+  /**
+   * The text displayed below the dropdown.
+   */
+  helperText: PropTypes.string,
+
+  /**
+   * The `id` of the underlying `<input>` element.
+   */
+  id: PropTypes.string,
+
+  /**
+   * The text displayed above the dropdown.
+   */
+  label: PropTypes.string,
+
+  /**
+   * The callback function called when the dropdown value changes.
+   */
+  onChange: PropTypes.func,
+
+  /**
+   * A boolean value indicating whether the dropdown is required to be filled
+   * by the user.
+   */
+  required: PropTypes.bool,
+
+  /**
+   * The value of the dropdown.
+   */
+  value: PropTypes.string
+}
+
 Dropdown.defaultProps = {
-  value: ''
+  disabled: false,
+  error: false,
+  fullWidth: false,
+  required: false
 }
 
 export default withStyles(styles, { withTheme: true })(Dropdown)
