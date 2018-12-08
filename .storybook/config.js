@@ -11,7 +11,11 @@ function loadStories () {
 }
 
 function importAll (r) {
-  r.keys().forEach(r)
+  r.keys().sort((a, b) => {
+    a = a.toLowerCase()
+    b = b.toLowerCase()
+    return a < b ? -1 : (a > b ? 1 : 0)
+  }).forEach(r)
 }
 
 const CenterDecorator = story => (
