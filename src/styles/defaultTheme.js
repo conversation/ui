@@ -22,12 +22,12 @@ export default function defaultTheme () {
       fontFamily: 'Montserrat',
 
       body1: {
-        fontFamily: 'Libre Baskerville',
         fontSize: '1rem',
         lineHeight: '1.5'
       },
 
       body2: {
+        fontFamily: 'Libre Baskerville',
         fontSize: '1rem',
         lineHeight: '1.5'
       },
