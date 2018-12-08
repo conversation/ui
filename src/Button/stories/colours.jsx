@@ -8,12 +8,14 @@ import { GridLayout } from '../../util'
 const md = `
 # Colours
 
-The \`<Button>\` component has three different colours: \`default\`,
-\`primary\`, and \`secondary\`.
+The \`<Button>\` component has three different colours:
 
-The \`primary\` buttons (e.g. save, yes, etc.) should have a higher visual
-empasis, while \`secondary\` buttons (e.g. delete, etc.) are given a different
-emphasis to indicate to the user that they perform an auxilary action.
+* \`primary\`: A button with the highest visual emphasis, it should be used for
+  primary actions like "Create", "Save", "Publish", etc.
+* \`secondary\`: A button with an alternate visual emphasis, it should be used
+  for auxilary actions like "Delete", "Suspend", etc.
+* \`default\`: A button with no visual emphasis, it should be used for
+  everything else.
 
 You can set the colour of a button using the \`colour\` prop:
 
@@ -28,7 +30,7 @@ You can set the colour of a button using the \`colour\` prop:
 <!-- STORY -->
 `
 
-const COLOURS = ['default', 'primary', 'secondary']
+const COLOURS = ['primary', 'secondary', 'default']
 
 export default withDocs(md, () =>
   <GridLayout>
