@@ -22,6 +22,11 @@ const Button = ({ children, colour, ...other }) => (
 
 Button.propTypes = {
   /**
+   * The content of the button.
+   */
+  children: PropTypes.node.isRequired,
+
+  /**
    * The colour of the button.
    *
    * The `primary` buttons (e.g. save, yes, etc.) should have a higher visual

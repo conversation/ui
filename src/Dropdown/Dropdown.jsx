@@ -103,6 +103,11 @@ export const Dropdown = ({
 
 Dropdown.propTypes = {
   /**
+   * The content of the dropdown.
+   */
+  children: PropTypes.node.isRequired,
+
+  /**
    * A boolean value indicating whether the dropdown is disabled.
    */
   disabled: PropTypes.bool,
