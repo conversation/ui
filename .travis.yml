@@ -19,9 +19,11 @@ jobs:
       script: make publish
 
     - stage: npm release
-      if: branch = master AND tag = true
+      if: tag =~ ^v
       script: make dist
       deploy:
         provider: npm
+        email: josh.bassett@gmail.com
         api_key: $NPM_TOKEN
-        on: deploy-npm-release
+        on:
+          tags: true
