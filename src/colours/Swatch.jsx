@@ -34,7 +34,7 @@ const Swatch = ({ classes, colour, theme, variant, ...other }) => {
   return (
     <Paper className={classes.root} style={{ backgroundColor: value[variant] }}>
       <div className={classes.label}>
-        <ColourLabel label={colour} colour={value} variant='button' />
+        <ColourLabel label={colour} colour={value} variant='body1' />
         {variant !== 'main' ? <ColourLabel label={variant} colour={value} variant='caption' /> : null }
       </div>
     </Paper>
