@@ -8,7 +8,7 @@ describe('<Card />', () => {
   it('renders the children', () => {
     const wrapper = shallow(
       <Card>lorem</Card>
-    ).find(MaterialCard)
+    ).dive().find(MaterialCard)
     expect(wrapper.contains('lorem')).toBe(true)
   })
 

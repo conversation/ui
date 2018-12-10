@@ -9,6 +9,8 @@
 // ourselves a head start with a few MUI components.
 export { default as CardActions } from '@material-ui/core/CardActions'
 export { default as CardContent } from '@material-ui/core/CardContent'
+export { default as CardHeader } from '@material-ui/core/CardHeader'
+export { default as CardMedia } from '@material-ui/core/CardMedia'
 export { default as Grid } from '@material-ui/core/Grid'
 export { default as MenuItem } from '@material-ui/core/MenuItem'
 export { default as Paper } from '@material-ui/core/Paper'
