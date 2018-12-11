@@ -1,5 +1,6 @@
-## Unreleased
+## 1.6.2 (2018-12-11)
 
+* Add `Card` prop types
 * Add `href` to `Button` prop types
 
 ## 1.6.1 (2018-12-10)
