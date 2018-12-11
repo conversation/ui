@@ -5,17 +5,19 @@ import { withDocs } from 'storybook-readme'
 import { Button } from '../../index'
 import { GridLayout } from '../../util'
 
+const COLOURS = ['default', 'primary', 'secondary']
+
 const md = `
 # Colours
 
 The \`<Button>\` component has three different colours:
 
+* \`default\`: A button with no visual emphasis, it should be used for
+  everything else.
 * \`primary\`: A button with the highest visual emphasis, it should be used for
   primary actions like "Create", "Save", "Publish", etc.
 * \`secondary\`: A button with an alternate visual emphasis, it should be used
   for auxilary actions like "Delete", "Suspend", etc.
-* \`default\`: A button with no visual emphasis, it should be used for
-  everything else.
 
 You can set the colour of a button using the \`colour\` prop:
 
@@ -29,8 +31,6 @@ You can set the colour of a button using the \`colour\` prop:
 
 <!-- STORY -->
 `
-
-const COLOURS = ['primary', 'secondary', 'default']
 
 export default withDocs(md, () =>
   <GridLayout>

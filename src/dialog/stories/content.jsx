@@ -5,6 +5,8 @@ import { withDocs } from 'storybook-readme'
 import { Button, Dialog, DialogAction, DialogActions, DialogContent, DialogTitle, Typography } from '../../index'
 import { GridLayout } from '../../util'
 
+const LIPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+
 const md = `
 # Content
 
@@ -50,7 +52,7 @@ class ExampleDialog extends React.Component {
         <Dialog open={this.state.open} onClose={this.handleClose}>
           <DialogTitle>Title</DialogTitle>
           <DialogContent>
-            <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
+            <Typography variant='body1'>{LIPSUM}</Typography>
           </DialogContent>
           <DialogActions>
             <DialogAction onClick={this.handleClose} variant='primary'>OK</DialogAction>

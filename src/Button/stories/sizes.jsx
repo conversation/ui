@@ -5,6 +5,8 @@ import { withDocs } from 'storybook-readme'
 import { Button } from '../../index'
 import { GridLayout } from '../../util'
 
+const SIZES = ['small', 'medium', 'large']
+
 const md = `
 # Sizes
 
@@ -23,8 +25,6 @@ You can set the size of a button using the \`size\` prop:
 
 <!-- STORY -->
 `
-
-const SIZES = ['small', 'medium', 'large']
 
 export default withDocs(md, () =>
   <GridLayout>

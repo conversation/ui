@@ -5,6 +5,8 @@ import { withDocs } from 'storybook-readme'
 import { Button } from '../../index'
 import { GridLayout } from '../../util'
 
+const VARIANTS = ['text', 'outlined', 'contained']
+
 const md = `
 # Variants
 
@@ -23,8 +25,6 @@ You can set the variant of a button using the \`variant\` prop:
 
 <!-- STORY -->
 `
-
-const VARIANTS = ['text', 'outlined', 'contained']
 
 export default withDocs(md, () =>
   <GridLayout>

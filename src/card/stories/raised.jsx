@@ -4,6 +4,8 @@ import { withDocs } from 'storybook-readme'
 import { Card, CardContent, CardHeader, Typography, withStyles } from '../../index'
 import { GridLayout } from '../../util'
 
+const LIPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+
 const md = `
 # Raised
 
@@ -33,7 +35,7 @@ const ExampleCard = withStyles(styles)(({ classes, title, ...other }) => (
   <Card {...other} className={classes.root}>
     <CardHeader title={title} />
     <CardContent>
-      <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
+      <Typography variant='body1'>{LIPSUM}</Typography>
     </CardContent>
   </Card>
 ))

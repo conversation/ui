@@ -6,6 +6,7 @@ import { Card, CardAction, CardActions, CardContent, CardHeader, CardMedia, Typo
 import { GridLayout } from '../../util'
 
 const IMAGE_URL = 'https://images.theconversation.com/files/249397/original/file-20181207-128208-vvsiqo.jpg?w=600'
+const LIPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 
 const md = `
 # Content
@@ -46,7 +47,7 @@ const ExampleCard = withStyles(styles)(({ classes }) => (
     <CardHeader title='Title' subheader='Subheader' />
     <CardMedia className={classes.media} image={IMAGE_URL} />
     <CardContent>
-      <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
+      <Typography variant='body1'>{LIPSUM}</Typography>
     </CardContent>
     <CardActions>
       <CardAction onClick={action('primary')} variant='primary'>Click Me!</CardAction>
