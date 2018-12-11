@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Add `href` to `Button` prop types
+
 ## 1.6.1 (2018-12-10)
 
 * Don't capitalise button text

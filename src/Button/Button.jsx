@@ -48,6 +48,12 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
 
   /**
+   * The URL to link to when the button is clicked. If defined, an `<a>`
+   * element will be used as the root node.
+   */
+  href: PropTypes.string,
+
+  /**
    * The callback function called when the button is clicked.
    */
   onClick: PropTypes.func,
