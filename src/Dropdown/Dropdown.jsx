@@ -42,7 +42,7 @@ const styles = theme => {
  * The `<Dropdown>` component allows users to select from a list of items.
  *
  * ```js
-  * import { MenuItem, TextField } from '@theconversation/ui'
+  * import { MenuItem, Dropdown } from '@theconversation/ui'
   *
  * <Dropdown
  *   helperText='Select a colour'
