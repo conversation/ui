@@ -14,6 +14,7 @@ export { default as CardMedia } from '@material-ui/core/CardMedia'
 export { default as Grid } from '@material-ui/core/Grid'
 export { default as MenuItem } from '@material-ui/core/MenuItem'
 export { default as Paper } from '@material-ui/core/Paper'
+export { default as Toolbar } from '@material-ui/core/Toolbar'
 export { default as withStyles } from '@material-ui/core/styles/withStyles'
 export { default as withTheme } from '@material-ui/core/styles/withTheme'
 
