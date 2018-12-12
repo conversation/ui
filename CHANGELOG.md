@@ -1,3 +1,7 @@
+## 1.6.3 (2018-12-12)
+
+* Fix travis config
+
 ## 1.6.2 (2018-12-11)
 
 * Add `Card` prop types
