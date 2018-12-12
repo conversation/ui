@@ -1,29 +1,15 @@
 language: node_js
-
 node_js:
   - "8"
-
 env:
   global:
     - PATH=$HOME/.local/bin:$PATH
-
 before_install: pip install --user awscli
-
-jobs:
-  include:
-    - stage: test
-      script: make lint test
-
-    - stage: api
-      if: branch = master AND type = push
-      script: make publish
-
-    - stage: npm release
-      if: tag =~ ^v
-      script: make dist
-      deploy:
-        provider: npm
-        email: josh.bassett@gmail.com
-        api_key: $NPM_TOKEN
-        on:
-          tags: true
+script: make lint test
+deploy:
+  on:
+    branch: master
+    tags: true
+  provider: script
+  script: "cp .npmrc.template $HOME/.npmrc && make release"
+  skip_cleanup: true
