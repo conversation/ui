@@ -1,3 +1,7 @@
+## 1.6.4 (2018-12-12)
+
+* Export Material UI `Toolbar` component
+
 ## 1.6.3 (2018-12-12)
 
 * Fix travis config
