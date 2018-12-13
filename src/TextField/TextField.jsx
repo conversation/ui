@@ -82,6 +82,11 @@ export const TextField = ({
 
 TextField.propTypes = {
   /**
+   * Overrides the styles applied to the component.
+   */
+  classes: PropTypes.object,
+
+  /**
    * A boolean value indicating whether the text field is disabled.
    */
   disabled: PropTypes.bool,

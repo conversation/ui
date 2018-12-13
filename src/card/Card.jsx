@@ -43,6 +43,11 @@ Card.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
+   * Overrides the styles applied to the component.
+   */
+  classes: PropTypes.object,
+
+  /**
    * A boolean value indicating whether the card is raised.
    */
   raised: PropTypes.bool

@@ -37,6 +37,11 @@ Dialog.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
+   * Overrides the styles applied to the component.
+   */
+  classes: PropTypes.object,
+
+  /**
    * The callback function called when the component requests to be closed.
    */
   onClose: PropTypes.func,

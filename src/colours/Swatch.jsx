@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 
@@ -41,7 +42,25 @@ const Swatch = ({ classes, colour, theme, variant, ...other }) => {
   )
 }
 
+Swatch.propTypes = {
+  /**
+   * Overrides the styles applied to the component.
+   */
+  classes: PropTypes.object,
+
+  /**
+   * The colour of the swatch.
+   */
+  colour: PropTypes.oneOf(['primary', 'secondary', 'error']),
+
+  /**
+   * The variant of the swatch.
+   */
+  variant: PropTypes.oneOf(['main', 'light', 'dark'])
+}
+
 Swatch.defaultProps = {
+  colour: 'primary',
   variant: 'main'
 }
 

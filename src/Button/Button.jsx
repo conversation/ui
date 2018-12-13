@@ -27,6 +27,11 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
+   * Overrides the styles applied to the component.
+   */
+  classes: PropTypes.object,
+
+  /**
    * The colour of the button.
    *
    * The `primary` buttons (e.g. save, yes, etc.) should have a higher visual

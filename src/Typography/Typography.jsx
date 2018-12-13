@@ -32,6 +32,11 @@ Typography.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
+   * Overrides the styles applied to the component.
+   */
+  classes: PropTypes.object,
+
+  /**
    * The colour of the text.
    */
   colour: PropTypes.oneOf(['default', 'primary', 'secondary', 'error', 'inherit']),
