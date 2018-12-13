@@ -1,3 +1,7 @@
+## Unreleased
+
+* Add `component` prop type to `Button` component
+
 ## 1.6.4 (2018-12-12)
 
 * Export Material UI `Toolbar` component

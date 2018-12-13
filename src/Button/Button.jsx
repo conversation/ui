@@ -37,6 +37,12 @@ Button.propTypes = {
   colour: PropTypes.oneOf(['default', 'primary', 'secondary']),
 
   /**
+   * The component used for the root node. Either a string to use a DOM element
+or a component.
+   */
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
+
+  /**
    * A boolean value indicating whether the button is disabled.
    */
   disabled: PropTypes.bool,
