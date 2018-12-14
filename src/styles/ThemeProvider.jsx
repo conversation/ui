@@ -2,12 +2,12 @@ import JssProvider from 'react-jss/lib/JssProvider'
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import React from 'react'
 
-import defaultTheme from './defaultTheme'
+import legacy from './themes/legacy'
 
 export default class ThemeProvider extends React.Component {
   constructor (props) {
     super(props)
-    this.theme = this.props.theme || defaultTheme()
+    this.theme = this.props.theme || legacy()
   }
 
   render () {

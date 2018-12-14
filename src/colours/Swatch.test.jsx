@@ -2,10 +2,11 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import Swatch from './Swatch'
-import { Paper, ThemeProvider, Typography, defaultTheme } from '../index'
+import { Paper, ThemeProvider, Typography } from '../index'
+import legacy from '../styles/themes/legacy'
 
 describe('<Swatch />', () => {
-  const theme = defaultTheme()
+  const theme = legacy()
 
   it('renders a <Paper> element', () => {
     const wrapper = mount(
