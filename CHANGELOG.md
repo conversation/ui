@@ -2,6 +2,7 @@
 
 * Add `classes` prop types
 * Add `component` prop type to `Button` component
+* Add `legacy` and `future` themes
 
 ## 1.6.4 (2018-12-12)
 
