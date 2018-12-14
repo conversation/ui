@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid } from './index'
-import { get } from 'lodash'
+import get from 'lodash.get'
 
 const SPACING = 16
 
