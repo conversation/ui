@@ -31,6 +31,9 @@ const styles = theme => {
     error: {
       borderColor: theme.palette.error.main
     },
+    success: {
+      borderColor: theme.palette.success.main
+    },
     input: {
       padding: '10px 12px'
     }

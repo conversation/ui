@@ -1,5 +1,6 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import memoize from 'lodash-es/memoize'
+import { darken, lighten } from '@material-ui/core/styles/colorManipulator'
 
 /**
  * This theme contains the styles which represent the legacy design of our
@@ -10,7 +11,8 @@ export default memoize(() => createMuiTheme({
   palette: {
     primary: { main: '#5499db' },
     secondary: { main: '#50ab50', contrastText: '#fff' },
-    error: { main: '#d8352a' }
+    error: { main: '#d8352a' },
+    success: { main: '#50ab50', dark: darken('#50ab50', 0.2 * 1.5), light: lighten('#50ab50', 0.2), contrastText: '#fff' }
   },
   typography: {
     // Enable v2 variants.

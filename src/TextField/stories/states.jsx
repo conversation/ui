@@ -52,5 +52,11 @@ export default withDocs(md, () =>
       onChange={action('change')}
       placeholder='Placeholder text'
     />
+    <TextField success
+      helperText='Helper text'
+      label='Success'
+      onChange={action('change')}
+      placeholder='Placeholder text'
+    />
   </GridLayout>
 )

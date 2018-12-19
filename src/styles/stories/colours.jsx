@@ -3,7 +3,7 @@ import React from 'react'
 import { Swatch } from '../../index'
 import { GridLayout } from '../../util'
 
-const COLOURS = ['primary', 'secondary', 'error']
+const COLOURS = ['primary', 'secondary', 'error', 'success']
 
 export default () => (
   <GridLayout>
