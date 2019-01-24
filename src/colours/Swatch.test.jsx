@@ -2,7 +2,10 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import Swatch from './Swatch'
-import { Paper, ThemeProvider, Typography } from '../index'
+import Paper from '@material-ui/core/Paper'
+import ThemeProvider from '../styles/ThemeProvider'
+import Typography from '../Typography'
+
 import legacy from '../styles/themes/legacy'
 
 describe('<Swatch />', () => {

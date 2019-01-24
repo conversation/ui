@@ -6,7 +6,7 @@ import { shallow } from 'enzyme'
 
 import Dropdown from './Dropdown'
 import FormLabel from '../form/FormLabel'
-import { MenuItem } from '../index'
+import MenuItem from '@material-ui/core/MenuItem'
 
 describe('<Dropdown />', () => {
   it('renders the children', () => {

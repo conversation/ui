@@ -2,7 +2,7 @@ import MaterialDialogTitle from '@material-ui/core/DialogTitle'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import { Typography } from '../index'
+import Typography from '../Typography'
 
 const styles = theme => ({
   root: {
