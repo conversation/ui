@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
-
-import { Paper, Typography } from '../index'
+import Paper from '@material-ui/core/Paper'
+import Typography from '../Typography'
 
 const size = 120
 const margin = 16
