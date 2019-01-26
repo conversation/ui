@@ -1,5 +1,5 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
-import { memoize } from 'lodash-es'
+import memoize from 'lodash.memoize'
 
 /**
  * This theme contains the styles which represent the legacy design of our
