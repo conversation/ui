@@ -1,3 +1,7 @@
+## Unreleased
+
+* Add `ChipInput` component
+
 ## 1.9.0
 
 * Add the `DatePicker` component
