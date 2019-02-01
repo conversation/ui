@@ -3,6 +3,7 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
 import PropTypes from 'prop-types'
 import React from 'react'
+import classnames from 'classnames'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 import FormLabel from '../form/FormLabel'
@@ -55,6 +56,7 @@ const styles = theme => {
  * ```
  */
 export const TextField = ({
+  classes,
   disabled,
   error,
   fullWidth,
@@ -62,9 +64,11 @@ export const TextField = ({
   id,
   label,
   required,
+  success,
   ...other
 }) => {
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
+  const className = classnames({ [classes.success]: success })
 
   return (
     <FormControl aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}>
@@ -73,7 +77,7 @@ export const TextField = ({
           {label}
         </FormLabel>
       )}
-      <InputBase {...other} id={id} />
+      <InputBase {...other} classes={classes} className={className} id={id} />
       {helperText && (
         <FormHelperText id={helperTextId}>
           {helperText}
@@ -137,6 +141,11 @@ TextField.propTypes = {
   required: PropTypes.bool,
 
   /**
+   * A boolean value indicating whether the text field has the success border colour.
+   */
+  success: PropTypes.bool,
+
+  /**
    * The type of the text field.
    */
   type: PropTypes.oneOf(['text', 'password']),
@@ -152,6 +161,7 @@ TextField.defaultProps = {
   error: false,
   fullWidth: false,
   required: false,
+  success: false,
   type: 'text'
 }
 
