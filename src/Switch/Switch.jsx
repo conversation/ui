@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 /**
- * The `<Switch>` component toggle the state of a single setting on or off.
+ * The `<Switch>` component allows a user to toggle the state of a setting on
+ * or off.
  *
  * ```js
  * import { Switch } from '@theconversation/ui'
@@ -17,7 +18,7 @@ const Switch = ({ colour, ...other }) => (
 
 Switch.propTypes = {
   /**
-   * Marks switch component is checked
+   * A boolean value indicating whether the switch is checked.
    */
   checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 
@@ -37,7 +38,7 @@ Switch.propTypes = {
   disabled: PropTypes.bool,
 
   /**
-   * A boolean value indicating the ripple effect will be enabled.
+   * A boolean value indicating whether the ripple effect is enabled.
    */
   disabledRipple: PropTypes.bool,
 
@@ -47,7 +48,7 @@ Switch.propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * The value of the component
+   * The value of the component.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
 }
