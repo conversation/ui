@@ -40,7 +40,7 @@ Switch.propTypes = {
   /**
    * A boolean value indicating whether the ripple effect is enabled.
    */
-  disabledRipple: PropTypes.bool,
+  disableRipple: PropTypes.bool,
 
   /**
    * The callback function called when the switch changes.
