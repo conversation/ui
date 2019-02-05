@@ -35,8 +35,8 @@ Button.propTypes = {
    * The colour of the button.
    *
    * The `primary` buttons (e.g. save, yes, etc.) should have a higher visual
-   * empasis, while `secondary` buttons (e.g. delete, etc.) are given a
-   * different emphasis to indicate to the user that they perform an auxilary
+   * emphasis, while `secondary` buttons (e.g. delete, etc.) are given a
+   * different emphasis to indicate to the user that they perform an auxiliary
    * action.
    */
   colour: PropTypes.oneOf(['default', 'primary', 'secondary']),
