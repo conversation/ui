@@ -54,8 +54,10 @@ Switch.propTypes = {
 }
 
 Switch.defaultProps = {
+  checked: false,
   colour: 'default',
-  disabled: false
+  disabled: false,
+  disableRipple: false
 }
 
 export default Switch
