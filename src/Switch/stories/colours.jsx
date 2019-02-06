@@ -1,8 +1,9 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
+import { capitalize } from 'lodash-es'
 import { withDocs } from 'storybook-readme'
 
-import { Switch } from '../../index'
+import { FormControlLabel, FormGroup, Switch } from '../../index'
 import { GridLayout } from '../../util'
 
 const COLOURS = ['default', 'primary', 'secondary']
@@ -49,8 +50,13 @@ class ExampleSwitch extends React.Component {
 
 export default withDocs(md, () =>
   <GridLayout>
-    {COLOURS.map(colour =>
-      <ExampleSwitch key={colour} colour={colour} />
-    )}
+    <FormGroup>
+      {COLOURS.map(colour =>
+        <FormControlLabel
+          control={<ExampleSwitch key={colour} colour={colour} />}
+          label={capitalize(colour)}
+        />
+      )}
+    </FormGroup>
   </GridLayout>
 )
