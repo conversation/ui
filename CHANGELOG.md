@@ -1,3 +1,15 @@
+## 1.9.0
+
+* Add the `DatePicker` component
+* Add the `DateTimePicker` component
+* Add the `FormControlLabel` component
+* Add the `FormGroup` component
+* Add the `TimePicker` component
+
+## 1.8.2
+
+* Add the `Switch` component
+
 ## 1.7.0
 
 * Add `classes` prop types
