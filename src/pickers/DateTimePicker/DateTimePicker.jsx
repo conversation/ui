@@ -3,7 +3,7 @@ import React from 'react'
 import { DateTimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from 'material-ui-pickers'
 
 /**
- * The `<DateTimePicker>` component allows a user to easily select a specific time of the day.
+ * The `<DateTimePicker>` component allows a user to easily select a specific date and time of the day.
  *
  * This component uses the `material-ui-pickers` library, which requires an external date management library
  * to parse dates. You can use `moment`, `luxon` or `date-fns` (only 2.0.0-alpha version).
