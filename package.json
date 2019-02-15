@@ -11,6 +11,9 @@
     "component",
     "ui"
   ],
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
   "main": "dist/ui.cjs.js",
   "module": "dist/ui.esm.js",
   "files": [
