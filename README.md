@@ -74,6 +74,14 @@ To run the example react app:
 > npm start
 ```
 
+## Storybook
+
+When working on components, you can run storybook locally:
+
+```sh
+make storybook
+```
+
 ## Publishing a Release
 
 Tagged releases of this library will be automatically published to NPM by our
