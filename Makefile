@@ -4,27 +4,27 @@ node_modules:
 	@npm install
 
 dev:
-	@node_modules/.bin/rollup -c -w
+	@npx rollup -c -w
 
 dist:
-	@node_modules/.bin/rollup -c
+	@npx rollup -c
 
 test:
-	@node_modules/.bin/jest
+	@npx jest
 
 watch:
-	@node_modules/.bin/jest --watch
+	@npx jest --watch
 
 lint:
-	@node_modules/.bin/standard
+	@npx standard
 
 release: dist doc deploy publish
 
 doc:
-	@node_modules/.bin/build-storybook -c .storybook -o doc
+	@npx build-storybook -c .storybook -o doc
 
 storybook:
-	@node_modules/.bin/start-storybook -p 9001 -c .storybook --ci
+	@npx start-storybook -p 9001 -c .storybook --ci
 
 publish:
 	@npm publish
