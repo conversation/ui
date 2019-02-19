@@ -11,9 +11,9 @@
     "component",
     "ui"
   ],
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "files": [
-    "src"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -29,16 +29,16 @@
     "react-jss": "^8.6.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@date-io/moment": "^1.0.2",
     "@storybook/addon-actions": "^4.1.11",
     "@storybook/addon-knobs": "^4.1.11",
     "@storybook/react": "^4.1.11",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "jest": "^24.1.0",
