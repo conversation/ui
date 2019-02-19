@@ -11,10 +11,9 @@
     "component",
     "ui"
   ],
-  "main": "dist/ui.cjs.js",
-  "module": "dist/ui.esm.js",
+  "main": "src/index.js",
   "files": [
-    "dist"
+    "src"
   ],
   "repository": {
     "type": "git",
