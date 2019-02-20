@@ -4,7 +4,7 @@ node_modules:
 	@npm install
 
 dist:
-	@npx babel ./src --out-dir ./dist
+	@npx babel --out-dir dist src
 
 test:
 	@npx jest
