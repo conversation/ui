@@ -1,6 +1,5 @@
 module.exports = {
   setupFilesAfterEnv: ['<rootDir>/test/setup.js'],
-  transformIgnorePatterns: [
-    '<rootDir>/node_modules/(?!lodash-es/.*)'
-  ]
+  testMatch: ['<rootDir>/src/**/*.test.js?(x)'],
+  transformIgnorePatterns: ['<rootDir>/node_modules/(?!lodash-es/.*)']
 }
