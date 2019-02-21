@@ -1,13 +1,10 @@
-.PHONY: clean deploy dev dist doc lint node_modules publish release storybook test
+.PHONY: clean deploy dist doc lint node_modules publish release storybook test
 
 node_modules:
 	@npm install
 
-dev:
-	@npx rollup -c -w
-
 dist:
-	@npx rollup -c
+	@npx babel --out-dir dist src
 
 test:
 	@npx jest

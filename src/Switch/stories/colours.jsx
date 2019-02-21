@@ -1,6 +1,6 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import { capitalize } from 'lodash-es'
+import capitalize from 'lodash/capitalize'
 import { withDocs } from 'storybook-readme'
 
 import { FormControlLabel, FormGroup, Switch } from '../../index'
