@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.1",
-    "lodash-es": "^4.17.11",
+    "lodash": "^4.17.11",
     "material-ui-pickers": "^2.1.2",
     "react-jss": "^8.6.1"
   },

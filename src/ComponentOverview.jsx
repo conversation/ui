@@ -1,6 +1,6 @@
 import Marked from 'storybook-readme/components/Marked'
 import React from 'react'
-import { get } from 'lodash-es'
+import get from 'lodash/get'
 
 import { propDefinitions } from './util'
 
