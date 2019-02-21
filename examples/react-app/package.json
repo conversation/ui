@@ -23,7 +23,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "@theconversation/ui": "^1.2.0",
+    "@theconversation/ui": "^1.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
