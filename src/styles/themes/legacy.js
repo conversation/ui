@@ -25,8 +25,6 @@ export default memoize(() => createMuiTheme({
     },
 
     body2: {
-      fontSize: '1rem',
-      lineHeight: '1.5'
       fontFamily: 'Noto Sans'
     },
 
