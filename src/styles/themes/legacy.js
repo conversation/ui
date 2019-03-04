@@ -25,9 +25,7 @@ export default memoize(() => createMuiTheme({
     },
 
     body2: {
-      fontFamily: 'Libre Baskerville',
-      fontSize: '1rem',
-      lineHeight: '1.5'
+      fontFamily: 'Noto Sans'
     },
 
     button: {
