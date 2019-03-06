@@ -1,3 +1,7 @@
+## Unreleased
+
+* Upgrade storybook to 5.x
+
 ## 1.11.0
 
 * Add `ChipInput` component
