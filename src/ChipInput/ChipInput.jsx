@@ -313,6 +313,7 @@ export class ChipInput extends React.Component {
             onFocus={this.handleInputFocus}
             onBlur={this.handleInputBlur}
             inputRef={this.setActualInputRef}
+            id={id}
             value={inputValue}
             placeholder={inputValue.length === 0 && entries.length === 0 ? placeholder : null}
             disabled={disabled}
@@ -327,6 +328,11 @@ export class ChipInput extends React.Component {
 }
 
 ChipInput.propTypes = {
+  /**
+   * Overrides the styles applied to the component.
+   */
+  id: PropTypes.string,
+
   /**
    * Overrides the styles applied to the component.
    */
