@@ -56,12 +56,32 @@ describe('<TextField />', () => {
     })
   })
 
-  describe('when changed', () => {
-    it('calls the callback', () => {
-      const onChange = jest.fn()
-      const wrapper = mount(<TextField onChange={onChange} />)
-      wrapper.find('input').simulate('change')
-      expect(onChange).toHaveBeenCalled()
+  describe('events', () => {
+    describe('when changed', () => {
+      it('calls the callback', () => {
+        const onChange = jest.fn()
+        const wrapper = mount(<TextField onChange={onChange} />)
+        wrapper.find('input').simulate('change')
+        expect(onChange).toHaveBeenCalled()
+      })
+    })
+
+    describe('when gains focus', () => {
+      it('calls the callback', () => {
+        const onFocus = jest.fn()
+        const wrapper = mount(<TextField onFocus={onFocus} />)
+        wrapper.find('input').simulate('focus')
+        expect(onFocus).toHaveBeenCalled()
+      })
+    })
+
+    describe('when loses focus', () => {
+      it('calls the callback', () => {
+        const onBlur = jest.fn()
+        const wrapper = mount(<TextField onBlur={onBlur} />)
+        wrapper.find('input').simulate('blur')
+        expect(onBlur).toHaveBeenCalled()
+      })
     })
   })
 })

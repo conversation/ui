@@ -123,6 +123,16 @@ TextField.propTypes = {
   onChange: PropTypes.func,
 
   /**
+   * The callback function called when the text field loses focus.
+   */
+  onBlur: PropTypes.func,
+
+  /**
+   * The callback function called when the text field gains focus.
+   */
+  onFocus: PropTypes.func,
+
+  /**
    * The text displayed inside text field before the user enters a value.
    */
   placeholder: PropTypes.string,
