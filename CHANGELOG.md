@@ -1,6 +1,8 @@
 ## Unreleased
 
 * Upgrade storybook to 5.x
+* Added `onBlur` and `onFocus` events to `TextField`
+* Added `onBlur` and `onFocus` events to `Dropdown`
 
 ## 1.11.0
 

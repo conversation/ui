@@ -149,6 +149,16 @@ Dropdown.propTypes = {
   onChange: PropTypes.func,
 
   /**
+   * The callback function called when the text field loses focus.
+   */
+  onBlur: PropTypes.func,
+
+  /**
+   * The callback function called when the text field gains focus.
+   */
+  onFocus: PropTypes.func,
+
+  /**
    * A boolean value indicating whether the dropdown is required to be filled
    * by the user.
    */

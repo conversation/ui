@@ -2,7 +2,7 @@ import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import React from 'react'
 import Select from '@material-ui/core/Select'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 
 import Dropdown from './Dropdown'
 import FormLabel from '../form/FormLabel'
@@ -80,6 +80,49 @@ describe('<Dropdown />', () => {
         </Dropdown>
       ).dive().find(FormHelperText)
       expect(wrapper.props().id).toBe('foo-helper-text')
+    })
+  })
+
+  describe('events', () => {
+    describe('when changed', () => {
+      it('calls the callback', () => {
+        const onChange = jest.fn()
+        const wrapper = mount(
+          <Dropdown value='' onChange={onChange}>
+            <MenuItem value='1'>one</MenuItem>
+            <MenuItem value='2'>two</MenuItem>
+          </Dropdown>
+        )
+        wrapper.find('[role="button"]').simulate('click')
+        wrapper.find(MenuItem).at(1).simulate('click')
+        expect(onChange).toHaveBeenCalled()
+      })
+    })
+
+    describe('when gains focus', () => {
+      it('calls the callback', () => {
+        const onFocus = jest.fn()
+        const wrapper = mount(
+          <Dropdown value='' onFocus={onFocus}>
+            <MenuItem value='1'>one</MenuItem>
+          </Dropdown>
+        )
+        wrapper.find('div[role="button"]').simulate('focus')
+        expect(onFocus).toHaveBeenCalled()
+      })
+    })
+
+    describe('when loses focus', () => {
+      it('calls the callback', () => {
+        const onBlur = jest.fn()
+        const wrapper = mount(
+          <Dropdown value='' onBlur={onBlur}>
+            <MenuItem value='1'>one</MenuItem>
+          </Dropdown>
+        )
+        wrapper.find('div[role="button"]').simulate('blur')
+        expect(onBlur).toHaveBeenCalled()
+      })
     })
   })
 })
