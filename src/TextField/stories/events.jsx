@@ -28,19 +28,10 @@ The \`<TextField>\` component accepts multiple events:
 export default withDocs(md, () =>
   <GridLayout>
     <TextField
-      label='onChange'
+      label='Triggers events'
       onChange={action('change')}
-      placeholder='Trigger on change'
-    />
-    <TextField
-      label='onBlur'
       onBlur={action('blur')}
-      placeholder='Trigger on lose focus'
-    />
-    <TextField
-      label='onFocus'
       onFocus={action('focus')}
-      placeholder='Trigger on gain focus'
     />
   </GridLayout>
 )
