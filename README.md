@@ -87,7 +87,8 @@ make storybook
 Tagged releases of this library will be automatically published to NPM by our
 build pipeline on Travis CI.
 
-To release a new (major/minor/patch) version, on the master branch:
+To release a new (major/minor/patch) version, first update the changelog. Then
+on the master branch:
 
 ```sh
 > npm version minor
