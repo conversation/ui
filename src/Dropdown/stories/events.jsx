@@ -47,18 +47,9 @@ class ExampleDropdown extends React.Component {
 export default withDocs(md, () =>
   <GridLayout>
     <ExampleDropdown
-      helperText='Trigger on change'
-      label='onChange'
+      helperText='Event triggers'
       onChange={action('change')}
-    />
-    <ExampleDropdown
-      helperText='Trigger on lose focus'
-      label='onBlur'
       onBlur={action('blur')}
-    />
-    <ExampleDropdown
-      helperText='Trigger on gain focus'
-      label='onFocus'
       onFocus={action('focus')}
     />
   </GridLayout>
