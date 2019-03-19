@@ -1,3 +1,7 @@
+## 1.13.0 (2019-03-19)
+
+* Allow `ChipInput` to receive `id` prop
+
 ## 1.12.0 (2019-03-18)
 
 * Upgrade storybook to 5.x
