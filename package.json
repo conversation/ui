@@ -12,6 +12,9 @@
     "ui"
   ],
   "main": "dist/index.js",
+  "scripts": {
+    "prepare": "babel --out-dir dist src"
+  },
   "files": [
     "dist"
   ],
