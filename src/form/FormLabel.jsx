@@ -3,7 +3,8 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
   root: {
-    fontSize: theme.typography.pxToRem(14),
+    fontWeight: 'bold',
+    fontSize: theme.typography.pxToRem(12),
     textAlign: 'left'
   }
 })
