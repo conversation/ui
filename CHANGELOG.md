@@ -1,3 +1,7 @@
+## 1.14.0 (2019-03-26)
+
+* Add `ToggleButton` and `ToggleButtonGroup` components
+
 ## 1.13.0 (2019-03-19)
 
 * Allow `ChipInput` to receive `id` prop
