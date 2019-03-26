@@ -17,7 +17,7 @@ export default memoize(() => createMuiTheme({
     // https://material-ui.com/style/typography/#migration-to-typography-v2
     useNextVariants: true,
 
-    fontFamily: 'Montserrat',
+    fontFamily: 'Noto Sans',
 
     body1: {
       fontSize: '1rem',
