@@ -15,6 +15,15 @@ describe('<TextField />', () => {
     expect(wrapper.props().value).toBe('foo')
   })
 
+  describe('with an autoComplete setting', () => {
+    it('sets the autocomplete attr', () => {
+      const wrapper = shallow(
+        <TextField autoComplete='postal-code' />
+      ).dive().find(InputBase)
+      expect(wrapper.props().autoComplete).toBe('postal-code')
+    })
+  })
+
   describe('when disabled', () => {
     it('disables the form control', () => {
       const wrapper = shallow(

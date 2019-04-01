@@ -63,7 +63,6 @@ export const TextField = ({
   ...other
 }) => {
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
-
   return (
     <FormControl aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}>
       {label && (
@@ -84,6 +83,11 @@ export const TextField = ({
 }
 
 TextField.propTypes = {
+  /**
+   * Overrides the styles applied to the component.
+   */
+  autoComplete: PropTypes.string,
+
   /**
    * Overrides the styles applied to the component.
    */
@@ -158,6 +162,7 @@ TextField.propTypes = {
 }
 
 TextField.defaultProps = {
+  autoComplete: 'off',
   disabled: false,
   error: false,
   fullWidth: false,
