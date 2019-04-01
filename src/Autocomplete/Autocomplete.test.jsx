@@ -28,6 +28,22 @@ describe('<Autocomplete />', () => {
     })
   })
 
+  describe('with an ID', () => {
+    it('sets the text field ID', () => {
+      const wrapper = mount(
+        <Autocomplete id='foo' />
+      ).find(TextField)
+      expect(wrapper.props().id).toBe('foo')
+    })
+
+    it('sets a default downshift generated ID', () => {
+      const wrapper = mount(
+        <Autocomplete />
+      ).find(TextField)
+      expect(wrapper.props().id).toMatch(/downshift-\d*-input/)
+    })
+  })
+
   describe('with label', () => {
     it('renders a label', () => {
       const wrapper = mount(
@@ -61,6 +77,28 @@ describe('<Autocomplete />', () => {
         wrapper.find('MenuItem').simulate('click')
 
         expect(onChange).toHaveBeenCalledWith({ value: 'AU', label: 'Australia' })
+      })
+    })
+
+    describe('when focussed', () => {
+      it('calls the callback', () => {
+        const onFocus = jest.fn()
+        const wrapper = mount(
+          <Autocomplete onFocus={onFocus} suggestions={suggestions} />
+        )
+        wrapper.find('input').simulate('focus')
+        expect(onFocus).toHaveBeenCalled()
+      })
+    })
+
+    describe('when blurred', () => {
+      it('calls the callback', () => {
+        const onBlur = jest.fn()
+        const wrapper = mount(
+          <Autocomplete onBlur={onBlur} suggestions={suggestions} />
+        )
+        wrapper.find('input').simulate('blur')
+        expect(onBlur).toHaveBeenCalled()
       })
     })
   })

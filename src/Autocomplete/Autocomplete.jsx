@@ -118,8 +118,11 @@ export const Autocomplete = ({
   error,
   fullWidth,
   helperText,
+  id,
   label,
+  onBlur,
   onChange,
+  onFocus,
   placeholder,
   required,
   suggestions
@@ -139,12 +142,19 @@ export const Autocomplete = ({
     }) => {
       const results = getSuggestions(suggestions, inputValue)
       const isVisible = isOpen && results.length > 0
+      const inputProps = { onBlur, onFocus }
+
+      // Only set the ID property if we are actually overriding it. Otherwise,
+      // let Downshift automatically generate an ID for us.
+      if (id !== undefined) {
+        inputProps.id = id
+      }
 
       return (
         <div className={classes.container}>
           {
             renderInput({
-              InputProps: getInputProps(),
+              InputProps: getInputProps(inputProps),
               disabled,
               error,
               fullWidth,
@@ -192,14 +202,29 @@ Autocomplete.propTypes = {
   helperText: PropTypes.string,
 
   /**
+   * The `id` of the underlying `<input>` element.
+   */
+  id: PropTypes.string,
+
+  /**
    * The text displayed above the dropdown.
    */
   label: PropTypes.string,
 
   /**
+   * The callback function called when the text field loses focus.
+   */
+  onBlur: PropTypes.func,
+
+  /**
    * The callback function called when the dropdown value changes.
    */
   onChange: PropTypes.func,
+
+  /**
+   * The callback function called when the text field gains focus.
+   */
+  onFocus: PropTypes.func,
 
   /**
    * The text displayed inside text field before the user enters a value.

@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Add `id`, `onBlur`, and `onFocus` props to `Autocomplete` component
+
 ## 1.15.0 (2019-03-31)
 
 * Upgrade storybook to 5.0.5
