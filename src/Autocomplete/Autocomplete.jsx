@@ -120,6 +120,7 @@ export const Autocomplete = ({
   helperText,
   id,
   label,
+  name,
   onBlur,
   onChange,
   onFocus,
@@ -148,6 +149,12 @@ export const Autocomplete = ({
       // let Downshift automatically generate an ID for us.
       if (id !== undefined) {
         inputProps.id = id
+      }
+
+      // Only set the name property if we are actually overriding it. Otherwise,
+      // don't add a name field.
+      if (name !== undefined) {
+        inputProps.name = name
       }
 
       return (
@@ -210,6 +217,11 @@ Autocomplete.propTypes = {
    * The text displayed above the dropdown.
    */
   label: PropTypes.string,
+
+  /**
+   * The name of the input field
+   */
+  name: PropTypes.string,
 
   /**
    * The callback function called when the text field loses focus.
