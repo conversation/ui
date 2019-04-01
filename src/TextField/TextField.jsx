@@ -52,6 +52,7 @@ const styles = theme => {
  * ```
  */
 export const TextField = ({
+  InputProps,
   disabled,
   error,
   fullWidth,
@@ -70,7 +71,9 @@ export const TextField = ({
           {label}
         </FormLabel>
       )}
-      <InputBase {...other} id={id} />
+
+      <InputBase {...other} id={id} {...InputProps} />
+
       {helperText && (
         <FormHelperText id={helperTextId}>
           {helperText}

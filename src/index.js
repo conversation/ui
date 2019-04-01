@@ -24,6 +24,7 @@ export { default as withTheme } from '@material-ui/core/styles/withTheme'
 
 // Our API.
 export { ThemeProvider, themes } from './styles'
+export { default as Autocomplete } from './Autocomplete'
 export { default as Button } from './Button'
 export { default as Card } from './card/Card'
 export { default as CardAction } from './card/CardAction'
