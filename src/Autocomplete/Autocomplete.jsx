@@ -4,8 +4,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
 
-import { TextField, withStyles } from '../index'
+import { TextField } from '../index'
 
 function renderInput ({ InputProps, fullWidth, ref, ...other }) {
   const otherProps = { ...other, ...InputProps }
