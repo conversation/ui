@@ -1,3 +1,7 @@
+## Unreleased
+
+* Allow `Autocomplete` to pass the `name` prop to the underlying `Textfield` component
+
 ## 1.17.0 (2019-04-02)
 
 * Add `id`, `onBlur`, and `onFocus` props to `Autocomplete` component

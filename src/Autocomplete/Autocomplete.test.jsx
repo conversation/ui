@@ -44,6 +44,22 @@ describe('<Autocomplete />', () => {
     })
   })
 
+  describe('with a name', () => {
+    it('sets the input field name', () => {
+      const wrapper = mount(
+        <Autocomplete name='name' />
+      ).find(TextField)
+      expect(wrapper.props().name).toBe('name')
+    })
+
+    it('does not add a name field', () => {
+      const wrapper = mount(
+        <Autocomplete />
+      ).find(TextField)
+      expect(wrapper.props().name).toBe(undefined)
+    })
+  })
+
   describe('with label', () => {
     it('renders a label', () => {
       const wrapper = mount(
