@@ -1,4 +1,4 @@
-## Unreleased
+##1.18.0 (2019-04-02)
 
 * Allow `Autocomplete` to pass the `name` prop to the underlying `Textfield` component
 
