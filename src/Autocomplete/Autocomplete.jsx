@@ -220,7 +220,7 @@ Autocomplete.propTypes = {
   label: PropTypes.string,
 
   /**
-   * The name of the input field
+   * The `name` of the underlying `<input>` element.
    */
   name: PropTypes.string,
 
