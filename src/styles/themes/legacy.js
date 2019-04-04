@@ -10,7 +10,7 @@ export default memoize(() => createMuiTheme({
   palette: {
     primary: { main: '#5499db' },
     secondary: { main: '#50ab50', contrastText: '#fff' },
-    error: { main: '#d8352a' }
+    error: { main: '#990000', border: '#d8352a' }
   },
   typography: {
     // Enable v2 variants.
