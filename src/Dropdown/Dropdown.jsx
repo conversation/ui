@@ -30,7 +30,7 @@ const styles = theme => {
       borderColor: theme.palette.primary.main
     },
     error: {
-      borderColor: theme.palette.error.main
+      borderColor: theme.palette.error.border
     },
     input: {
       padding: '10px 32px 10px 12px'
