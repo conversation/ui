@@ -3,6 +3,7 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
 import PropTypes from 'prop-types'
 import React from 'react'
+import isBoolean from 'lodash/isBoolean'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 import FormLabel from '../form/FormLabel'
@@ -53,6 +54,7 @@ const styles = theme => {
  */
 export const TextField = ({
   InputProps,
+  autoComplete,
   disabled,
   error,
   fullWidth,
@@ -64,6 +66,11 @@ export const TextField = ({
 }) => {
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
 
+  // Sugar for setting autoComplete using a boolean value.
+  if (isBoolean(autoComplete)) {
+    autoComplete = autoComplete ? 'on' : 'off'
+  }
+
   return (
     <FormControl aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}>
       {label && (
@@ -72,7 +79,7 @@ export const TextField = ({
         </FormLabel>
       )}
 
-      <InputBase {...other} id={id} {...InputProps} />
+      <InputBase {...other} autoComplete={autoComplete} id={id} {...InputProps} />
 
       {helperText && (
         <FormHelperText id={helperTextId}>
@@ -84,6 +91,15 @@ export const TextField = ({
 }
 
 TextField.propTypes = {
+  /**
+   * The `autoComplete` value of the underlying `<input>` element. It can be
+   * specified as either a boolean or string value.
+   */
+  autoComplete: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string
+  ]),
+
   /**
    * Overrides the styles applied to the component.
    */
@@ -158,6 +174,7 @@ TextField.propTypes = {
 }
 
 TextField.defaultProps = {
+  autoComplete: false,
   disabled: false,
   error: false,
   fullWidth: false,

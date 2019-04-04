@@ -15,6 +15,29 @@ describe('<TextField />', () => {
     expect(wrapper.props().value).toBe('foo')
   })
 
+  describe('with autoComplete', () => {
+    it('converts a true value to "on" for the autoComplete prop', () => {
+      const wrapper = shallow(
+        <TextField autoComplete />
+      ).dive().find(InputBase)
+      expect(wrapper.props().autoComplete).toBe('on')
+    })
+
+    it('converts a false value to "off" for the autoComplete prop', () => {
+      const wrapper = shallow(
+        <TextField autoComplete={false} />
+      ).dive().find(InputBase)
+      expect(wrapper.props().autoComplete).toBe('off')
+    })
+
+    it('passes a string value for the autoComplete prop', () => {
+      const wrapper = shallow(
+        <TextField autoComplete='foo' />
+      ).dive().find(InputBase)
+      expect(wrapper.props().autoComplete).toBe('foo')
+    })
+  })
+
   describe('when disabled', () => {
     it('disables the form control', () => {
       const wrapper = shallow(
