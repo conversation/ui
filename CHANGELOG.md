@@ -1,4 +1,4 @@
-## Unreleased
+## 1.18.1 (2019-04-04)
 
 * Allow specifying the `autoComplete` prop as a boolean or string
 
