@@ -29,7 +29,7 @@ const styles = theme => {
       margin: theme.spacing.unit / 2
     },
     error: {
-      borderColor: `${theme.palette.error.main}`
+      borderColor: theme.palette.error.border
     },
     focused: {
       borderColor: `${theme.palette.primary.main}`
