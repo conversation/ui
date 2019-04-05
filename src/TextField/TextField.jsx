@@ -17,6 +17,7 @@ const styles = theme => {
       backgroundColor: theme.palette.common.white,
       border: `1px solid ${borderColor}`,
       borderRadius: 4,
+      overflow: 'hidden',
       transition: theme.transitions.create('border-color', {
         duration: theme.transitions.duration.shorter
       })
