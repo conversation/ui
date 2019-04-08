@@ -7,9 +7,11 @@ import memoize from 'lodash/memoize'
  */
 export default memoize(() => createMuiTheme({
   palette: {
-    primary: { main: '#29339b', light: '#48509e' },
-    secondary: { main: '#006060', light: '#5dd39e' },
-    error: { main: '#aa1155', border: '#aa1155' }
+    neutral: { 900: '#000000', 800: '#202020', 700: '#383838', 600: '#555768', 400: '#AFB2BA', 200: '#D6D6DA', 50: '#f1f1f2', 40: '#f8f8f8', 0: '#ffffff' },
+    core: { 700: '#990000', 600: '#D8352A', 400: '#E37169', 200: '#ECC3C0' },
+    accent: { 700: '#29339B', 600: '#48509E', 200: '#B1B4DA' },
+    positive: { 700: '#047C56', 600: '#02A371', 400: '#19C992', 200: '#8CE4C8' },
+    aware: { 600: '#F5A623', 200: '#F6E7AD' }
   },
   typography: {
     // Enable v2 variants.
