@@ -1,4 +1,5 @@
 .cache
+.node-version
 dist
 doc
 node_modules
