@@ -37,7 +37,7 @@ const Swatch = ({ classes, colour, theme, variant, ...other }) => {
     <Paper className={classes.root} elevation={0} style={{ backgroundColor: value[variant] }}>
       { value[variant]
         ? <div className={classes.label}>
-          <ColourLabel label={colour} colour={value} variant='body1' />
+          <ColourLabel label={colour} colour={value} variant='body2' />
           {variant !== 'main' ? <ColourLabel label={variant} colour={value} variant='caption' /> : null }
         </div> : null
       }
