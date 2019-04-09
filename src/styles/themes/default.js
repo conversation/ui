@@ -20,26 +20,29 @@ const theme = createMuiTheme({
     // https://material-ui.com/style/typography/#migration-to-typography-v2
     useNextVariants: true,
 
-    fontFamily: 'Montserrat',
+    fontFamily: 'Noto Sans',
+
+    h1: { fontFamily: 'Montserrat' },
+    h2: { fontFamily: 'Montserrat' },
+    h3: { fontFamily: 'Montserrat' },
+    h4: { fontFamily: 'Montserrat' },
+    h5: { fontFamily: 'Montserrat' },
+    h6: { fontFamily: 'Montserrat' },
 
     body1: {
-      fontSize: '1rem',
-      lineHeight: '1.5'
-    },
-
-    body2: {
       fontFamily: 'Libre Baskerville',
       fontSize: '1rem',
       lineHeight: '1.5'
     },
 
     button: {
-      fontFamily: 'Noto Sans',
+      letterSpacing: 0.25,
       textTransform: 'none'
     },
 
-    caption: {
-      fontFamily: 'Noto Sans'
+    overline: {
+      letterSpacing: 0.25,
+      textTransform: 'none'
     }
   }
 })
