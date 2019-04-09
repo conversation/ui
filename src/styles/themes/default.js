@@ -11,6 +11,7 @@ const theme = createMuiTheme({
     // mui colours
     primary: { main: '#5499db' },
     secondary: { main: '#f1f1f2' },
+    error: { main: '#990000', border: '#d8352a' },
 
     // expanded colours
     core: { main: '#D8352A' }
