@@ -22,9 +22,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/conversation/ui.git"
   },
-  "bugs": {
-    "url": "https://github.com/conversation/ui/issues"
-  },
   "dependencies": {
     "@material-ui/core": "^3.9.1",
     "@material-ui/lab": "^3.0.0-alpha.30",
