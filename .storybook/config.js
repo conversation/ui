@@ -3,9 +3,9 @@ import 'typeface-montserrat'
 import 'typeface-noto-sans'
 
 import React from 'react'
-import { ThemeProvider, themes } from '../src'
+import { ThemeProvider } from '../src'
 import { addDecorator, configure } from '@storybook/react'
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs'
 
 function loadStories () {
   importAll(require.context('../src', true, /.stories.jsx?$|stories\/index.jsx?$/))
@@ -20,11 +20,8 @@ function importAll (r) {
 }
 
 addDecorator(story => {
-  const name = select('Theme', Object.keys(themes), 'legacy')
-  const theme = themes[name]()
-
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       {story()}
     </ThemeProvider>
   )

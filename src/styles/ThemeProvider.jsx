@@ -3,9 +3,11 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import legacy from './themes/legacy'
+import defaultTheme from './themes/default'
 
-const ThemeProvider = ({ children, sheetsManager, sheetsRegistry, theme, ...other }) => (
+const theme = defaultTheme()
+
+const ThemeProvider = ({ children, sheetsManager, sheetsRegistry, ...other }) => (
   <JssProvider registry={sheetsRegistry}>
     <MuiThemeProvider theme={theme} sheetsManager={sheetsManager} {...other} >
       {children}
@@ -27,16 +29,7 @@ ThemeProvider.propTypes = {
   /**
    * A `sheetsRegistry` is used to keep track of the stylesheet.
    */
-  sheetsRegistry: PropTypes.object,
-
-  /**
-   * A theme object or function.
-   */
-  theme: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired
-}
-
-ThemeProvider.defaultProps = {
-  theme: legacy()
+  sheetsRegistry: PropTypes.object
 }
 
 export default ThemeProvider
