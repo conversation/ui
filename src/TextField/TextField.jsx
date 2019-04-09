@@ -53,42 +53,48 @@ const styles = theme => {
  * />
  * ```
  */
-export const TextField = ({
-  InputProps,
-  autoComplete,
-  disabled,
-  error,
-  fullWidth,
-  helperText,
-  id,
-  label,
-  required,
-  ...other
-}) => {
-  const helperTextId = helperText && id ? `${id}-helper-text` : undefined
+class TextField extends React.Component {
+  render () {
+    const {
+      InputProps,
+      disabled,
+      error,
+      fullWidth,
+      helperText,
+      id,
+      label,
+      required,
+      ...other
+    } = this.props
 
-  // Sugar for setting autoComplete using a boolean value.
-  if (isBoolean(autoComplete)) {
-    autoComplete = autoComplete ? 'on' : 'off'
+    const helperTextId = helperText && id ? `${id}-helper-text` : undefined
+
+    // Sugar for setting autoComplete using a boolean value.
+    let autoComplete = this.props.autoComplete
+    if (isBoolean(autoComplete)) {
+      autoComplete = autoComplete ? 'on' : 'off'
+    }
+
+    return (
+      <FormControl
+        aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}
+      >
+        {label && (
+          <FormLabel htmlFor={id} required={required}>
+            {label}
+          </FormLabel>
+        )}
+
+        <InputBase {...other} autoComplete={autoComplete} id={id} {...InputProps} />
+
+        {helperText && (
+          <FormHelperText id={helperTextId}>
+            {helperText}
+          </FormHelperText>
+        )}
+      </FormControl>
+    )
   }
-
-  return (
-    <FormControl aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}>
-      {label && (
-        <FormLabel htmlFor={id} required={required}>
-          {label}
-        </FormLabel>
-      )}
-
-      <InputBase {...other} autoComplete={autoComplete} id={id} {...InputProps} />
-
-      {helperText && (
-        <FormHelperText id={helperTextId}>
-          {helperText}
-        </FormHelperText>
-      )}
-    </FormControl>
-  )
 }
 
 TextField.propTypes = {

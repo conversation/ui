@@ -1,6 +1,7 @@
 ## Unreleased
 
 * Set overflow hidden for `TextField` input wrapper
+* Rewrite TextField as a class to allow adding refs
 
 ## 1.18.1 (2019-04-04)
 
