@@ -1,4 +1,4 @@
-.PHONY: clean deploy dist doc lint node_modules publish release storybook test
+.PHONY: clean deploy dist doc lint node_modules publish release storybook test watch
 
 node_modules:
 	@npm install
