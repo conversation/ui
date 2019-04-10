@@ -1,3 +1,5 @@
+import * as colours from './colours'
+
 // Re-exported Material UI (MUI) components.
 //
 // Ideally, we shouldn't expose too much of the raw MUI API because it means
@@ -24,10 +26,12 @@ export { default as withTheme } from '@material-ui/core/styles/withTheme'
 
 // Our API.
 export { ThemeProvider } from './styles'
+export { colours }
 export { default as Autocomplete } from './Autocomplete'
 export { default as Button } from './Button'
 export { default as Card } from './card/Card'
 export { default as CardAction } from './card/CardAction'
+export { default as ChipInput } from './ChipInput'
 export { default as DatePicker } from './pickers/DatePicker'
 export { default as DateTimePicker } from './pickers/DateTimePicker'
 export { default as Dialog } from './dialog/Dialog'
@@ -40,5 +44,4 @@ export { default as Swatch } from './colours/Swatch'
 export { default as Switch } from './Switch'
 export { default as TextField } from './TextField'
 export { default as TimePicker } from './pickers/TimePicker'
-export { default as ChipInput } from './ChipInput'
 export { default as Typography } from './Typography'
