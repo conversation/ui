@@ -1,1 +1,6 @@
+export { default as accent } from './accent'
+export { default as aware } from './aware'
+export { default as core } from './core'
+export { default as neutral } from './neutral'
+export { default as positive } from './positive'
 export { default } from './Swatch'
