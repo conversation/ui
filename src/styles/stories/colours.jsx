@@ -3,15 +3,16 @@ import React from 'react'
 import { Swatch } from '../../index'
 import { GridLayout } from '../../util'
 
-const COLOURS = ['primary', 'secondary', 'error']
+const COLOURS = ['primary', 'secondary', 'error', 'core']
+const VARIANTS = ['dark', 'main', 'light']
 
 export default () => (
   <GridLayout>
-    {COLOURS.map((colour, index) =>
+    {VARIANTS.map((variant, index) =>
       <div key={index}>
-        <Swatch colour={colour} />
-        <Swatch colour={colour} variant='dark' />
-        <Swatch colour={colour} variant='light' />
+        {COLOURS.map((colour, index2) =>
+          <Swatch colour={colour} variant={variant} />
+        )}
       </div>
     )}
   </GridLayout>

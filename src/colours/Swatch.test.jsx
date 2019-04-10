@@ -6,10 +6,10 @@ import Paper from '@material-ui/core/Paper'
 import ThemeProvider from '../styles/ThemeProvider'
 import Typography from '../Typography'
 
-import legacy from '../styles/themes/legacy'
+import defaultTheme from '../styles/themes/default'
 
 describe('<Swatch />', () => {
-  const theme = legacy()
+  const theme = defaultTheme()
 
   it('renders a <Paper> element', () => {
     const wrapper = mount(
