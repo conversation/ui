@@ -1,6 +1,7 @@
 ## Unreleased
 
 * Set overflow hidden for `TextField` input wrapper
+* Unify colours and typography under single theme
 
 ## 1.18.1 (2019-04-04)
 
