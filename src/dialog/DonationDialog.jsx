@@ -76,8 +76,8 @@ export const DonationDialog = ({ children, open, onVisible, onClose, classes, hr
   return (
     <MaterialDialog {...dialogProps} >
       <MaterialDialogActions className={classes.topActions}>
-        <MaterialIconButton color='inherit' className={classes.close} onClick={onClose}>
-          <CloseIcon>{closeText}</CloseIcon>
+        <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
+          <CloseIcon />
         </MaterialIconButton>
       </MaterialDialogActions>
       {children}

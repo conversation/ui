@@ -1,3 +1,7 @@
+## Unreleased
+
+* Set ARIA label on `DonationDialog` close button
+
 ## 1.19.1 (2019-04-11)
 
 * Include non-JS assets in output directory
