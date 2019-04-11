@@ -1,4 +1,4 @@
-## Unreleased
+## 1.19.2 (2019-04-11)
 
 * Set ARIA label on `DonationDialog` close button
 * Upgrade react to 16.8.6
