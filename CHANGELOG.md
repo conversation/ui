@@ -1,3 +1,7 @@
+## 1.19.1 (2019-04-11)
+
+* Include non-JS assets in output directory
+
 ## 1.19.0 (2019-04-11)
 
 * Set overflow hidden for `TextField` input wrapper
