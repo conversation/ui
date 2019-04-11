@@ -1,8 +1,12 @@
-## Unreleased
+## 1.19.0 (2019-04-11)
 
 * Set overflow hidden for `TextField` input wrapper
 * Unify colours and typography under single theme
 * Add named colours
+* Add `Avatar` component
+* Add `MiniDivider` component
+* Add `Person` component
+* Add `DonationDialog` component
 
 ## 1.18.1 (2019-04-04)
 
