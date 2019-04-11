@@ -38,13 +38,17 @@ const PropDefinitionsTable = ({ propDefinitions }) => (
  * based on the docgen data.
  */
 const ComponentOverview = ({ component, heading, children }) => (
-  <div className='markdown-body'>
-    <h1>{heading || 'Overview'}</h1>
-    <Marked md={get(component, '__docgenInfo.description', '')} />
+  <React.Fragment>
+    <div className='markdown-body'>
+      <h1>{heading || 'Overview'}</h1>
+      <Marked md={get(component, '__docgenInfo.description', '')} />
+    </div>
     {children}
-    <h2>Props</h2>
-    <PropDefinitionsTable propDefinitions={propDefinitions(component)} />
-  </div>
+    <div className='markdown-body'>
+      <h2>Props</h2>
+      <PropDefinitionsTable propDefinitions={propDefinitions(component)} />
+    </div>
+  </React.Fragment>
 )
 
 export default ComponentOverview
