@@ -22,9 +22,9 @@ const styles = theme => ({
  * <Avatar src={YOUR_URL} />
  * ```
  */
-export const Avatar = ({ src, size, classes }) => {
+export const Avatar = ({ src, size, classes, ...other }) => {
   return (
-    <MaterialAvatar src={src} classes={classes} style={{ width: size, height: size }} />
+    <MaterialAvatar {...other} src={src} classes={classes} style={{ width: size, height: size }} />
   )
 }
 
