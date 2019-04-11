@@ -8,14 +8,14 @@ describe('<Button />', () => {
   it('maps the colour prop', () => {
     const wrapper = shallow(
       <Button colour='primary'>Click Me!</Button>
-    ).find(MaterialButton)
+    ).dive().find(MaterialButton)
     expect(wrapper.props().color).toBe('primary')
   })
 
   it('passes props to Material UI', () => {
     const wrapper = shallow(
       <Button disabled>Click Me!</Button>
-    ).find(MaterialButton)
+    ).dive().find(MaterialButton)
     expect(wrapper.props().disabled).toBe(true)
   })
 

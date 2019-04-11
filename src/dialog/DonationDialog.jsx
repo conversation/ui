@@ -1,4 +1,3 @@
-import MaterialButton from '@material-ui/core/Button'
 import MaterialDialog from '@material-ui/core/Dialog'
 import MaterialIconButton from '@material-ui/core/IconButton'
 import MaterialDialogActions from '@material-ui/core/DialogActions'
@@ -7,6 +6,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 import DialogActions from './DialogActions'
+import Button from '../Button'
 
 const styles = theme => ({
   paper: {
@@ -33,7 +33,6 @@ const styles = theme => ({
   button: {
     backgroundColor: '#fff',
     fontWeight: 'bold',
-    padding: '0.5em 3em',
     '&:hover': {
       backgroundColor: '#f1f1f2'
     }
@@ -83,9 +82,9 @@ export const DonationDialog = ({ children, open, onVisible, onClose, classes, hr
       </MaterialDialogActions>
       {children}
       <DialogActions className={classes.bottomActions}>
-        <MaterialButton href={href} className={classes.button}>
+        <Button prominent href={href} className={classes.button}>
           {donateText}
-        </MaterialButton>
+        </Button>
       </DialogActions>
     </MaterialDialog>
   )
