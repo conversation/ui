@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react'
 
 import content from './content'
 import overview from './overview'
-import donationDialog from './donation_dialog'
+import donationDialog from './donationDialog'
 
 storiesOf('Dialogs', module)
   .add('Overview', overview)
