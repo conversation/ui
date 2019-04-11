@@ -37,7 +37,7 @@ Avatar.propTypes = {
   /**
    * The size of the button, limited to select sizes.
    */
-  size: PropTypes.oneOf([DEFAULT_AVATAR_SIZE])
+  size: PropTypes.oneOf([48, DEFAULT_AVATAR_SIZE])
 }
 
 Avatar.defaultProps = {
