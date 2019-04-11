@@ -130,7 +130,8 @@ DonationDialog.propTypes = {
 DonationDialog.defaultProps = {
   open: false,
   href: 'http://example.com',
-  donateText: 'Donate'
+  donateText: 'Donate',
+  closeText: 'Close'
 }
 
 export default withStyles(styles)(DonationDialog)
