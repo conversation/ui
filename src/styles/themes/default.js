@@ -23,12 +23,12 @@ const theme = createMuiTheme({
 
     fontFamily: 'Noto Sans',
 
-    h1: { fontFamily: 'Montserrat' },
-    h2: { fontFamily: 'Montserrat' },
-    h3: { fontFamily: 'Montserrat' },
-    h4: { fontFamily: 'Montserrat' },
-    h5: { fontFamily: 'Montserrat' },
-    h6: { fontFamily: 'Montserrat' },
+    h1: { fontFamily: 'Montserrat', fontWeight: 700 },
+    h2: { fontFamily: 'Montserrat', fontWeight: 700 },
+    h3: { fontFamily: 'Montserrat', fontWeight: 700 },
+    h4: { fontFamily: 'Montserrat', fontWeight: 600 },
+    h5: { fontFamily: 'Montserrat', fontWeight: 600 },
+    h6: { fontFamily: 'Montserrat', fontWeight: 700 },
 
     body1: {
       fontFamily: 'Libre Baskerville',
