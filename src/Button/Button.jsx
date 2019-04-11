@@ -1,6 +1,16 @@
 import MaterialButton from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
 import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
+
+const styles = theme => ({
+  root: {
+    boxShadow: "none",
+    "&:active": {
+      boxShadow: "none",
+    }
+  }
+})
 
 /**
   * The `<Button>` component allows users to take actions, by tapping or
@@ -88,4 +98,4 @@ Button.defaultProps = {
   variant: 'contained'
 }
 
-export default Button
+export default withStyles(styles)(Button)
