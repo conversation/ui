@@ -39,7 +39,10 @@ class ExampleDialog extends React.Component {
     return (
       <ComponentOverview heading='DonationDialog' component={UnwrappedDonationDialog}>
         <React.Fragment>
-          <h2>Example</h2>
+          <div className='markdown-body'>
+            <h2>Example</h2>
+          </div>
+
           <Button colour='primary' onClick={this.handleOpen}>Open Dialog</Button>
           <DonationDialog href='https://donate.theconversation.com' open={this.state.open} onClose={this.handleClose} donateText='Donate now'>
             <DialogAvatar src={koala} />

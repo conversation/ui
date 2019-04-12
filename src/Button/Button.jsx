@@ -1,6 +1,21 @@
 import MaterialButton from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
 import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
+import classNames from 'classnames'
+
+const styles = theme => ({
+  root: {
+    boxShadow: 'none',
+    '&:active': {
+      boxShadow: 'none'
+    }
+  },
+  prominent: {
+    paddingLeft: '2.5em',
+    paddingRight: '2.5em'
+  }
+})
 
 /**
   * The `<Button>` component allows users to take actions, by tapping or
@@ -14,11 +29,19 @@ import React from 'react'
   * </Button>
   * ```
   */
-const Button = ({ children, colour, ...other }) => (
-  <MaterialButton color={colour} {...other}>
-    {children}
-  </MaterialButton>
-)
+const Button = ({ classes, children, colour, prominent, className, ...other }) => {
+  const muiClasses = {
+    root: classes.root
+  }
+
+  const joinedClassNames = classNames(className, { [classes.prominent]: prominent })
+
+  return (
+    <MaterialButton classes={muiClasses} color={colour} className={joinedClassNames} {...other}>
+      {children}
+    </MaterialButton>
+  )
+}
 
 Button.propTypes = {
   /**
@@ -59,6 +82,12 @@ or a component.
   fullWidth: PropTypes.bool,
 
   /**
+   * If true, the button will have slightly more padding around the text,
+   * making it a little bit larger than usual.
+   */
+  prominent: PropTypes.bool,
+
+  /**
    * The URL to link to when the button is clicked. If defined, an `<a>`
    * element will be used as the root node.
    */
@@ -84,8 +113,9 @@ Button.defaultProps = {
   colour: 'default',
   disabled: false,
   fullWidth: false,
+  prominent: false,
   size: 'medium',
   variant: 'contained'
 }
 
-export default Button
+export default withStyles(styles)(Button)
