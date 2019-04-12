@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react'
 
-import articleDonationBanner from './article_donation_banner'
+import articleDonationBanner from './articleDonationBanner'
 
 storiesOf('Promos', module)
   .add('ArticleDonationBanner', articleDonationBanner)
