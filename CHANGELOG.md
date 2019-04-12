@@ -1,6 +1,6 @@
-## Unreleased
+## 1.19.3 (2019-04-12)
 
-* Set the `DonationDialog` actions bottom margin to 32px
+* Set the `DonationDialog` actions bottom margin to 48px
 
 ## 1.19.2 (2019-04-11)
 
