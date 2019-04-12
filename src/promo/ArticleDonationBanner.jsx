@@ -45,12 +45,9 @@ const styles = theme => ({
 export const ArticleDonationBanner = ({ children, classes, href, donateText }) => {
   const filteredChildren = children.filter(component => component.key !== 'attribution')
   const attribution = children.filter(component => component.key === 'attribution')
-  const paperClasses = {
-    root: classes.root
-  }
 
   return (
-    <Paper elevation={0} classes={paperClasses}>
+    <Paper elevation={0} className={classes.root}>
       {filteredChildren}
       <Typography paragraph>
         <Button prominent className={classes.button} href={href}>{donateText}</Button>
