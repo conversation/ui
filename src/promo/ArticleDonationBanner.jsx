@@ -24,11 +24,10 @@ const styles = theme => ({
 
 /**
  * The `<ArticleDonationBanner>` component is a block that can contain text and
- * attribution, intended for donations campaigns. It has a callback, `onVisible`,
- * for tracking impressions.
+ * attribution, intended for donations campaigns.
  *
  * ~~~js
- * <ArticleDonationBanner href="http://donate.theconverastion.com" donateText="Donate now">
+ * <ArticleDonationBanner href="http://donate.theconversation.com" donateText="Donate now">
  *   <Typography variant="h6" gutterBottom>Some text</Typography>
  *   <Typography variant="body1" paragraph>
  *     More text
@@ -63,7 +62,7 @@ export const ArticleDonationBanner = ({ children, classes, href, donateText }) =
 
 ArticleDonationBanner.propTypes = {
   /**
-   * Any sub-components you want to render. Children with a key of 'attribution'
+   * Any sub-components you want to render. Children with a key of `attribution`
    * will be rendered below the donate button.
    */
   children: PropTypes.node.isRequired,
