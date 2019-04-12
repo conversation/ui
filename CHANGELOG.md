@@ -1,3 +1,7 @@
+## Unreleased
+
+* Set the `DonationDialog` actions bottom margin to 32px
+
 ## 1.19.2 (2019-04-11)
 
 * Set ARIA label on `DonationDialog` close button
