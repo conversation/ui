@@ -1,3 +1,11 @@
+## 1.20.0 (2019-04-12)
+
+* Remove box shadow from buttons
+* Make heading variants bold
+* Add `prominent` prop to `Button` component
+* Add extra allowable avatar size
+* Add `ArticleDonationBanner` component
+
 ## 1.19.3 (2019-04-12)
 
 * Set the `DonationDialog` actions bottom margin to 48px
