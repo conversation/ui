@@ -23,7 +23,7 @@ const styles = theme => ({
   bottomActions: {
     justifyContent: 'center',
     marginTop: 0,
-    marginBottom: theme.spacing.unit * 4
+    marginBottom: theme.spacing.unit * 6
   },
   close: {
     margin: theme.spacing.unit
