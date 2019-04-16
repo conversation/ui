@@ -14,7 +14,11 @@ const styles = theme => ({
   // themes and palettes properly
   button: {
     backgroundColor: theme.palette.core && theme.palette.core.main,
-    color: theme.palette.primary.contrastText,
+
+    // We need to mark the colour with `!important` to avoid global hyperlink
+    // styles overriding this value.
+    color: [theme.palette.primary.contrastText, '!important'],
+
     fontWeight: 'bold',
     '&:hover': {
       backgroundColor: theme.palette.core && theme.palette.core.main
