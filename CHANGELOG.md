@@ -1,3 +1,7 @@
+## 1.20.1 (2019-04-17)
+
+* Fix global CSS conflict with `ArticleDonationBanner` button
+
 ## 1.20.0 (2019-04-12)
 
 * Remove box shadow from buttons
