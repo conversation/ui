@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 1.21.0 (2019-04-18)
+
  * Allow type number for TextField input
 
 ## 1.20.1 (2019-04-17)
