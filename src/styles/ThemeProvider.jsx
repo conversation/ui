@@ -7,8 +7,8 @@ import defaultTheme from './themes/default'
 
 const theme = defaultTheme()
 
-const ThemeProvider = ({ children, sheetsManager, sheetsRegistry, ...other }) => (
-  <JssProvider registry={sheetsRegistry}>
+const ThemeProvider = ({ children, sheetsManager, sheetsRegistry, generateClassName, ...other }) => (
+  <JssProvider registry={sheetsRegistry} generateClassName={generateClassName} >
     <MuiThemeProvider theme={theme} sheetsManager={sheetsManager} {...other} >
       {children}
     </MuiThemeProvider>
@@ -29,7 +29,13 @@ ThemeProvider.propTypes = {
   /**
    * A `sheetsRegistry` is used to keep track of the stylesheet.
    */
-  sheetsRegistry: PropTypes.object
+  sheetsRegistry: PropTypes.object,
+
+  /**
+   * Allows sharing of class name generator so that generated class names
+   * will remain unique even when rendering multiple react trees.
+   */
+  generateClassName: PropTypes.any
 }
 
 export default ThemeProvider
