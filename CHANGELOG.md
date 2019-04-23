@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 1.22.0 (2019-04-23)
+
+ * Allow sharing class name generators across instances of `ThemeProvider`
+
 ## 1.21.0 (2019-04-18)
 
  * Allow type number for TextField input
