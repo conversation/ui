@@ -1,5 +1,11 @@
 ## Unreleased
 
+## 1.23.0 (2019-04-24)
+ * Add `DonationBanner`
+ * Add `ThinDonationBanner`
+ * Remove bottom padding from `DialogContent`
+ * Tweak spacing around Avatar in `ArticleDonationBanner`
+
 ## 1.22.0 (2019-04-23)
 
  * Allow sharing class name generators across instances of `ThemeProvider`
