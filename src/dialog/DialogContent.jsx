@@ -4,7 +4,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = {
   root: {
-    padding: 24
+    padding: '24px 24px 0'
   }
 }
 

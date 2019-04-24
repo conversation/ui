@@ -6,7 +6,7 @@ const Person = ({ children, name, caption }) => (
   <React.Fragment>
     {children}
     <Typography color='inherit' variant='subtitle1'>{name}</Typography>
-    <Typography color='inherit' variant='caption'>{caption}</Typography>
+    <Typography color='inherit' variant='caption' paragraph>{caption}</Typography>
   </React.Fragment>
 )
 
