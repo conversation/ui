@@ -33,6 +33,9 @@ const styles = theme => ({
   // Donation button styles are a special case until we decide
   // "inverted" buttons are going to be a more widespread thing
   button: {
+    // We need to mark the colour with `!important` to avoid global hyperlink
+    // styles overriding this value.
+    color: [theme.palette.text.primary, '!important'],
     backgroundColor: '#fff',
     fontWeight: 'bold',
     '&:hover': {
