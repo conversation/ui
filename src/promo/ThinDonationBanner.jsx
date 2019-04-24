@@ -10,8 +10,10 @@ const styles = theme => ({
     // themes and palettes properly
     backgroundColor: theme.palette.core && theme.palette.core.main,
     padding: '9px 12px', // special case, needs to match padding on existing topbar
-    color: theme.palette.primary.contrastText,
-    fontWeight: 'bold' // TODO: we don't want to be making a habit of this
+    fontWeight: 'bold', // TODO: we don't want to be making a habit of this
+    // We need to mark the colour with `!important` to avoid global hyperlink
+    // styles overriding this value.
+    color: [theme.palette.primary.contrastText, '!important']
   },
   icon: {
     position: 'absolute',
