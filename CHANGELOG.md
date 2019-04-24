@@ -1,9 +1,15 @@
 ## Unreleased
 
+## 1.23.2 (2019-04-24)
+
+* Add `!important` to `DonationDialog`, `DonationBanner` and `ThinDonationBanner` button colours
+
 ## 1.23.1 (2019-04-24)
+
  * Export `DonationBanner` and `ThinDonationBanner` 🤦
 
 ## 1.23.0 (2019-04-24)
+
  * Add `DonationBanner`
  * Add `ThinDonationBanner`
  * Remove bottom padding from `DialogContent`
