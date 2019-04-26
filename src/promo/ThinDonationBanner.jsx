@@ -34,7 +34,7 @@ const styles = theme => ({
  * ~~~
  *
  */
-export const ThinDonationBanner = ({ children, classes, donateText, onClick }) => {
+export const ThinDonationBanner = ({ children, classes, onClick }) => {
   return (
     <Link block variant='button' underline='none' className={classes.link} onClick={onClick}>
       {children}
@@ -50,18 +50,9 @@ ThinDonationBanner.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
-   * Text that appears in the donate button.
-   */
-  donateText: PropTypes.string,
-
-  /**
    * The callback called when button is clicked.
    */
   onClick: PropTypes.func
-}
-
-ThinDonationBanner.defaultProps = {
-  donateText: 'Donate now'
 }
 
 export default withStyles(styles)(ThinDonationBanner)
