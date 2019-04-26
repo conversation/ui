@@ -8,7 +8,7 @@ export default () => (
       <h2>Example</h2>
     </div>
 
-    <ThinDonationBanner href='http://donate.theconverastion.com' donateText='Donate now'>
+    <ThinDonationBanner>
       Rebuild trust in experts. Donate now.
     </ThinDonationBanner>
   </ComponentOverview>

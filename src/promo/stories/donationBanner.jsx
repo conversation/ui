@@ -8,7 +8,7 @@ export default () => (
       <h2>Example</h2>
     </div>
 
-    <DonationBanner href='http://donate.theconverastion.com'>
+    <DonationBanner>
       The Conversation provides clean information in a world infected with spin. Please donate.
     </DonationBanner>
   </ComponentOverview>
