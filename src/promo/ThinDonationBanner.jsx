@@ -28,15 +28,15 @@ const styles = theme => ({
  * Intended for use on mobile as an alternative to `<DonationBanner>`
  *
  * ~~~js
- * <ThinDonationBanner href='http://donate.theconversation.com'>
+ * <ThinDonationBanner>
  *   Some nice text
  * </ThinDonationBanner>
  * ~~~
  *
  */
-export const ThinDonationBanner = ({ children, classes, href, donateText }) => {
+export const ThinDonationBanner = ({ children, classes, donateText, onClick }) => {
   return (
-    <Link block variant='button' underline='none' className={classes.link} href={href}>
+    <Link block variant='button' underline='none' className={classes.link} onClick={onClick}>
       {children}
       <ArrowRightIcon className={classes.icon} />
     </Link>
@@ -50,13 +50,18 @@ ThinDonationBanner.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
-   * URL that clicking donate button points to
+   * Text that appears in the donate button.
    */
-  href: PropTypes.string
+  donateText: PropTypes.string,
+
+  /**
+   * The callback called when button is clicked.
+   */
+  onClick: PropTypes.func
 }
 
 ThinDonationBanner.defaultProps = {
-  href: 'http://example.com'
+  donateText: 'Donate now'
 }
 
 export default withStyles(styles)(ThinDonationBanner)

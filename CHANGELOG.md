@@ -2,7 +2,7 @@
 
 * Change the `DonationDialog` `href` prop to an `onClick` callback
 * Change the `ArticleDonationBanner` `href` prop to an `onClick` callback
-* Change the `DonationBanner` `href` prop to an `onClick` callback
+* Change the `ThinDonationBanner` `href` prop to an `onClick` callback
 
 ## 1.23.2 (2019-04-24)
 
