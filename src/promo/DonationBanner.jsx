@@ -46,22 +46,29 @@ const styles = theme => ({
 
 /**
  * The `<DonationBanner>` component is a large, dismissable banner that contains
- * a button which links to the given `href`.
+ * a button.
  *
  * ~~~js
- * <DonationBanner href='http://donate.theconverastion.com'>
+ * <DonationBanner>
  *   The Conversation provides clean information in a world infected with spin. Please donate.
  * </DonationBanner>
  * ~~~
  */
-export const DonationBanner = ({ children, classes, href, donateText, closeText, onClose }) => {
+export const DonationBanner = ({
+  children,
+  classes,
+  closeText,
+  donateText,
+  onClick,
+  onClose
+}) => {
   return (
     <Paper className={classes.paper} elevation={0}>
       <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
         <CloseIcon />
       </MaterialIconButton>
       <Typography variant='h5' paragraph className={classes.typography}>{children}</Typography>
-      <Button prominent href={href} className={classes.button}>
+      <Button prominent className={classes.button} onClick={onClick}>
         {donateText}
       </Button>
     </Paper>
@@ -75,31 +82,29 @@ DonationBanner.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
-   * URL that clicking donate button points to
+   * Accessibility text for close button.
    */
-  href: PropTypes.string,
+  closeText: PropTypes.string,
 
   /**
-   * Text that appears in the donate button
+   * Text that appears in the donate button.
    */
   donateText: PropTypes.string,
 
   /**
-   * Callback that is executed when DonationBanner is dismissed
+   * The callback called when button is clicked.
    */
-  onClose: PropTypes.func,
+  onClick: PropTypes.func,
 
   /**
-   * Accessibility text for close button
+   * The callback called when banner is dismissed.
    */
-  closeText: PropTypes.string
+  onClose: PropTypes.func
 }
 
 DonationBanner.defaultProps = {
-  href: 'http://example.com',
   donateText: 'Donate now',
-  closeText: 'Close',
-  onClose: () => {}
+  closeText: 'Close'
 }
 
 export default withStyles(styles)(DonationBanner)
