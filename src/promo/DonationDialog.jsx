@@ -5,7 +5,7 @@ import CloseIcon from '@material-ui/icons/Close'
 import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
-import DialogActions from './DialogActions'
+import DialogActions from '../dialog/DialogActions'
 import Button from '../Button'
 
 const styles = theme => ({
