@@ -6,6 +6,8 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
   button: {
+    borderRadius: 0,
+    justifyContent: 'left',
     backgroundColor: theme.palette.core && theme.palette.core.main,
 
     // We need to mark the colour with `!important` to avoid global hyperlink
@@ -20,7 +22,7 @@ const styles = theme => ({
   },
   icon: {
     position: 'absolute',
-    right: theme.spacing.unit * 2
+    right: theme.spacing.unit
   }
 })
 
