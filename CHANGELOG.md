@@ -1,3 +1,7 @@
+## Unreleased
+
+* Minor design fix to `Dropdown` to avoid `:focus` overflow of background
+
 ## 2.0.0 (2019-04-29)
 
 * Change the `DonationDialog` `href` prop to an `onClick` callback
