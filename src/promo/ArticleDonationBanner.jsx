@@ -31,7 +31,7 @@ const styles = theme => ({
  * attribution, intended for donations campaigns.
  *
  * ~~~js
- * <ArticleDonationBanner href="http://donate.theconversation.com" donateText="Donate now">
+ * <ArticleDonationBanner donateText="Donate now">
  *   <Typography variant="h6" gutterBottom>Some text</Typography>
  *   <Typography variant="body1" paragraph>
  *     More text
@@ -46,7 +46,7 @@ const styles = theme => ({
  * ~~~
  *
  */
-export const ArticleDonationBanner = ({ children, classes, href, donateText }) => {
+export const ArticleDonationBanner = ({ children, classes, donateText, onClick }) => {
   const filteredChildren = children.filter(component => component.key !== 'attribution')
   const attribution = children.filter(component => component.key === 'attribution')
 
@@ -54,7 +54,7 @@ export const ArticleDonationBanner = ({ children, classes, href, donateText }) =
     <Paper elevation={0} className={classes.root}>
       {filteredChildren}
       <Typography paragraph>
-        <Button prominent className={classes.button} href={href}>{donateText}</Button>
+        <Button prominent className={classes.button} onClick={onClick}>{donateText}</Button>
       </Typography>
       {attribution}
     </Paper>
@@ -69,18 +69,17 @@ ArticleDonationBanner.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
-   * URL that clicking donate button points to
-   */
-  href: PropTypes.string,
-
-  /**
    * Text that appears in the donate button
    */
-  donateText: PropTypes.string
+  donateText: PropTypes.string,
+
+  /**
+   * The callback function called when the button is clicked.
+   */
+  onClick: PropTypes.func
 }
 
 ArticleDonationBanner.defaultProps = {
-  href: 'http://example.com',
   donateText: 'Donate'
 }
 

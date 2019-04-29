@@ -5,7 +5,7 @@ import CloseIcon from '@material-ui/icons/Close'
 import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
-import DialogActions from './DialogActions'
+import DialogActions from '../dialog/DialogActions'
 import Button from '../Button'
 
 const styles = theme => ({
@@ -53,7 +53,7 @@ const styles = theme => ({
  * ~~~js
  * import { DialogAvatar, DialogInlineTitle, DialogContent } from '@theconversation/ui'
  *
- * <DonationDialog href="https://donate.theconversation.com" donateText="Donate now" closeText="close">
+ * <DonationDialog donateText="Donate now" closeText="close">
  *   <DialogAvatar src={koala} />
  *   <DialogInlineTitle>Support close combat training for koalas</DialogInlineTitle>
  *   <DialogContent>
@@ -65,7 +65,16 @@ const styles = theme => ({
  * ~~~
  *
  */
-export const DonationDialog = ({ children, open, onVisible, onClose, classes, href, donateText, closeText }) => {
+export const DonationDialog = ({
+  children,
+  classes,
+  closeText,
+  donateText,
+  onClick,
+  onClose,
+  onVisible,
+  open
+}) => {
   const dialogProps = {
     open,
     onClose,
@@ -85,7 +94,7 @@ export const DonationDialog = ({ children, open, onVisible, onClose, classes, hr
       </MaterialDialogActions>
       {children}
       <DialogActions className={classes.bottomActions}>
-        <Button prominent href={href} className={classes.button}>
+        <Button prominent className={classes.button} onClick={onClick}>
           {donateText}
         </Button>
       </DialogActions>
@@ -100,12 +109,17 @@ DonationDialog.propTypes = {
   children: PropTypes.node,
 
   /**
-   * The callback function called when the component requests to be closed.
+   * The callback function called when the button is clicked.
+   */
+  onClick: PropTypes.func,
+
+  /**
+   * The callback function called when the dialog is closed.
    */
   onClose: PropTypes.func,
 
   /**
-   * The callback function called when the component is made visible.
+   * The callback function called when the dialog is opened.
    */
   onVisible: PropTypes.func,
 
@@ -115,24 +129,18 @@ DonationDialog.propTypes = {
   open: PropTypes.bool,
 
   /**
-   * URL that clicking donate button points to
-   */
-  href: PropTypes.string,
-
-  /**
-   * Text that appears in the donate button
+   * Text that appears in the donate button.
    */
   donateText: PropTypes.string,
 
   /**
-   * Accessibility alt text that is associated with the close icon button
+   * Accessibility alt text that is associated with the close icon button.
    */
   closeText: PropTypes.string
 }
 
 DonationDialog.defaultProps = {
   open: false,
-  href: 'http://example.com',
   donateText: 'Donate',
   closeText: 'Close'
 }

@@ -1,23 +1,28 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from '@material-ui/core/Link'
+import Button from '../Button'
 import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
+import PropTypes from 'prop-types'
+import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
-  link: {
-    // TODO: this is temporary while we work out what to do about
-    // themes and palettes properly
+  button: {
+    borderRadius: 0,
+    justifyContent: 'left',
     backgroundColor: theme.palette.core && theme.palette.core.main,
-    padding: '9px 12px', // special case, needs to match padding on existing topbar
-    fontWeight: 'bold', // TODO: we don't want to be making a habit of this
+
     // We need to mark the colour with `!important` to avoid global hyperlink
     // styles overriding this value.
-    color: [theme.palette.primary.contrastText, '!important']
+    color: [theme.palette.primary.contrastText, '!important'],
+
+    fontWeight: 'bold',
+    '&:hover': {
+      backgroundColor: theme.palette.core && theme.palette.core.main
+    },
+    padding: '9px 12px' // special case, needs to match padding on existing topbar
   },
   icon: {
     position: 'absolute',
-    right: theme.spacing.unit * 2
+    right: theme.spacing.unit
   }
 })
 
@@ -28,18 +33,18 @@ const styles = theme => ({
  * Intended for use on mobile as an alternative to `<DonationBanner>`
  *
  * ~~~js
- * <ThinDonationBanner href='http://donate.theconversation.com'>
+ * <ThinDonationBanner>
  *   Some nice text
  * </ThinDonationBanner>
  * ~~~
  *
  */
-export const ThinDonationBanner = ({ children, classes, href, donateText }) => {
+export const ThinDonationBanner = ({ children, classes, onClick }) => {
   return (
-    <Link block variant='button' underline='none' className={classes.link} href={href}>
+    <Button fullWidth className={classes.button} onClick={onClick}>
       {children}
       <ArrowRightIcon className={classes.icon} />
-    </Link>
+    </Button>
   )
 }
 
@@ -50,13 +55,9 @@ ThinDonationBanner.propTypes = {
   children: PropTypes.node.isRequired,
 
   /**
-   * URL that clicking donate button points to
+   * The callback called when button is clicked.
    */
-  href: PropTypes.string
-}
-
-ThinDonationBanner.defaultProps = {
-  href: 'http://example.com'
+  onClick: PropTypes.func
 }
 
 export default withStyles(styles)(ThinDonationBanner)

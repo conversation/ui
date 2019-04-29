@@ -1,5 +1,5 @@
-import React from 'react'
 import ComponentOverview from '../../ComponentOverview'
+import React from 'react'
 import { action } from '@storybook/addon-actions'
 
 import {
@@ -44,7 +44,7 @@ class ExampleDialog extends React.Component {
           </div>
 
           <Button colour='primary' onClick={this.handleOpen}>Open Dialog</Button>
-          <DonationDialog href='https://donate.theconversation.com' open={this.state.open} onClose={this.handleClose} donateText='Donate now'>
+          <DonationDialog onClick={action('clicked')} open={this.state.open} onClose={this.handleClose} donateText='Donate now'>
             <DialogAvatar src={koala} />
             <DialogInlineTitle>Support close combat training for koalas</DialogInlineTitle>
             <DialogContent>

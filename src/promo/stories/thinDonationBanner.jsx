@@ -1,6 +1,7 @@
-import React from 'react'
 import ComponentOverview from '../../ComponentOverview'
+import React from 'react'
 import ThinDonationBanner, { ThinDonationBanner as UnwrappedThinDonationBanner } from '../ThinDonationBanner'
+import { action } from '@storybook/addon-actions'
 
 export default () => (
   <ComponentOverview heading='ThinDonationBanner' component={UnwrappedThinDonationBanner}>
@@ -8,7 +9,7 @@ export default () => (
       <h2>Example</h2>
     </div>
 
-    <ThinDonationBanner href='http://donate.theconverastion.com' donateText='Donate now'>
+    <ThinDonationBanner onClick={action('clicked')}>
       Rebuild trust in experts. Donate now.
     </ThinDonationBanner>
   </ComponentOverview>

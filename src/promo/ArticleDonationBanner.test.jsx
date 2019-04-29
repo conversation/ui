@@ -2,6 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import ArticleDonationBanner from './ArticleDonationBanner'
+import Button from '../Button'
 
 describe('<ArticleDonationBanner />', () => {
   describe('child node filtering', () => {
@@ -16,6 +17,20 @@ describe('<ArticleDonationBanner />', () => {
       expect(wrapper.childAt(0).text()).toEqual('foo')
       expect(wrapper.childAt(1).html()).toContain('Donate')
       expect(wrapper.childAt(2).text()).toEqual('bar')
+    })
+  })
+
+  describe('onClick callback', () => {
+    it('is called when button is clicked', () => {
+      const onClick = jest.fn()
+      const wrapper = shallow(
+        <ArticleDonationBanner onClick={onClick}>
+          <div>foo</div>
+          <div key='attribution'>bar</div>
+        </ArticleDonationBanner>
+      )
+      wrapper.dive().find(Button).simulate('click')
+      expect(onClick).toHaveBeenCalled()
     })
   })
 })

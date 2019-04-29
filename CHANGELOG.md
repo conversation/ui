@@ -1,5 +1,10 @@
 ## Unreleased
 
+* Change the `DonationDialog` `href` prop to an `onClick` callback
+* Change the `ArticleDonationBanner` `href` prop to an `onClick` callback
+* Change the `ThinDonationBanner` `href` prop to an `onClick` callback
+* Remove unused `donateText` prop from `ThinDonationBanner` component
+
 ## 1.23.2 (2019-04-24)
 
 * Add `!important` to `DonationDialog`, `DonationBanner` and `ThinDonationBanner` button colours
