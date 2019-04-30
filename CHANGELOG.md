@@ -1,4 +1,4 @@
-## Unreleased
+## 2.0.1 (2019-04-30)
 
 * Minor design fix to `Dropdown` to avoid `:focus` overflow of background
 
