@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import withStyles from '@material-ui/core/styles/withStyles'
-import Paper from '@material-ui/core/Paper'
-import MaterialIconButton from '@material-ui/core/IconButton'
-import CloseIcon from '@material-ui/icons/Close'
 import Button from '../Button'
+import CloseIcon from '@material-ui/icons/Close'
+import MaterialIconButton from '@material-ui/core/IconButton'
+import Paper from '@material-ui/core/Paper'
+import PropTypes from 'prop-types'
+import React from 'react'
 import Typography from '../Typography'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
   // TODO: this is temporary while we work out what to do about
@@ -60,8 +60,14 @@ export const DonationBanner = ({
   closeText,
   donateText,
   onClick,
-  onClose
+  onClose,
+  open
 }) => {
+  // Don't bother rendering if it's not open.
+  if (!open) {
+    return null
+  }
+
   return (
     <Paper className={classes.paper} elevation={0}>
       <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
@@ -99,10 +105,16 @@ DonationBanner.propTypes = {
   /**
    * The callback called when banner is dismissed.
    */
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+
+  /**
+   * A boolean value indicating whether the banner is currently displayed.
+   */
+  open: PropTypes.bool
 }
 
 DonationBanner.defaultProps = {
+  open: false,
   donateText: 'Donate now',
   closeText: 'Close'
 }

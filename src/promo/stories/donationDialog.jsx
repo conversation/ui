@@ -1,5 +1,5 @@
 import ComponentOverview from '../../ComponentOverview'
-import React from 'react'
+import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import {
@@ -20,43 +20,44 @@ import koala from './koala.png'
 
 const CONTENT = 'Koalas want to eat leaves and sleep all day, they need your help to achieve this ideal lifestyle. By donating $5 today, you can help keep koalas safe from Instagrammers and robot vacuum cleaners.'
 
-class ExampleDialog extends React.Component {
-  state = {
-    open: false
+function ExampleDialog () {
+  const [open, setOpen] = useState(false)
+
+  const handleClick = event => {
+    action('clicked')(event)
   }
 
-  handleOpen = event => {
+  const handleOpen = event => {
     action('open')(event)
-    this.setState({ open: true })
+    setOpen(true)
   }
 
-  handleClose = event => {
+  const handleClose = event => {
     action('close')(event)
-    this.setState({ open: false })
+    setOpen(false)
   }
 
-  render () {
-    return (
-      <ComponentOverview heading='DonationDialog' component={UnwrappedDonationDialog}>
-        <React.Fragment>
-          <div className='markdown-body'>
-            <h2>Example</h2>
-          </div>
+  return (
+    <ComponentOverview heading='DonationDialog' component={UnwrappedDonationDialog}>
+      <React.Fragment>
+        <div className='markdown-body'>
+          <h2>Example</h2>
+        </div>
 
-          <Button colour='primary' onClick={this.handleOpen}>Open Dialog</Button>
-          <DonationDialog onClick={action('clicked')} open={this.state.open} onClose={this.handleClose} donateText='Donate now'>
-            <DialogAvatar src={koala} />
-            <DialogInlineTitle>Support close combat training for koalas</DialogInlineTitle>
-            <DialogContent>
-              <Typography variant='body2'>{CONTENT}</Typography>
-              <MiniDivider />
-              <Person name='Colonel Koala' caption='Leader of the Koala Freedom Collective' />
-            </DialogContent>
-          </DonationDialog>
-        </React.Fragment>
-      </ComponentOverview>
-    )
-  }
+        <Button colour='primary' onClick={handleOpen}>Open Dialog</Button>
+
+        <DonationDialog onClick={handleClick} open={open} onClose={handleClose} donateText='Donate now'>
+          <DialogAvatar src={koala} />
+          <DialogInlineTitle>Support close combat training for koalas</DialogInlineTitle>
+          <DialogContent>
+            <Typography variant='body2'>{CONTENT}</Typography>
+            <MiniDivider />
+            <Person name='Colonel Koala' caption='Leader of the Koala Freedom Collective' />
+          </DialogContent>
+        </DonationDialog>
+      </React.Fragment>
+    </ComponentOverview>
+  )
 }
 
 export default () => (
