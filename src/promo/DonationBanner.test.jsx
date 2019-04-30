@@ -1,11 +1,19 @@
+import Button from '../Button'
+import MaterialIconButton from '@material-ui/core/IconButton'
+import Paper from '@material-ui/core/Paper'
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Button from '../Button'
 import DonationBanner from './DonationBanner'
-import MaterialIconButton from '@material-ui/core/IconButton'
 
 describe('<DonationBanner />', () => {
+  it('is is visible when the "open" prop is true', () => {
+    const wrapper = shallow(<DonationBanner open>foo</DonationBanner>)
+    expect(wrapper.dive().find(Paper).length).toBe(1)
+    wrapper.setProps({ open: false })
+    expect(wrapper.dive().find(Paper).length).toBe(0)
+  })
+
   describe('onClick callback', () => {
     it('is called when button is clicked', () => {
       const onClick = jest.fn()
