@@ -1,9 +1,8 @@
+import Button from '../Button'
+import DonationDialog from './DonationDialog'
 import MaterialIconButton from '@material-ui/core/IconButton'
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-
-import Button from '../Button'
-import DonationDialog from './DonationDialog'
 
 describe('<DonationDialog />', () => {
   describe('onClick callback', () => {
