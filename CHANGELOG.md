@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 2.1.0 (2019-04-30)
+
 * Add `open` prop to the `DonationBanner` component
 
 ## 2.0.1 (2019-04-30)
