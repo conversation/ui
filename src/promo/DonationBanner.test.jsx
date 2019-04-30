@@ -1,10 +1,9 @@
 import Button from '../Button'
+import DonationBanner from './DonationBanner'
 import MaterialIconButton from '@material-ui/core/IconButton'
 import Paper from '@material-ui/core/Paper'
 import React from 'react'
 import { shallow } from 'enzyme'
-
-import DonationBanner from './DonationBanner'
 
 describe('<DonationBanner />', () => {
   it('is is visible when the "open" prop is true', () => {

@@ -11,14 +11,14 @@ function ExampleBanner () {
     action('clicked')(event)
   }
 
-  const handleClose = event => {
-    setOpen(false)
-    action('close')(event)
-  }
-
   const handleOpen = event => {
     setOpen(true)
     action('open')(event)
+  }
+
+  const handleClose = event => {
+    setOpen(false)
+    action('close')(event)
   }
 
   return (
