@@ -18,6 +18,7 @@ You can set the type of a text field using the \`type\` prop:
 ~~~js
 <TextField type='text' />
 <TextField type='password' />
+<TextField type='email' />
 ~~~
 
 ## Example
@@ -39,6 +40,12 @@ export default withDocs(md, () =>
       label='Password'
       onChange={action('change')}
       type='password'
+    />
+    <TextField
+      helperText='Enter your email'
+      label='Email'
+      onChange={action('change')}
+      type='email'
     />
   </GridLayout>
 )
