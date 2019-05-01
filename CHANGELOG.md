@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 2.2.0 (2019-05-01)
+
+* Allow `TextField` to have `email` type
+
 ## 2.1.1 (2019-05-01)
 
 * Set the `ArticleDonationBanner` background colour to `#f8f8f8`
