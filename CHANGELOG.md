@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 2.1.1 (2019-05-01)
+
 * Set the `ArticleDonationBanner` background colour to `#f8f8f8`
 
 ## 2.1.0 (2019-04-30)
