@@ -166,7 +166,7 @@ TextField.propTypes = {
   /**
    * The type of the text field.
    */
-  type: PropTypes.oneOf(['text', 'password', 'number']),
+  type: PropTypes.oneOf(['email', 'text', 'password', 'number']),
 
   /**
    * The value of the text field.
