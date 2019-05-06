@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Add Form components from Material UI to list of exported MUI components
+
 ## 2.2.0 (2019-05-01)
 
 * Allow `TextField` to have `email` type
