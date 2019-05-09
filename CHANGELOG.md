@@ -1,4 +1,4 @@
-## Unreleased
+## 2.2.2 (2019-05-09)
 
 * Add MUI Radio components from Material UI to list of exported MUI components
 
