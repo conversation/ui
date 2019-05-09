@@ -1,4 +1,4 @@
-## Unreleased
+## 2.2.1 (2019-05-07)
 
 * Add Form components from Material UI to list of exported MUI components
 
