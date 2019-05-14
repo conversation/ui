@@ -9,13 +9,40 @@ import DialogActions from '../dialog/DialogActions'
 import Button from '../Button'
 
 const styles = theme => ({
+  container: {
+    // For small-medium devices, render the dialog container normally.
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+      overflowY: 'auto',
+      overflowX: 'hidden'
+    },
+
+    // For medium-large devices, render the dialog container in the centre.
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
+  },
   paper: {
     // TODO: revisit palette colours with what we learned building
     // this component.
     backgroundColor: theme.palette.core && theme.palette.core.main,
     overflow: 'visible', // So we can have the avatar poking out the top
     color: theme.palette.primary.contrastText,
-    textAlign: 'center'
+    margin: `48px ${theme.spacing.unit * 3}px`,
+    textAlign: 'center',
+
+    // For small devices, allow the dialog paper to be full width/height.
+    [theme.breakpoints.down('sm')]: {
+      maxHeight: 'none'
+    },
+
+    // For medium-large devices, allow the dialog paper to be centred.
+    [theme.breakpoints.up('sm')]: {
+      flex: '0 1 auto',
+      maxHeight: 'calc(100% - 96px)'
+    }
   },
   topActions: {
     margin: 0
@@ -79,14 +106,14 @@ export const DonationDialog = ({
     open,
     onClose,
     onEnter: onVisible,
-    scroll: 'body',
     classes: {
+      container: classes.container,
       paper: classes.paper
     }
   }
 
   return (
-    <MaterialDialog {...dialogProps} >
+    <MaterialDialog {...dialogProps}>
       <MaterialDialogActions className={classes.topActions}>
         <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
           <CloseIcon />
