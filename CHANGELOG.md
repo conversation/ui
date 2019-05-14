@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 2.2.3 (2019-05-14)
+
 * Update donation dialog breakpoints
 
 ## 2.2.2 (2019-05-09)
