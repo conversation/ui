@@ -1,8 +1,10 @@
 ## Unreleased
 
+* Fix placement issues with `DonationDialog` component
+
 ## 2.2.3 (2019-05-14)
 
-* Update donation dialog breakpoints
+* Update `DonationDialog` breakpoints
 
 ## 2.2.2 (2019-05-09)
 
