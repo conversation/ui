@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 2.3.0 (2019-05-14)
+
+* Add TC logo images
+
 ## 2.2.3 (2019-05-14)
 
 * Update donation dialog breakpoints
