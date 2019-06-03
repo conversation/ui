@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 2.3.1 (2019-06-03)
+
+* TC logo favicons white background fix
+
 ## 2.3.0 (2019-05-14)
 
 * Add TC logo images
