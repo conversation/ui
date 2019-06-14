@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 2.3.2 (2019-06-14)
+
+* TC logo images fixes (https://github.com/conversation/ui/pull/71)
+
 ## 2.3.1 (2019-06-03)
 
 * TC logo favicons white background fix
