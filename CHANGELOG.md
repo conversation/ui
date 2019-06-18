@@ -1,5 +1,7 @@
 ## Unreleased
 
+* TC large logo PNG image fixes (https://github.com/conversation/ui/pull/72)
+
 ## 2.3.2 (2019-06-14)
 
 * TC logo images fixes (https://github.com/conversation/ui/pull/71)
