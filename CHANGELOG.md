@@ -1,4 +1,4 @@
-## 2.3.3
+## 2.3.4 (2019-06-25)
 
 * TC large logo PNG image fixes (https://github.com/conversation/ui/pull/72)
 
