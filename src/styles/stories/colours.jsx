@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Swatch } from '../../index'
+import Swatch from '../../Swatch'
 import { GridLayout } from '../../util'
 
 const COLOURS = ['primary', 'secondary', 'error', 'core']
@@ -10,7 +10,7 @@ export default () => (
   <GridLayout>
     {VARIANTS.map((variant, index) =>
       <div key={index}>
-        {COLOURS.map((colour, index2) =>
+        {COLOURS.map((colour) =>
           <Swatch colour={colour} variant={variant} />
         )}
       </div>
