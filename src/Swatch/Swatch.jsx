@@ -8,13 +8,15 @@ const size = 120
 const margin = 16
 const styles = {
   root: {
+    display: 'block',
+    bacground: '#eee',
+    float: 'left',
     width: size,
     height: size,
-    marginBottom: margin,
     borderRadius: 0
   },
   label: {
-    paddingTop: margin / 2,
+    paddingTop: margin / 4,
     paddingLeft: margin / 2,
     textTransform: 'capitalize'
   }
@@ -37,8 +39,8 @@ const Swatch = ({ classes, colour, theme, variant, ...other }) => {
     <Paper className={classes.root} elevation={0} style={{ backgroundColor: value[variant] }}>
       { value[variant]
         ? <div className={classes.label}>
-          <ColourLabel label={colour} colour={value} variant='body2' />
-          {variant !== 'main' ? <ColourLabel label={variant} colour={value} variant='caption' /> : null }
+          <ColourLabel label={colour} colour={value} variant='subtitle1' />
+          <ColourLabel label={value[variant]} colour={value} variant='caption' />
         </div> : null
       }
     </Paper>

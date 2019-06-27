@@ -29,8 +29,6 @@ describe('<Swatch />', () => {
     ).find(Typography)
     const color = theme.palette.primary.contrastText
     expect(wrapper.at(0).props().children).toBe('primary')
-    expect(wrapper.at(0).props().style).toEqual({ color })
-    expect(wrapper.at(1).props().children).toBe('light')
     expect(wrapper.at(1).props().style).toEqual({ color })
   })
 })
