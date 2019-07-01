@@ -1,3 +1,7 @@
+## 2.4.0 (2019-07-01)
+
+* Dot not export the `Swatch` component (https://github.com/conversation/tc-donations/pull/839#issuecomment-507257651)
+
 ## 2.3.4 (2019-06-25)
 
 * TC large logo PNG image fixes (https://github.com/conversation/ui/pull/72)
