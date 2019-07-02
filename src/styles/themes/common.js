@@ -1,3 +1,5 @@
+import core from '../palettes/core'
+
 export const typography = {
   // Enable v2 variants.
   // https://material-ui.com/style/typography/#migration-to-typography-v2
@@ -31,6 +33,6 @@ export const typography = {
 
 export const errorStateColours = {
   palette: {
-    error: { main: '#990000', border: '#d8352a' }
+    error: { main: core[700], border: core[600] }
   }
 }

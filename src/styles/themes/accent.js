@@ -1,6 +1,7 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import memoize from 'lodash/memoize'
 import merge from 'deepmerge'
+import accent from '../palettes/accent'
 import { typography, errorStateColours } from './common'
 
 /**
@@ -11,8 +12,8 @@ const theme = createMuiTheme(
     {
       palette: {
         // mui colours
-        primary: { main: '#29339b' },
-        secondary: { main: '#48509e' }
+        primary: { main: accent[700] },
+        secondary: { main: accent[600] }
       },
       typography
     }, errorStateColours
