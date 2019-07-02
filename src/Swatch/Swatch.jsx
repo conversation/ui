@@ -9,7 +9,7 @@ const margin = 16
 const styles = {
   root: {
     display: 'block',
-    bacground: '#eee',
+    background: '#eee',
     float: 'left',
     width: size,
     height: size,
