@@ -1,19 +1,49 @@
 import React from 'react'
 
-import Swatch from '../../Swatch'
-import { GridLayout } from '../../util'
+import { ThemeProvider } from '../'
+import { Swatch, SwatchGroup } from '../../Swatch'
+import Typography from '../../Typography'
 
-const COLOURS = ['primary', 'secondary', 'error', 'core']
-const VARIANTS = ['dark', 'main', 'light']
+import accentTheme from '../themes/accent'
+import coreTheme from '../themes/core'
+import defaultTheme from '../themes/default'
 
-export default () => (
-  <GridLayout>
-    {VARIANTS.map((variant, index) =>
-      <div key={index}>
-        {COLOURS.map((colour) =>
-          <Swatch colour={colour} variant={variant} />
-        )}
-      </div>
-    )}
-  </GridLayout>
-)
+const COLOURS = ['primary', 'secondary', 'error']
+
+export default () => {
+  return (
+    <React.Fragment>
+      <Typography style={{ clear: 'both' }} variant='h4'>Primary</Typography>
+      <ThemeProvider theme={defaultTheme()}>
+        <SwatchGroup groupLabel={'Default'}>
+          {COLOURS.map((colour) =>
+            <div>
+              <Swatch colour={colour} />
+            </div>
+          )}
+        </SwatchGroup>
+      </ThemeProvider>
+
+      <Typography style={{ clear: 'both' }} variant='h4'>Extended</Typography>
+      <ThemeProvider theme={coreTheme()}>
+        <SwatchGroup groupLabel={'Core'}>
+          {COLOURS.map((colour) =>
+            <div>
+              <Swatch colour={colour} />
+            </div>
+          )}
+        </SwatchGroup>
+      </ThemeProvider>
+
+      <ThemeProvider theme={accentTheme()}>
+        <SwatchGroup groupLabel={'Accent'}>
+          {COLOURS.map((colour) =>
+            <div>
+              <Swatch colour={colour} />
+            </div>
+          )}
+        </SwatchGroup>
+      </ThemeProvider>
+    </React.Fragment>
+  )
+}

@@ -1,1 +1,2 @@
-export { default } from './Swatch'
+export { default as Swatch } from './Swatch'
+export { default as SwatchGroup } from './SwatchGroup'

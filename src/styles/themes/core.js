@@ -2,12 +2,9 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import memoize from 'lodash/memoize'
 import merge from 'deepmerge'
 import { typography, errorStateColours } from './common'
-
-import neutral from '../palettes/neutral'
-
+import core from '../palettes/core'
 /**
- * This theme contains the styles which represent the future design of our
- * applications.
+ *  This theme contains 'core' coloured swatches
  */
 
 const theme = createMuiTheme(
@@ -15,8 +12,8 @@ const theme = createMuiTheme(
     {
       palette: {
       // mui colours
-        primary: { main: neutral[600] },
-        secondary: { main: neutral[50] }
+        primary: { main: core[600] },
+        secondary: { main: core[400] }
       },
       typography
     }, errorStateColours)
