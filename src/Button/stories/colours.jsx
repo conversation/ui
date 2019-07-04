@@ -4,6 +4,10 @@ import { withDocs } from 'storybook-readme'
 
 import { Button } from '../../index'
 import { GridLayout } from '../../util'
+import { ThemeProvider } from '../../styles'
+import accentTheme from '../../styles/themes/accent'
+import coreTheme from '../../styles/themes/core'
+import defaultTheme from '../../styles/themes/default'
 
 const COLOURS = ['default', 'primary', 'secondary']
 
@@ -33,11 +37,35 @@ You can set the colour of a button using the \`colour\` prop:
 `
 
 export default withDocs(md, () =>
-  <GridLayout>
-    {COLOURS.map(colour =>
-      <Button key={colour} colour={colour} onClick={action(colour)}>
-        {colour}
-      </Button>
-    )}
-  </GridLayout>
+  <React.Fragment>
+    <ThemeProvider theme={defaultTheme()}>
+      <GridLayout>
+        {COLOURS.map((colour) =>
+          <Button key={colour} colour={colour} onClick={action(colour)}>
+            {colour}
+          </Button>
+        )}
+      </GridLayout>
+    </ThemeProvider>
+
+    <ThemeProvider theme={coreTheme()}>
+      <GridLayout>
+        {COLOURS.map((colour) =>
+          <Button key={colour} colour={colour} onClick={action(colour)}>
+            {colour}
+          </Button>
+        )}
+      </GridLayout>
+    </ThemeProvider>
+
+    <ThemeProvider theme={accentTheme()}>
+      <GridLayout>
+        {COLOURS.map((colour) =>
+          <Button key={colour} colour={colour} onClick={action(colour)}>
+            {colour}
+          </Button>
+        )}
+      </GridLayout>
+    </ThemeProvider>
+  </React.Fragment>
 )

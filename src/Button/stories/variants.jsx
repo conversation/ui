@@ -4,8 +4,13 @@ import { withDocs } from 'storybook-readme'
 
 import { Button } from '../../index'
 import { GridLayout } from '../../util'
+import { ThemeProvider } from '../../styles'
+import accentTheme from '../../styles/themes/accent'
+import coreTheme from '../../styles/themes/core'
+import defaultTheme from '../../styles/themes/default'
 
 const VARIANTS = ['text', 'outlined', 'contained']
+const COLOURS = ['primary', 'secondary']
 
 const md = `
 # Variants
@@ -27,11 +32,51 @@ You can set the variant of a button using the \`variant\` prop:
 `
 
 export default withDocs(md, () =>
-  <GridLayout>
+  <React.Fragment>
     {VARIANTS.map(variant =>
-      <Button key={variant} variant={variant} onClick={action(variant)}>
-        {variant}
-      </Button>
+      <GridLayout>
+        {COLOURS.map(colour =>
+          <Button key={variant + colour} color={colour} variant={variant} onClick={action(variant)}>
+            {variant}
+          </Button>
+        )}
+      </GridLayout>
     )}
-  </GridLayout>
+
+    <ThemeProvider theme={defaultTheme()}>
+      {VARIANTS.map(variant =>
+        <GridLayout>
+          {COLOURS.map(colour =>
+            <Button key={variant + colour} color={colour} variant={variant} onClick={action(variant)}>
+              {variant}
+            </Button>
+          )}
+        </GridLayout>
+      )}
+    </ThemeProvider>
+
+    <ThemeProvider theme={coreTheme()}>
+      {VARIANTS.map(variant =>
+        <GridLayout>
+          {COLOURS.map(colour =>
+            <Button key={variant + colour} color={colour} variant={variant} onClick={action(variant)}>
+              {variant}
+            </Button>
+          )}
+        </GridLayout>
+      )}
+    </ThemeProvider>
+
+    <ThemeProvider theme={accentTheme()}>
+      {VARIANTS.map(variant =>
+        <GridLayout>
+          {COLOURS.map(colour =>
+            <Button key={variant + colour} color={colour} variant={variant} onClick={action(variant)}>
+              {variant}
+            </Button>
+          )}
+        </GridLayout>
+      )}
+    </ThemeProvider>
+  </React.Fragment>
 )
