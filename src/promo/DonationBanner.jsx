@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Typography from '../Typography'
+import corePalette from '../styles/palettes/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
@@ -12,8 +13,8 @@ const styles = theme => ({
   // themes and palettes properly
   paper: {
     position: 'relative',
-    backgroundColor: theme.palette.core && theme.palette.core.main,
-    color: theme.palette.primary.contrastText,
+    backgroundColor: corePalette[600],
+    color: '#fff',
     borderRadius: 0,
     padding: theme.spacing(4),
     textAlign: 'center'
