@@ -4,6 +4,8 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '../Typography'
 import Button from '../Button'
+import { ThemeProvider } from '../styles'
+import coreTheme from '../styles/themes/core'
 
 const styles = theme => ({
   root: {
@@ -13,16 +15,7 @@ const styles = theme => ({
   // TODO: this is temporary while we work out what to do about
   // themes and palettes properly
   button: {
-    backgroundColor: theme.palette.core && theme.palette.core.main,
-
-    // We need to mark the colour with `!important` to avoid global hyperlink
-    // styles overriding this value.
-    color: [theme.palette.primary.contrastText, '!important'],
-
-    fontWeight: 'bold',
-    '&:hover': {
-      backgroundColor: theme.palette.core && theme.palette.core.main
-    }
+    fontWeight: 'bold'
   }
 })
 
@@ -54,7 +47,9 @@ export const ArticleDonationBanner = ({ children, classes, donateText, onClick }
     <Paper elevation={0} className={classes.root}>
       {filteredChildren}
       <Typography paragraph>
-        <Button prominent className={classes.button} onClick={onClick}>{donateText}</Button>
+        <ThemeProvider theme={coreTheme()}>
+          <Button prominent color='primary' className={classes.button} onClick={onClick}>{donateText}</Button>
+        </ThemeProvider>
       </Typography>
       {attribution}
     </Paper>
