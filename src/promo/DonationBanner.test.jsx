@@ -1,16 +1,16 @@
 import Button from '../Button'
 import DonationBanner from './DonationBanner'
 import MaterialIconButton from '@material-ui/core/IconButton'
-import Paper from '@material-ui/core/Paper'
+import Box from '@material-ui/core/Box'
 import React from 'react'
 import { shallow } from 'enzyme'
 
 describe('<DonationBanner />', () => {
   it('is is visible when the "open" prop is true', () => {
     const wrapper = shallow(<DonationBanner open>foo</DonationBanner>)
-    expect(wrapper.dive().find(Paper).length).toBe(1)
+    expect(wrapper.dive().find(Box).length).toBe(1)
     wrapper.setProps({ open: false })
-    expect(wrapper.dive().find(Paper).length).toBe(0)
+    expect(wrapper.dive().find(Box).length).toBe(0)
   })
 
   describe('onClick callback', () => {
