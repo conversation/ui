@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 import corePalette from '../styles/palettes/core'
+import neutralPalette from '../styles/palettes/neutral'
 
 const styles = theme => ({
   button: {
@@ -13,7 +14,7 @@ const styles = theme => ({
 
     // We need to mark the colour with `!important` to avoid global hyperlink
     // styles overriding this value.
-    color: ['#fff', '!important'],
+    color: [neutralPalette[0], '!important'],
 
     fontWeight: 'bold',
     '&:hover': {

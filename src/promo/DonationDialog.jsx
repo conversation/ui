@@ -8,6 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import DialogActions from '../dialog/DialogActions'
 import Button from '../Button'
 import corePalette from '../styles/palettes/core'
+import neutralPalette from '../styles/palettes/neutral'
 
 const styles = theme => ({
   container: {
@@ -30,7 +31,7 @@ const styles = theme => ({
     // this component.
     backgroundColor: corePalette[600],
     overflow: 'visible', // So we can have the avatar poking out the top
-    color: '#fff',
+    color: neutralPalette[0],
     margin: `48px ${theme.spacing(3)}px`,
     textAlign: 'center',
 
@@ -62,7 +63,7 @@ const styles = theme => ({
     // We need to mark the colour with `!important` to avoid global hyperlink
     // styles overriding this value.
     color: [theme.palette.text.primary, '!important'],
-    backgroundColor: '#fff',
+    backgroundColor: neutralPalette[0],
     fontWeight: 'bold',
     '&:hover': {
       backgroundColor: '#f1f1f2'

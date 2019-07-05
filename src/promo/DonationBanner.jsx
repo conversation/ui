@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Typography from '../Typography'
 import corePalette from '../styles/palettes/core'
+import neutralPalette from '../styles/palettes/neutral'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
@@ -14,7 +15,7 @@ const styles = theme => ({
   paper: {
     position: 'relative',
     backgroundColor: corePalette[600],
-    color: '#fff',
+    color: neutralPalette[0],
     borderRadius: 0,
     padding: theme.spacing(4),
     textAlign: 'center'
@@ -37,7 +38,7 @@ const styles = theme => ({
     // We need to mark the colour with `!important` to avoid global hyperlink
     // styles overriding this value.
     color: [theme.palette.text.primary, '!important'],
-    backgroundColor: '#fff',
+    backgroundColor: neutralPalette[0],
     fontWeight: 'bold',
     '&:hover': {
       backgroundColor: '#f1f1f2'
