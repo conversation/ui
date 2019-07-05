@@ -7,6 +7,7 @@ import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 import DialogActions from '../dialog/DialogActions'
 import Button from '../Button'
+import corePalette from '../styles/palettes/core'
 
 const styles = theme => ({
   container: {
@@ -27,9 +28,9 @@ const styles = theme => ({
   paper: {
     // TODO: revisit palette colours with what we learned building
     // this component.
-    backgroundColor: theme.palette.core && theme.palette.core.main,
+    backgroundColor: corePalette[600],
     overflow: 'visible', // So we can have the avatar poking out the top
-    color: theme.palette.primary.contrastText,
+    color: '#fff',
     margin: `48px ${theme.spacing(3)}px`,
     textAlign: 'center',
 
