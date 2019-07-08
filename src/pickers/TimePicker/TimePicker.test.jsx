@@ -29,7 +29,8 @@ describe('<TimePicker />', () => {
       )
 
       wrapper.find('input').simulate('click')
-      wrapper.find(Button, { children: 'OK' }).at(1).simulate('click')
+      const okButton = wrapper.find(Button).findWhere(b => b.text() === 'OK').first()
+      okButton.simulate('click')
 
       expect(onChange).toHaveBeenCalled()
     })
