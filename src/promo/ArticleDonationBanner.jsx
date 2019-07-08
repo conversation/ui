@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '../Typography'
-import { Button } from '../index'
+import Button from '../Button'
 
 const styles = theme => ({
   root: {

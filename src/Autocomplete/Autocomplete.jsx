@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import { TextField } from '../index'
+import TextField from '../TextField'
 
 function renderInput ({ InputProps, fullWidth, ref, ...other }) {
   const otherProps = { ...other, ...InputProps }
