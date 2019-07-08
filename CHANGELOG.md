@@ -1,4 +1,4 @@
-## Unreleased
+## 2.5.0 (2019-07-08)
 
 * Export MUI Drawer component (https://github.com/conversation/ui/pull/79)
 * Update TCUI default theme, and add requried additional themes/colours (https://github.com/conversation/ui/pull/75)
