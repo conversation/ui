@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button'
 import MomentUtils from '@date-io/moment'
 import React from 'react'
-import { DateTimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from 'material-ui-pickers'
+import { DateTimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
 import { mount, shallow } from 'enzyme'
 
 import DateTimePicker from './DateTimePicker'

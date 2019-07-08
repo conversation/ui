@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { DatePicker as MaterialDatePicker, MuiPickersUtilsProvider } from 'material-ui-pickers'
+import { DatePicker as MaterialDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
 
 /**
  * The `<DatePicker>` component allows a user to easily select a specific date.
