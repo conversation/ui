@@ -8,7 +8,7 @@ import Button from '../Button'
 const styles = theme => ({
   root: {
     backgroundColor: '#f8f8f8',
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing(3)
   },
   // TODO: this is temporary while we work out what to do about
   // themes and palettes properly

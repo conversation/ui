@@ -13,7 +13,7 @@ const styles = theme => ({
   },
   icon: {
     position: 'absolute',
-    right: theme.spacing.unit
+    right: theme.spacing(1)
   }
 })
 

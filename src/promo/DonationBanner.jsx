@@ -15,18 +15,18 @@ const styles = theme => ({
     backgroundColor: theme.palette.core && theme.palette.core.main,
     color: theme.palette.primary.contrastText,
     borderRadius: 0,
-    padding: theme.spacing.unit * 4,
+    padding: theme.spacing(4),
     textAlign: 'center'
   },
   close: {
     position: 'absolute',
     top: 0,
     right: 0,
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   typography: {
-    maxWidth: theme.spacing.unit * 90,
-    padding: `0 ${theme.spacing.unit * 4}px`, // ensure there's always room for close button
+    maxWidth: theme.spacing(90),
+    padding: `0 ${theme.spacing(4)}px`, // ensure there's always room for close button
     marginLeft: 'auto',
     marginRight: 'auto'
   },
