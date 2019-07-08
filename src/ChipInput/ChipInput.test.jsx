@@ -11,7 +11,7 @@ describe('<ChipInput />', () => {
     const tree = mount(
       <ChipInput entries={['foo', 'bar', 'foobar']} />
     )
-    expect(tree.find('Chip').map((chip) => chip.text())).toEqual(['foo', 'bar', 'foobar'])
+    expect(tree.find('ForwardRef(Chip)').map((chip) => chip.text())).toEqual(['foo', 'bar', 'foobar'])
   })
 
   it('displays added chips', () => {
@@ -20,7 +20,7 @@ describe('<ChipInput />', () => {
     )
     tree.find('input').getDOMNode().value = 'test'
     tree.find('input').simulate('keyDown', { keyCode: 13 }) // press enter
-    expect(tree.find('Chip').map((chip) => chip.text())).toEqual(['foo', 'bar', 'test'])
+    expect(tree.find('ForwardRef(Chip)').map((chip) => chip.text())).toEqual(['foo', 'bar', 'test'])
   })
 
   it('calls onChange when adding new chips', () => {
@@ -182,18 +182,18 @@ describe('<ChipInput />', () => {
 
   describe('chip focusing', () => {
     function getFocusedChip (tree) {
-      return tree.find('Chip').filterWhere((chip) => chip.getDOMNode().style.backgroundColor !== 'rgb(100, 181, 246)')
+      return tree.find('ForwardRef(Chip)').filterWhere((chip) => chip.getDOMNode().style.backgroundColor !== 'rgb(100, 181, 246)')
     }
 
     function focusChip (tree, name) {
-      tree.find('Chip').filterWhere((chip) => chip.text() === name).simulate('click')
+      tree.find('ForwardRef(Chip)').filterWhere((chip) => chip.text() === name).simulate('click')
     }
 
     it('focuses a chip on click', () => {
       const tree = mount(
         <ChipInput entries={['foo', 'bar']} />
       )
-      tree.find('Chip').at(1).simulate('click')
+      tree.find('ForwardRef(Chip)').at(1).simulate('click')
       expect(getFocusedChip(tree).length).toBe(1)
       expect(getFocusedChip(tree).text()).toBe('bar')
     })
