@@ -65,7 +65,7 @@ describe('<ChipInput />', () => {
     const tree = mount(
       <ChipInput entries={['foo', 'bar']} onChange={handleChange} />
     )
-    tree.find('Cancel').first().simulate('click')
+    tree.find('ForwardRef(SvgIcon)').first().simulate('click')
     expect(handleChange).toBeCalledWith([{ 'valid': true, 'value': 'bar' }])
   })
 
