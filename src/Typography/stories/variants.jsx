@@ -26,6 +26,13 @@ You can set the variant of the text using the \`variant\` prop:
 
 export default withDocs(md, () =>
   VARIANTS.map((variant, index) =>
-    <Typography gutterBottom key={index} variant={variant}>{variant}. {LIPSUM}</Typography>
+    <Typography
+      gutterBottom
+      display='block'
+      key={index}
+      variant={variant}
+    >
+      {variant}.{LIPSUM}
+    </Typography>
   )
 )
