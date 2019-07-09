@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button'
 import MomentUtils from '@date-io/moment'
 import React from 'react'
-import { TimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from 'material-ui-pickers'
+import { TimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
 import { mount, shallow } from 'enzyme'
 
 import TimePicker from './TimePicker'
@@ -29,7 +29,8 @@ describe('<TimePicker />', () => {
       )
 
       wrapper.find('input').simulate('click')
-      wrapper.find(Button, { children: 'OK' }).at(1).simulate('click')
+      const okButton = wrapper.find(Button).findWhere(b => b.text() === 'OK').first()
+      okButton.simulate('click')
 
       expect(onChange).toHaveBeenCalled()
     })

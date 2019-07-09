@@ -19,14 +19,14 @@ const styles = theme => {
       display: 'flex',
       justifyContent: 'center',
       flexWrap: 'wrap',
-      padding: theme.spacing.unit / 2
+      padding: theme.spacing(1) / 2
     },
     label: {
       marginTop: 8,
-      marginBottom: theme.spacing.unit
+      marginBottom: theme.spacing(1)
     },
     chip: {
-      margin: theme.spacing.unit / 2
+      margin: theme.spacing(1) / 2
     },
     error: {
       borderColor: theme.palette.error.border
@@ -42,7 +42,7 @@ const styles = theme => {
       borderColor: borderColor
     },
     inputRoot: {
-      margin: theme.spacing.unit / 2
+      margin: theme.spacing(1) / 2
     },
     chipContainer: {
       borderStyle: 'solid',

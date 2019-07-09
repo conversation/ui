@@ -90,7 +90,7 @@ describe('<Autocomplete />', () => {
         wrapper.find('input').simulate('change', { target: { value: 'aus' } })
 
         // Choose the suggestion.
-        wrapper.find('MenuItem').simulate('click')
+        wrapper.find('ForwardRef(MenuItem)').simulate('click')
 
         expect(onChange).toHaveBeenCalledWith({ value: 'AU', label: 'Australia' })
       })

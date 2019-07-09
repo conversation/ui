@@ -4,7 +4,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
   root: {
-    margin: `${theme.spacing.unit * 2}px auto`,
+    margin: `${theme.spacing(1) * 2}px auto`,
     width: '21px',
     backgroundColor: theme.palette.primary.contrastText
   }

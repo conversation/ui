@@ -30,7 +30,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.core && theme.palette.core.main,
     overflow: 'visible', // So we can have the avatar poking out the top
     color: theme.palette.primary.contrastText,
-    margin: `48px ${theme.spacing.unit * 3}px`,
+    margin: `48px ${theme.spacing(3)}px`,
     textAlign: 'center',
 
     // For small devices, allow the dialog paper to be full width/height.
@@ -50,10 +50,10 @@ const styles = theme => ({
   bottomActions: {
     justifyContent: 'center',
     marginTop: 0,
-    marginBottom: theme.spacing.unit * 6
+    marginBottom: theme.spacing(6)
   },
   close: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   // Donation button styles are a special case until we decide
   // "inverted" buttons are going to be a more widespread thing

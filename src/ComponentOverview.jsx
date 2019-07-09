@@ -26,8 +26,8 @@ const PropDefinitionsTable = ({ propDefinitions }) => (
       </tr>
     </thead>
     <tbody>
-      {propDefinitions.map(propDefinition =>
-        <Row {...propDefinition} />
+      {propDefinitions.map((propDefinition, index) =>
+        <Row key={index} {...propDefinition} />
       )}
     </tbody>
   </table>

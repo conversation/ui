@@ -1,10 +1,6 @@
 import core from '../palettes/core'
 
 export const typography = {
-  // Enable v2 variants.
-  // https://material-ui.com/style/typography/#migration-to-typography-v2
-  useNextVariants: true,
-
   fontFamily: 'Noto Sans',
 
   h1: { fontFamily: 'Montserrat', fontWeight: 700 },

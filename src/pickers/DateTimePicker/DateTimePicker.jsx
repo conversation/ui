@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { DateTimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from 'material-ui-pickers'
+import { DateTimePicker as MaterialDateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
 
 /**
  * The `<DateTimePicker>` component allows a user to easily select a specific date and time of the day.
