@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import get from 'lodash/get'
 
-const SPACING = 16
+const SPACING = 2
 
 /**
  * The `<GridLayout>` component automatically renders its children in a grid
