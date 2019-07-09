@@ -3,6 +3,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
   root: {
+    fontFamily: 'Noto Sans',
     fontWeight: 'bold',
     fontSize: theme.typography.pxToRem(12),
     textAlign: 'left'
