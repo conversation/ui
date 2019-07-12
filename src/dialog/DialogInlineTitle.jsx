@@ -6,7 +6,6 @@ import Typography from '../Typography'
 
 const styles = theme => ({
   root: {
-    color: theme.palette.primary.contrastText,
     paddingTop: 0,
     paddingBottom: 0
   }

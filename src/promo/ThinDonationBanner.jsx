@@ -3,20 +3,22 @@ import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
+import corePalette from '../styles/palettes/core'
+import neutralPalette from '../styles/palettes/neutral'
 
 const styles = theme => ({
   button: {
     borderRadius: 0,
     justifyContent: 'left',
-    backgroundColor: theme.palette.core && theme.palette.core.main,
+    backgroundColor: corePalette[600],
 
     // We need to mark the colour with `!important` to avoid global hyperlink
     // styles overriding this value.
-    color: [theme.palette.primary.contrastText, '!important'],
+    color: [neutralPalette[0], '!important'],
 
     fontWeight: 'bold',
     '&:hover': {
-      backgroundColor: theme.palette.core && theme.palette.core.main
+      backgroundColor: corePalette[600]
     },
     padding: '9px 12px' // special case, needs to match padding on existing topbar
   },

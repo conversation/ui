@@ -1,19 +1,19 @@
 import Button from '../Button'
 import CloseIcon from '@material-ui/icons/Close'
 import MaterialIconButton from '@material-ui/core/IconButton'
-import Paper from '@material-ui/core/Paper'
+import Box from '@material-ui/core/Box'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Typography from '../Typography'
+import corePalette from '../styles/palettes/core'
+import neutralPalette from '../styles/palettes/neutral'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({
-  // TODO: this is temporary while we work out what to do about
-  // themes and palettes properly
-  paper: {
+  box: {
     position: 'relative',
-    backgroundColor: theme.palette.core && theme.palette.core.main,
-    color: theme.palette.primary.contrastText,
+    backgroundColor: corePalette[600],
+    color: neutralPalette[0],
     borderRadius: 0,
     padding: theme.spacing(4),
     textAlign: 'center'
@@ -33,10 +33,7 @@ const styles = theme => ({
   // Donation button styles are a special case until we decide
   // "inverted" buttons are going to be a more widespread thing
   button: {
-    // We need to mark the colour with `!important` to avoid global hyperlink
-    // styles overriding this value.
-    color: [theme.palette.text.primary, '!important'],
-    backgroundColor: '#fff',
+    backgroundColor: neutralPalette[0],
     fontWeight: 'bold',
     '&:hover': {
       backgroundColor: '#f1f1f2'
@@ -69,7 +66,7 @@ export const DonationBanner = ({
   }
 
   return (
-    <Paper className={classes.paper} elevation={0}>
+    <Box bgcolor={corePalette[600]} color={neutralPalette[0]} className={classes.box}>
       <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
         <CloseIcon />
       </MaterialIconButton>
@@ -77,7 +74,7 @@ export const DonationBanner = ({
       <Button prominent className={classes.button} onClick={onClick}>
         {donateText}
       </Button>
-    </Paper>
+    </Box>
   )
 }
 

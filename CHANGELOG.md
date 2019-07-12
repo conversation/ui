@@ -1,3 +1,7 @@
+## Unreleased
+
+* Update donation components to use themes
+
 ## 2.6.0 (2019-07-09)
 
 * Update Material UI to 4.2.0 (https://github.com/conversation/ui/pull/81)
