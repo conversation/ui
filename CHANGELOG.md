@@ -1,6 +1,8 @@
 ## Unreleased
 
-* Update donation components to use themes
+## 2.6.1 (2019-07-12)
+
+* Update donation components to use themes (https://github.com/conversation/ui/pull/78)
 
 ## 2.6.0 (2019-07-09)
 
