@@ -21,6 +21,12 @@ export const typography = {
     lineHeight: '1.5'
   },
 
+  body2: {
+    fontFamily: 'Noto Sans',
+    fontSize: '0.875rem',
+    lineHeight: '1.5'
+  },
+
   button: {
     letterSpacing: 0.25,
     textTransform: 'none'
