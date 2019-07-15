@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Box from '@material-ui/core/Box'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Button from '../Button'
 
@@ -18,15 +17,16 @@ export const MessageTileButton = ({ children, classes, onClick }) => {
   )
 }
 
-MessageTileButton.defaultProps = {
-  children: []
-}
-
 MessageTileButton.propTypes = {
+
   /**
-   * The contents of the Header. If not provided, it's not shown.
+   * The Button text
    */
-  children: PropTypes.array,
+  children: PropTypes.node.isRequired,
+  /**
+   * The onClick event for the Button
+   */
+  onClick: PropTypes.func
 }
 
 export default withStyles(styles)(MessageTileButton)

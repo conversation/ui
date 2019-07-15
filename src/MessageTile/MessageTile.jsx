@@ -13,6 +13,53 @@ const styles = theme => ({
   }
 })
 
+/**
+ * The `<MessageTile>` component is used to wrap three sub-components
+ * to show a tile, intended for promos, with a header, a body and a
+ * call-to-action button at the bottom.
+ *
+ * ```js
+ * import { MessageTile, MessageTileHeader, MessageTileBody, MessageTileButton } from '@theconversation/ui'
+ *
+ * <MessageTile>
+ *  <MessageTileHeader>
+ *    <img style={{ width: 26, marginRight: 6, marginBottom: 8 }} src={by} />
+ *    <img style={{ width: 26, marginRight: 6, marginBottom: 8 }} src={cc} />
+ *    <img style={{ width: 26, marginBottom: 8 }} src={nd} />
+ *    <div>We believe in the free flow of information.</div>
+ *  </MessageTileHeader>
+ *
+ *  <MessageTileBody>
+ *    All our articles can be republished for free, online or in print, under the Creative Commons licence.
+ *  </MessageTileBody>
+
+ *  <MessageTileButton onClick={action('clicked')}>
+ *    Republish for free
+ *  </MessageTileButton>
+ *</MessageTile>
+ * ```
+ *
+ * You can change the internal styling by wrapping the whole thing in a `ThemeProvider`
+ * with your chosen theme, e.g.
+ *
+ * ```js
+ * import {
+ *   MessageTile,
+ *   MessageTileHeader,
+ *   MessageTileBody,
+ *   MessageTileButton,
+ *   ThemeProvider
+ * } from '@theconversation/ui'
+ *
+ *
+ * <ThemeProvider theme={coreTheme()}>
+ *   <MessageTile>
+ *     ...
+ *   </MessageTile>
+ * </ThemeProvider>
+ * ```
+ */
+
 export const MessageTile = ({ children, classes }) => {
   return (
     <Box className={classes.box} bgcolor={neutralPalette[40]} color={neutralPalette[700]}>
@@ -21,30 +68,15 @@ export const MessageTile = ({ children, classes }) => {
   )
 }
 
-MessageTile.defaultProps = {
-  body: '',
-  buttonText: '',
-  onClick: () => {},
-  title: ''
+MessageTile.defaultTypes = {
+  children: {}
 }
 
 MessageTile.propTypes = {
   /**
-   * The body text. If not provided, it's not shown.
+   * The nested components
    */
-  body: PropTypes.string,
-  /**
-   * The buttonText text. If not provided, the button is not shown.
-   */
-  buttonText: PropTypes.string,
-  /**
-   * The callback called when button is clicked.
-   */
-  onClick: PropTypes.func,
-  /**
-   * The title text. If not provided, it's not shown.
-   */
-  title: PropTypes.string
+  children: PropTypes.node.isRequired
 }
 
 export default withStyles(styles)(MessageTile)

@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Box from '@material-ui/core/Box'
 import withStyles from '@material-ui/core/styles/withStyles'
-
 import Typography from '../Typography'
 
 const styles = theme => ({
   body: {
     marginBottom: theme.spacing(2)
-  },
+  }
 })
 
 export const MessageTileBody = ({ children, classes }) => {
@@ -19,15 +17,15 @@ export const MessageTileBody = ({ children, classes }) => {
   )
 }
 
-MessageTileBody.defaultProps = {
-  children: []
+MessageTileBody.defaultTypes = {
+  children: {}
 }
 
 MessageTileBody.propTypes = {
   /**
-   * The contents of the Body. If not provided, it's not shown.
+   * The nested components that go in the body
    */
-  children: PropTypes.array,
+  children: PropTypes.node.isRequired
 }
 
 export default withStyles(styles)(MessageTileBody)

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
-
 import Typography from '../Typography'
 
 const styles = theme => ({
@@ -18,15 +17,15 @@ export const MessageTileHeader = ({ children, classes }) => {
   )
 }
 
-MessageTileHeader.defaultProps = {
-  children: []
+MessageTileHeader.defaultTypes = {
+  children: {}
 }
 
 MessageTileHeader.propTypes = {
   /**
-   * The contents of the Header. If not provided, it's not shown.
+   * The nested components that go in the header
    */
-  children: PropTypes.array,
+  children: PropTypes.node.isRequired
 }
 
 export default withStyles(styles)(MessageTileHeader)
