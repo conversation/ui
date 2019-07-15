@@ -1,7 +1,9 @@
 ## Unreleased
 
-* Export MUI `Box`
-* Export our three themes and three palettes
+## 2.8.0 (2019-07-15)
+
+* Export MUI `Box` (https://github.com/conversation/ui/pull/83)
+* Export our three themes and three palettes (https://github.com/conversation/ui/pull/83)
 
 ## 2.7.1 (2019-07-15)
 
