@@ -65,3 +65,11 @@ export { default as ThinBanner } from './promo/ThinBanner'
 export { default as ThinDonationBanner } from './promo/ThinDonationBanner'
 export { default as TimePicker } from './pickers/TimePicker'
 export { default as Typography } from './Typography'
+
+export { default as defaultTheme } from './styles/themes/default'
+export { default as accentTheme } from './styles/themes/accent'
+export { default as coreTheme } from './styles/themes/core'
+
+export { default as neutralPalette } from './styles/palettes/neutral'
+export { default as accentPalette } from './styles/palettes/accent'
+export { default as corePalette } from './styles/palettes/core'
