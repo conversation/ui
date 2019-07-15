@@ -1,6 +1,8 @@
 ## Unreleased
 
-* Add MessageTile (and three subcomponents) for upcoming promos
+## 2.7.1 (2019-07-15)
+
+* Add MessageTile (and three subcomponents) for upcoming promos (https://github.com/conversation/ui/pull/82)
 
 ## 2.6.1 (2019-07-12)
 
