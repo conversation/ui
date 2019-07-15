@@ -5,7 +5,6 @@ import donationBanner from './donationBanner'
 import donationDialog from './donationDialog'
 import ThinBanner from './ThinBanner'
 import thinDonationBanner from './thinDonationBanner'
-import messageTile from './messageTile'
 
 storiesOf('Promos', module)
   .add('ArticleDonationBanner', articleDonationBanner)
@@ -13,4 +12,3 @@ storiesOf('Promos', module)
   .add('DonationDialog', donationDialog)
   .add('ThinBanner', ThinBanner)
   .add('ThinDonationBanner', thinDonationBanner)
-  .add('MessageTile', messageTile)

@@ -2,8 +2,8 @@ import MessageTile from './MessageTile'
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Button from '../Button'
-import Typography from '../Typography'
+import Button from '../../Button'
+import Typography from '../../Typography'
 
 describe('<MessageTile />', () => {
   describe('onClick callback', () => {

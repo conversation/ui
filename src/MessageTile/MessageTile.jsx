@@ -3,44 +3,20 @@ import React from 'react'
 import Box from '@material-ui/core/Box'
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import Button from '../Button'
-import Typography from '../Typography'
 import neutralPalette from '../styles/palettes/neutral'
 
 const styles = theme => ({
-  body: {
-    marginBottom: 16
-  },
   box: {
-    borderRadius: 4,
-    marginBottom: 16,
-    padding: 16
-  },
-  title: {
-    marginBottom: 8
+    borderRadius: theme.spacing(0.5),
+    marginBottom: theme.spacing(2),
+    padding: theme.spacing(2)
   }
 })
 
-export const MessageTile = ({ body, buttonText, classes, onClick, title }) => {
+export const MessageTile = ({ children, classes }) => {
   return (
     <Box className={classes.box} bgcolor={neutralPalette[40]} color={neutralPalette[700]}>
-      { title ? (
-        <Typography className={classes.title} variant='h6'>
-          {title}
-        </Typography>
-      ) : null }
-
-      { body ? (
-        <Typography className={classes.body} variant='body2'>
-          {body}
-        </Typography>
-      ) : null }
-
-      { buttonText ? (
-        <Button fullWidth colour='primary' onClick={onClick}>
-          {buttonText}
-        </Button>
-      ) : null }
+      { children }
     </Box>
   )
 }
