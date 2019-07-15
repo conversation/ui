@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Add MessageTile (and three subcomponents) for upcoming promos
+
 ## 2.6.1 (2019-07-12)
 
 * Update donation components to use themes (https://github.com/conversation/ui/pull/78)

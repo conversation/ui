@@ -8,11 +8,22 @@ export const typography = {
   h3: { fontFamily: 'Montserrat', fontWeight: 700 },
   h4: { fontFamily: 'Montserrat', fontWeight: 600 },
   h5: { fontFamily: 'Montserrat', fontWeight: 600 },
-  h6: { fontFamily: 'Montserrat', fontWeight: 700 },
+  h6: {
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    lineHeight: 'normal',
+    letterSpacing: '0.25px'
+  },
 
   body1: {
     fontFamily: 'Libre Baskerville',
     fontSize: '1rem',
+    lineHeight: '1.5'
+  },
+
+  body2: {
+    fontFamily: 'Noto Sans',
+    fontSize: '0.875rem',
     lineHeight: '1.5'
   },
 
