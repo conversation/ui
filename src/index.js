@@ -9,6 +9,7 @@ import * as colours from './colours'
 //
 // While we are actively developing this library, it does makes sense to give
 // ourselves a head start with a few MUI components.
+export { default as Box } from '@material-ui/core/Box'
 export { default as CardActions } from '@material-ui/core/CardActions'
 export { default as CardContent } from '@material-ui/core/CardContent'
 export { default as CardHeader } from '@material-ui/core/CardHeader'
@@ -64,3 +65,11 @@ export { default as ThinBanner } from './promo/ThinBanner'
 export { default as ThinDonationBanner } from './promo/ThinDonationBanner'
 export { default as TimePicker } from './pickers/TimePicker'
 export { default as Typography } from './Typography'
+
+export { default as defaultTheme } from './styles/themes/default'
+export { default as accentTheme } from './styles/themes/accent'
+export { default as coreTheme } from './styles/themes/core'
+
+export { default as neutralPalette } from './styles/palettes/neutral'
+export { default as accentPalette } from './styles/palettes/accent'
+export { default as corePalette } from './styles/palettes/core'
