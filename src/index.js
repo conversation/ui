@@ -9,6 +9,7 @@ import * as colours from './colours'
 //
 // While we are actively developing this library, it does makes sense to give
 // ourselves a head start with a few MUI components.
+export { default as Box } from '@material-ui/core/Box'
 export { default as CardActions } from '@material-ui/core/CardActions'
 export { default as CardContent } from '@material-ui/core/CardContent'
 export { default as CardHeader } from '@material-ui/core/CardHeader'
