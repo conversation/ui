@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Remove `Card` and related components
+
 ## 2.8.0 (2019-07-15)
 
 * Export MUI `Box` (https://github.com/conversation/ui/pull/83)
