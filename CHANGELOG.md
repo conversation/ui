@@ -1,6 +1,8 @@
 ## Unreleased
 
-* Remove `Card` and related components
+## 2.9.0 (2019-07-24)
+
+* Remove `Card` and related components (https://github.com/conversation/ui/pull/84)
 
 ## 2.8.0 (2019-07-15)
 
