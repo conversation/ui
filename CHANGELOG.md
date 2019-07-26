@@ -1,4 +1,4 @@
-## Unreleased
+## 2.10.0 (2019-07-26)
 
 * Rename all TCUI logos to be without the `tcui` prefix
 
