@@ -1,3 +1,9 @@
+## Unreleased
+
+## 2.10.1 (2019-08-12)
+
+* Adjust spacing on `MessageTile` component (https://github.com/conversation/ui/pull/87)
+
 ## 2.10.0 (2019-07-26)
 
 * Rename all TCUI logos to be without the `tcui` prefix
