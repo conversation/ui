@@ -4,14 +4,14 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Button from '../Button'
 
 const styles = theme => ({
-  title: {
+  button: {
     marginBottom: theme.spacing(1)
   }
 })
 
 export const MessageTileButton = ({ children, classes, onClick }) => {
   return (
-    <Button fullWidth colour='primary' onClick={onClick}>
+    <Button fullWidth className={classes.button} colour='primary' onClick={onClick}>
       {children}
     </Button>
   )
