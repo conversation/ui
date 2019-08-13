@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Bumps @material-ui/core to 4.3.2, and related packages in lockstep
+
 ## 2.10.1 (2019-08-12)
 
 * Adjust spacing on `MessageTile` component (https://github.com/conversation/ui/pull/87)
