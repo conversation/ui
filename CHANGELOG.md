@@ -1,6 +1,8 @@
 ## Unreleased
 
-* Bumps @material-ui/core to 4.3.2, and related packages in lockstep
+# 2.11.0 (2019-08-15)
+
+* Bumps @material-ui/core to 4.3.2, and related packages in lockstep (https://github.com/conversation/ui/pull/89)
 
 ## 2.10.1 (2019-08-12)
 
