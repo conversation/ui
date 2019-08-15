@@ -4,6 +4,7 @@ import articleDonationBanner from './articleDonationBanner'
 import donationBanner from './donationBanner'
 import donationDialog from './donationDialog'
 import ThinBanner from './ThinBanner'
+import ThickBanner from './ThickBanner'
 import thinDonationBanner from './thinDonationBanner'
 
 storiesOf('Promos', module)
@@ -11,4 +12,5 @@ storiesOf('Promos', module)
   .add('DonationBanner', donationBanner)
   .add('DonationDialog', donationDialog)
   .add('ThinBanner', ThinBanner)
+  .add('ThickBanner', ThickBanner)
   .add('ThinDonationBanner', thinDonationBanner)
