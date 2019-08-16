@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Add `ThickBanner` component
+
 # 2.11.0 (2019-08-15)
 
 * Bumps @material-ui/core to 4.3.2, and related packages in lockstep (https://github.com/conversation/ui/pull/89)
