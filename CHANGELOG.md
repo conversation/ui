@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Allow `Person` to _optionally_ accept a `caption` prop
 * Add `ThickBanner` component
 
 # 2.11.0 (2019-08-15)
