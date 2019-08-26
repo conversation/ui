@@ -17,7 +17,10 @@ Eg.
  - Donations message
  - Comment
 
-You can optionally include an avatar, but the behaviour isn't great yet. Will be refined shortly.
+You can optionally include a caption.
+
+You can optionally include an avatar, but the behaviour isn't great yet.
+Will be refined shortly.
 
 ## Example
 
@@ -25,9 +28,17 @@ You can optionally include an avatar, but the behaviour isn't great yet. Will be
 `
 
 export default withDocs(md, () =>
-  <GridLayout>
-    <Person name='Colonel Koala' caption='Leader of the Koala Freedom Collective'>
-      <Avatar />
-    </Person>
-  </GridLayout>
+  <React.Fragment>
+    <GridLayout>
+      <Person name='Colonel Koala' caption='Leader of the Koala Freedom Collective'>
+        <Avatar />
+      </Person>
+    </GridLayout>
+
+    <GridLayout>
+      <Person name='From the whole Koala Army'>
+        <Avatar />
+      </Person>
+    </GridLayout>
+  </React.Fragment>
 )
