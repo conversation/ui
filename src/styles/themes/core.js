@@ -1,4 +1,5 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
+import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes'
 import memoize from 'lodash/memoize'
 import merge from 'deepmerge'
 import { typography, errorStateColours } from './common'
@@ -19,4 +20,6 @@ const theme = createMuiTheme(
     }, errorStateColours)
 )
 
-export default memoize(() => theme)
+
+
+export default memoize(() => responsiveFontSizes(theme))

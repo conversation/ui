@@ -22,4 +22,18 @@ const theme = createMuiTheme(
     }, errorStateColours)
 )
 
+theme.typography.h1 = {
+  ...theme.typography.h1,
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "4.57rem",
+  },
+}
+
+theme.typography.h2 = {
+  ...theme.typography.h2,
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "2.85rem",
+  },
+}
+
 export default memoize(() => theme)
