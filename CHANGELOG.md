@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Move ThinBanner and ThickBanner to top level, outside promos.
+
 # 2.12.0 (2019-08-26)
 
 * Allow `Person` to _optionally_ accept a `caption` prop
