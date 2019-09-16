@@ -21,9 +21,10 @@ const styles = theme => ({
  * The `<ThinBanner>` component is a clickable block that can
  * contain a short amount of text.
  *
- * Intended for use on mobile as an alternative to `<DonationBanner>`, it can
- * also be used to promote surveys (traditionally with a green background) and
- * newsletters (traditionally with a blue background).
+ * Intended for use on mobile and on desktop as a slimmer alternative to `<ThickBanner>`,
+ * it can be used to promote surveys (traditionally with a green background),
+ * newsletters (traditionally with a blue background), and donations (traditionally with
+ * a red background).
  *
  * To change the colour of the banner, wrap it in a ThemeProvider, pick a theme,
  * and select a `color` ala: ['default' | 'inherit' | 'primary' | 'secondary']
