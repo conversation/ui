@@ -57,7 +57,7 @@ export { default as Switch } from './Switch'
 export { default as TextField } from './TextField'
 export { default as ThickBanner } from './ThickBanner'
 export { default as ThinBanner } from './ThinBanner'
-export { default as ThinDonationBanner } from './promo/ThinDonationBanner'
+export { default as ThinDonationBanner } from './ThinDonationBanner'
 export { default as TimePicker } from './pickers/TimePicker'
 export { default as Typography } from './Typography'
 
