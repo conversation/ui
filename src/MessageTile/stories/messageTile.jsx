@@ -15,7 +15,7 @@ import defaultTheme from '../../styles/themes/default'
 
 export default () => (
   <ComponentOverview heading='MessageTile' component={UnwrappedMessageTile}>
-    <div style={{ marginTop: 20, width: 220 }}>
+    <div style={{ marginTop: 16, width: 220 }}>
       <ThemeProvider theme={defaultTheme()}>
         <MessageTile>
           <MessageTileHeader>
