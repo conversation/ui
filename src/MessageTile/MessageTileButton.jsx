@@ -9,9 +9,9 @@ const styles = theme => ({
   }
 })
 
-export const MessageTileButton = ({ children, classes, onClick }) => {
+export const MessageTileButton = ({ children, classes, ...props }) => {
   return (
-    <Button fullWidth className={classes.button} colour='primary' onClick={onClick}>
+    <Button className={classes.button} colour='primary' {...props}>
       {children}
     </Button>
   )
@@ -24,9 +24,14 @@ MessageTileButton.propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The onClick event for the Button
+   *
    */
-  onClick: PropTypes.func
+  classes: PropTypes.object
+}
+
+MessageTileButton.defaultProps = {
+  fullWidth: true,
+  prominent: false
 }
 
 export default withStyles(styles)(MessageTileButton)

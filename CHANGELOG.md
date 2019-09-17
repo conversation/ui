@@ -1,6 +1,8 @@
 ## Unreleased
 
 * Move ThinBanner and ThickBanner to top level, outside promos.
+* Added props to MessageTile to allow it to be more configurable
+* Added more examples of MessageTile
 
 # 2.12.0 (2019-08-26)
 
