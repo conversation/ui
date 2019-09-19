@@ -32,6 +32,11 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+
+    // To give the children (except the last one) spacing between items.
+    '& > *:not(:last-child)': {
+      marginBottom: theme.spacing(2)
+    }
   },
 })
 
