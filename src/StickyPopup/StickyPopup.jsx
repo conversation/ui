@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Snackbar from '@material-ui/core/Snackbar'
+import SnackbarContent from '@material-ui/core/SnackbarContent'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = theme => ({})
@@ -22,8 +23,11 @@ export const StickyPopup = ({
       autoHideDuration={autoHideDuration}
       open={open}
       onClose={onClose}
-      message={children}
-    />
+    >
+      <SnackbarContent
+        message={children}
+      />
+    </Snackbar>
   )
 }
 
