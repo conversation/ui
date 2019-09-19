@@ -134,8 +134,8 @@ StickyPopup.propTypes = {
   * The placement of the StickyPopup
   */
   anchorOrigin: PropTypes.shape({
-    vertical: PropTypes.oneOf(['left', 'center', 'right']),
-    horizontal: PropTypes.oneOf(['top', 'bottom'])
+    vertical: PropTypes.oneOf(['top', 'bottom']),
+    horizontal: PropTypes.oneOf(['left', 'center', 'right'])
   }),
 
   /**
