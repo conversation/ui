@@ -47,7 +47,7 @@ StickyPopupDismiss.propTypes = {
   /**
    * The callback called when button is clicked.
    */
-  onClose: PropTypes.func.required
+  onClose: PropTypes.func
 }
 
 export default withStyles(styles)(StickyPopupDismiss)

@@ -156,7 +156,7 @@ StickyPopup.propTypes = {
   /**
    * The callback called when button is clicked.
    */
-  onClose: PropTypes.func.required,
+  onClose: PropTypes.func,
 
   /**
    * If true, the StickyPopup is shown.
