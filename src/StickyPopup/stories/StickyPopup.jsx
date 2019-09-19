@@ -41,6 +41,7 @@ class ExampleStickyPopup extends React.Component {
           open={this.state.open}
           color='primary'
           onClose={this.handleClose}
+          dismissable
         >
           <Typography variant='h5'>
             Join over 100,000 Australians who value free evidence-based news.

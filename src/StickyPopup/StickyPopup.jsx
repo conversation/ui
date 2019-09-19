@@ -4,6 +4,8 @@ import Snackbar from '@material-ui/core/Snackbar'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
 import withStyles from '@material-ui/core/styles/withStyles'
 
+import StickyPopupDismiss from './StickyPopupDismiss'
+
 // Like https://github.com/brunobertolini/styled-by
 const styledBy = (property, mapping) => props => mapping[props[property]]
 
@@ -38,6 +40,11 @@ const styles = theme => ({
       marginBottom: theme.spacing(2)
     }
   },
+
+  action: {
+    padding: 0,
+    margin: 0
+  }
 })
 
 /**
@@ -50,9 +57,11 @@ export const StickyPopup = ({
   children,
   classes,
   color,
+  dismissable,
   open,
   onClose
 }) => {
+  const action = dismissable ? <StickyPopupDismiss onClose={onClose} /> : null
   return (
     <Snackbar
       anchorOrigin={anchorOrigin}
@@ -64,6 +73,7 @@ export const StickyPopup = ({
         classes={classes}
         color={color}
         message={children}
+        action={action}
       />
     </Snackbar>
   )
@@ -74,6 +84,7 @@ StickyPopup.defaultProps = {
   autoHideDuration: null,
   children: {},
   color: 'default',
+  dismissable: false,
   open: true
 }
 
@@ -101,6 +112,11 @@ StickyPopup.propTypes = {
    * Optional colour to override the default colour.
    */
   color: PropTypes.oneOf(['default', 'primary', 'secondary', 'inherit']),
+
+  /**
+   * Optionally show a dismissable icon top right.
+   */
+  dismissable: PropTypes.bool,
 
   /**
    * The callback called when button is clicked.
