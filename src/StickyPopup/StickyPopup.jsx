@@ -25,9 +25,15 @@ const styles = theme => ({
   },
 
   message: {
-    paddingTop: theme.spacing(1),
+    paddingTop: styledBy('prominent', {
+      true: theme.spacing(5),
+      false: theme.spacing(1),
+    }),
+    paddingBottom: styledBy('prominent', {
+      true: theme.spacing(5),
+      false: theme.spacing(1),
+    }),
     paddingRight: theme.spacing(2),
-    paddingBottom: theme.spacing(1),
     paddingLeft: theme.spacing(2),
     textAlign: 'center',
     maxWidth: 360,
@@ -39,11 +45,6 @@ const styles = theme => ({
     '& > *:not(:last-child)': {
       marginBottom: theme.spacing(2)
     }
-  },
-
-  prominent: {
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5)
   },
 
   action: {
