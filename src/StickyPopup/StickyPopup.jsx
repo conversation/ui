@@ -27,11 +27,11 @@ const styles = theme => ({
   message: {
     paddingTop: styledBy('prominent', {
       true: theme.spacing(5),
-      false: theme.spacing(1),
+      false: theme.spacing(1)
     }),
     paddingBottom: styledBy('prominent', {
       true: theme.spacing(5),
-      false: theme.spacing(1),
+      false: theme.spacing(1)
     }),
     paddingRight: theme.spacing(2),
     paddingLeft: theme.spacing(2),
@@ -103,7 +103,6 @@ export const StickyPopup = ({
       onClose={onClose}
     >
       <SnackbarContent
-        className={prominent ? classes.prominent : null}
         classes={classes}
         color={color}
         message={children}
