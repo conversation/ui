@@ -40,10 +40,11 @@ class RepublishingStickyPopup extends React.Component {
             vertical: 'bottom',
             horizontal: 'center'
           }}
-          open={this.state.open}
           color='primary'
-          onClose={this.handleClose}
           dismissable
+          onClose={this.handleClose}
+          open={this.state.open}
+          prominent
         >
           <Typography variant='h5'>
             We believe in the free flow of information
@@ -91,10 +92,10 @@ class DonationStickyPopup extends React.Component {
             vertical: 'bottom',
             horizontal: 'left'
           }}
-          open={this.state.open}
           color='primary'
-          onClose={this.handleClose}
           dismissable
+          onClose={this.handleClose}
+          open={this.state.open}
         >
           <Typography variant='subtitle2'>
             The Conversation provides clean information in a world infected with spin.
@@ -138,10 +139,11 @@ class NewsletterStickyPopup extends React.Component {
             vertical: 'bottom',
             horizontal: 'right'
           }}
-          open={this.state.open}
           color='primary'
-          onClose={this.handleClose}
           dismissable
+          onClose={this.handleClose}
+          open={this.state.open}
+          prominent
         >
           <Typography variant='h5'>
             Join over 100,000 Australians who value free evidence-based news.

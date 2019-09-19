@@ -41,6 +41,11 @@ const styles = theme => ({
     }
   },
 
+  prominent: {
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5)
+  },
+
   action: {
     padding: 0,
     margin: 0
@@ -85,6 +90,7 @@ export const StickyPopup = ({
   color,
   dismissable,
   open,
+  prominent,
   onClose
 }) => {
   const action = dismissable ? <StickyPopupDismiss onClose={onClose} /> : null
@@ -96,6 +102,7 @@ export const StickyPopup = ({
       onClose={onClose}
     >
       <SnackbarContent
+        className={prominent ? classes.prominent : null}
         classes={classes}
         color={color}
         message={children}
@@ -111,7 +118,8 @@ StickyPopup.defaultProps = {
   children: {},
   color: 'default',
   dismissable: false,
-  open: true
+  open: true,
+  prominent: false
 }
 
 StickyPopup.propTypes = {
@@ -152,7 +160,12 @@ StickyPopup.propTypes = {
   /**
    * If true, the StickyPopup is shown.
    */
-  open: PropTypes.bool.isRequired
+  open: PropTypes.bool.isRequired,
+
+  /**
+   * Optionally boolean to give the message have more padding
+   */
+  prominent: PropTypes.bool
 }
 
 export default withStyles(styles)(StickyPopup)
