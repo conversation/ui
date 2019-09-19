@@ -117,7 +117,7 @@ StickyPopup.defaultProps = {
   anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
   autoHideDuration: null,
   children: {},
-  color: 'default',
+  color: 'inherit',
   dismissable: false,
   open: true,
   prominent: false
@@ -146,7 +146,7 @@ StickyPopup.propTypes = {
   /**
    * Optional colour to override the default colour.
    */
-  color: PropTypes.oneOf(['default', 'primary', 'secondary', 'inherit']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'inherit']),
 
   /**
    * Optionally show a dismissable icon top right.
