@@ -39,6 +39,7 @@ class ExampleStickyPopup extends React.Component {
             horizontal: 'right'
           }}
           open={this.state.open}
+          color='primary'
           onClose={this.handleClose}
         >
           <Typography variant='h5'>

@@ -4,7 +4,36 @@ import Snackbar from '@material-ui/core/Snackbar'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
 import withStyles from '@material-ui/core/styles/withStyles'
 
-const styles = theme => ({})
+// Like https://github.com/brunobertolini/styled-by
+const styledBy = (property, mapping) => props => mapping[props[property]]
+
+const styles = theme => ({
+  root: {
+    position: 'relative',
+    backgroundColor: styledBy('color', {
+      default: theme.palette.primary.main,
+      primary: theme.palette.primary.main,
+      secondary: theme.palette.secondary.main
+    }),
+    color: styledBy('color', {
+      default: theme.palette.primary.contrastText,
+      primary: theme.palette.primary.contrastText,
+      secondary: theme.palette.secondary.contrastText
+    })
+  },
+
+  message: {
+    paddingTop: theme.spacing(1),
+    paddingRight: theme.spacing(2),
+    paddingBottom: theme.spacing(1),
+    paddingLeft: theme.spacing(2),
+    textAlign: 'center',
+    maxWidth: 360,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+})
 
 /**
  * The `<StickyPopup>` component informs users of something while still allowing the
@@ -14,6 +43,8 @@ export const StickyPopup = ({
   anchorOrigin,
   autoHideDuration,
   children,
+  classes,
+  color,
   open,
   onClose
 }) => {
@@ -25,6 +56,8 @@ export const StickyPopup = ({
       onClose={onClose}
     >
       <SnackbarContent
+        classes={classes}
+        color={color}
         message={children}
       />
     </Snackbar>
@@ -35,6 +68,7 @@ StickyPopup.defaultProps = {
   anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
   autoHideDuration: null,
   children: {},
+  color: 'default',
   open: true
 }
 
@@ -57,6 +91,11 @@ StickyPopup.propTypes = {
   * The content of the StickyPopup.
   */
   children: PropTypes.node.isRequired,
+
+  /**
+   * Optional colour to override the default colour.
+   */
+  color: PropTypes.oneOf(['default', 'primary', 'secondary', 'inherit']),
 
   /**
    * The callback called when button is clicked.
