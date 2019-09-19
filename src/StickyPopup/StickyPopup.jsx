@@ -50,6 +50,32 @@ const styles = theme => ({
 /**
  * The `<StickyPopup>` component informs users of something while still allowing the
  * user to interact with the rest of the page.
+ *
+ * To change the colour of the StickyPopup, wrap it in a ThemeProvider, pick a theme,
+ * and select a `color` ala: ['default' | 'inherit' | 'primary' | 'secondary']
+ *
+ * ~~~js
+<ThemeProvider theme={defaultTheme()}>
+  <StickyPopup
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'right',
+    }}
+    open={this.state.open}
+    color="primary"
+    onClose={this.handleClose}
+    dismissable={true}
+  >
+    <Typography variant="subtitle1">
+      Join over 100,000 Australians who value free evidence-based news.
+    </Typography>
+
+    <Button variant="contained" onClick={action("click")}>
+      Sign up today
+    </Button>
+  </StickyPopup>
+</ThemeProvider />
+ * ~~~
  */
 export const StickyPopup = ({
   anchorOrigin,
