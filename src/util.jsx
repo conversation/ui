@@ -20,6 +20,9 @@ export const GridLayout = ({ children, ...other }) => {
   )
 }
 
+// Like https://github.com/brunobertolini/styled-by
+export const styledBy = (property, mapping) => props => mapping[props[property]]
+
 /**
  * Returns an array of prop definitions, based on the docgen info for the given
  * component.

@@ -3,11 +3,8 @@ import PropTypes from 'prop-types'
 import Snackbar from '@material-ui/core/Snackbar'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
 import withStyles from '@material-ui/core/styles/withStyles'
-
+import { styledBy } from '../util'
 import StickyPopupDismiss from './StickyPopupDismiss'
-
-// Like https://github.com/brunobertolini/styled-by
-const styledBy = (property, mapping) => props => mapping[props[property]]
 
 const styles = theme => ({
   root: {
