@@ -3,12 +3,10 @@ import CloseIcon from '@material-ui/icons/Close'
 import MaterialIconButton from '@material-ui/core/IconButton'
 import PropTypes from 'prop-types'
 import Typography from '../Typography'
+import { styledBy } from '../util'
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import withStyles from '@material-ui/core/styles/withStyles'
-
-// Like https://github.com/brunobertolini/styled-by
-const styledBy = (property, mapping) => props => mapping[props[property]]
 
 const styles = theme => ({
   box: {
