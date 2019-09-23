@@ -33,6 +33,7 @@ const styles = theme => ({
       true: theme.spacing(5),
       false: theme.spacing(1)
     }),
+    margin: '0 auto',
     paddingRight: theme.spacing(2),
     paddingLeft: theme.spacing(2),
     textAlign: 'center',
