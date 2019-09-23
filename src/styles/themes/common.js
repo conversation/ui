@@ -1,4 +1,8 @@
 import core from '../palettes/core'
+import { createMuiTheme } from '@material-ui/core/styles';
+
+// Create a new theme to use it's default breakpoints
+const theme = createMuiTheme();
 
 export const typography = {
   fontFamily: 'Noto Sans',
@@ -7,31 +11,37 @@ export const typography = {
   h1: {
     fontFamily: 'Montserrat',
     fontWeight: 700,
-    fontSize: 28,
+    fontSize: "1.75rem",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: "2.75rem"
+    }
   },
 
   h2: {
     fontFamily: 'Montserrat',
     fontWeight: 700,
-    fontSize: 26,
+    fontSize: "1.625rem",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: "2rem"
+    }
   },
 
   h3: {
     fontFamily: 'Montserrat',
     fontWeight: 700,
-    fontSize: 22,
+    fontSize: "1.375rem",
   },
 
   h4: {
     fontFamily: 'Montserrat',
     fontWeight: 600,
-    fontSize: 20,
+    fontSize: "1.25rem",
   },
 
   h5: {
     fontFamily: 'Montserrat',
     fontWeight: 600,
-    fontSize: 18,
+    fontSize: "1.125rem",
   },
 
   h6: {
@@ -39,45 +49,56 @@ export const typography = {
     fontWeight: 700,
     lineHeight: 'normal',
     letterSpacing: '0.25px',
-    fontSize: 16,
+    fontSize: "1rem",
   },
 
   body1: {
     fontFamily: 'Libre Baskerville',
-    fontSize: '1rem',
     lineHeight: '1.5',
-    fontSize: 16
+    fontSize: "1rem",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: "1.125rem"
+    }
   },
 
   body2: {
     fontFamily: 'Noto Sans',
     fontSize: '0.875rem',
     lineHeight: '1.5',
-    fontSize: 18
+    fontSize: "1.125rem",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: "1.5rem"
+    }
   },
 
   button: {
     letterSpacing: 0.25,
     textTransform: 'none',
-    fontSize: 14
+    fontSize: "0.875rem",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: "1rem"
+    }
   },
 
   overline: {
     letterSpacing: 0.25,
     textTransform: 'none',
-    fontSize: 14
+    fontSize: "0.875rem",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: "1rem"
+    }
   },
 
   caption: {
-    fontSize: 12
+    fontSize: "0.75rem"
   },
 
   subtitle1: {
-    fontSize: 16
+    fontSize: "1rem",
   },
 
   subtitle2: {
-    fontSize: 12
+    fontSize: "0.75rem"
   }
 }
 
