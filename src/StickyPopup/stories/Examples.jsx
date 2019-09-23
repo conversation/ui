@@ -33,7 +33,7 @@ class RepublishingStickyPopup extends React.Component {
           colour='primary'
           onClick={this.handleOpen}
           style={{ clear: 'both', margin: '16px 0' }}
-        >Toggle Republishing-related StickyPopup message</Button>
+        >Show Republishing StickyPopup</Button>
 
         <StickyPopup
           anchorOrigin={{
@@ -85,7 +85,7 @@ class DonationStickyPopup extends React.Component {
           colour='primary'
           onClick={this.handleOpen}
           style={{ clear: 'both', margin: '16px 0' }}
-        >Toggle Donation-related StickyPopup message</Button>
+        >Show Donation StickyPopup</Button>
 
         <StickyPopup
           anchorOrigin={{
@@ -132,7 +132,7 @@ class NewsletterStickyPopup extends React.Component {
           colour='primary'
           onClick={this.handleOpen}
           style={{ clear: 'both', margin: '16px 0' }}
-        >Toggle Newsletter-related StickyPopup message</Button>
+        >Show Newsletter StickyPopup</Button>
 
         <StickyPopup
           anchorOrigin={{
