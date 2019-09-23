@@ -1,8 +1,8 @@
 import core from '../palettes/core'
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles'
 
 // Create a new theme to use it's default breakpoints
-const theme = createMuiTheme();
+const theme = createMuiTheme()
 
 export const typography = {
   fontFamily: 'Noto Sans',
@@ -11,9 +11,9 @@ export const typography = {
   button: {
     letterSpacing: 0.25,
     textTransform: 'none',
-    fontSize: "0.875rem",
+    fontSize: '0.875rem',
     [theme.breakpoints.up('sm')]: {
-      fontSize: "1rem"
+      fontSize: '1rem'
     }
   }
 }
