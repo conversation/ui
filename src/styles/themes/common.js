@@ -2,6 +2,7 @@ import core from '../palettes/core'
 
 export const typography = {
   fontFamily: 'Noto Sans',
+  fontSize: 16,
 
   h1: {
     fontFamily: 'Montserrat',
