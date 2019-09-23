@@ -11,7 +11,7 @@ const styles = theme => ({
 
 export const MessageTileBody = ({ children, classes }) => {
   return (
-    <Typography className={classes.body} variant='body2'>
+    <Typography className={classes.body} variant='subtitle1'>
       {children}
     </Typography>
   )
