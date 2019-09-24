@@ -1,5 +1,8 @@
 ## Unreleased
 
+* Updates font sizes for Typography
+* Updates documentation and components to use new font sizes
+
 # 2.13.0 (2019-09-17)
 
 * Move ThinBanner and ThickBanner to top level, outside promos.
