@@ -13,7 +13,7 @@ export default () => (
     </div>
 
     <ArticleDonationBanner onClick={action('clicked')} donateText='Donate now'>
-      <Typography variant='h6' gutterBottom>Before you go...</Typography>
+      <Typography variant='h3' gutterBottom>Before you go...</Typography>
       <Typography variant='body1' paragraph>
         The Conversation serves society by making knowledge accessible to everyone, not just a select few. Our only agenda is a better informed public. If you care about what we do please make a donation now and help secure our future.
       </Typography>
