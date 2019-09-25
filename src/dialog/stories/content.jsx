@@ -52,7 +52,7 @@ class ExampleDialog extends React.Component {
         <Dialog open={this.state.open} onClose={this.handleClose}>
           <DialogTitle>Title</DialogTitle>
           <DialogContent>
-            <Typography variant='body2'>{LIPSUM}</Typography>
+            <Typography variant='subtitle1'>{LIPSUM}</Typography>
           </DialogContent>
           <DialogActions>
             <DialogAction onClick={this.handleClose} variant='primary'>OK</DialogAction>
