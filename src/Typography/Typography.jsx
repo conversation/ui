@@ -1,6 +1,7 @@
 import MaterialTypography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 import React from 'react'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 /**
  * The `<Typography>` component contains a block of text which is styled
@@ -14,6 +15,82 @@ import React from 'react'
  * </Typography>
  * ~~~
  */
+const styles = theme => ({
+  h1: {
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '1.75rem'
+  },
+
+  h2: {
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '1.625rem'
+  },
+
+  h3: {
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '1.375rem'
+  },
+
+  h4: {
+    fontFamily: 'Montserrat',
+    fontWeight: 600,
+    fontSize: '1.25rem'
+  },
+
+  h5: {
+    fontFamily: 'Montserrat',
+    fontWeight: 600,
+    fontSize: '1.125rem'
+  },
+
+  h6: {
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    lineHeight: 'normal',
+    letterSpacing: '0.25px',
+    fontSize: '1rem'
+  },
+
+  body1: {
+    fontFamily: 'Libre Baskerville',
+    lineHeight: '1.5',
+    fontSize: '1rem'
+  },
+
+  body2: {
+    fontFamily: 'Noto Sans',
+    lineHeight: '1.5',
+    fontSize: '1.125rem'
+  },
+
+  button: {
+    letterSpacing: 0.25,
+    textTransform: 'none',
+    fontSize: '0.875rem'
+  },
+
+  overline: {
+    letterSpacing: 0.25,
+    textTransform: 'none',
+    fontSize: '0.875rem'
+  },
+
+  caption: {
+    fontSize: '0.75rem'
+  },
+
+  subtitle1: {
+    fontSize: '1rem'
+  },
+
+  subtitle2: {
+    fontSize: '0.75rem'
+  }
+})
+
 export const Typography = ({ children, colour, ...other }) => (
   <MaterialTypography color={colour} {...other}>
     {children}
@@ -87,4 +164,4 @@ Typography.defaultProps = {
   variant: 'inherit'
 }
 
-export default Typography
+export default withStyles(styles)(Typography)
