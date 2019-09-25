@@ -94,7 +94,7 @@ export const ThickBanner = ({ children,
       <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
         <CloseIcon />
       </MaterialIconButton>
-      <Typography variant='h5' paragraph className={classes.typography}>{children}</Typography>
+      <Typography variant='h3' paragraph className={classes.typography}>{children}</Typography>
       <Button prominent className={classes.button} onClick={onClick}>
         {buttonText}
       </Button>
