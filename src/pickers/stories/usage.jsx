@@ -1,6 +1,8 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
+import { ThemeProvider } from '../../styles'
+import defaultTheme from '../../styles/themes/default'
 
 import MomentUtils from '@date-io/moment'
 import { DatePicker, DateTimePicker, TimePicker } from '../..'
@@ -28,8 +30,10 @@ const changeDate = (momentDate) => {
 
 export default withDocs(md, () =>
   <GridLayout>
-    <DatePicker dateManagementLibrary={MomentUtils} onChange={changeDate} />
-    <TimePicker dateManagementLibrary={MomentUtils} onChange={changeDate} />
-    <DateTimePicker dateManagementLibrary={MomentUtils} onChange={changeDate} />
+    <ThemeProvider theme={defaultTheme()}>
+      <DatePicker dateManagementLibrary={MomentUtils} onChange={changeDate} />
+      <TimePicker dateManagementLibrary={MomentUtils} onChange={changeDate} />
+      <DateTimePicker dateManagementLibrary={MomentUtils} onChange={changeDate} />
+    </ThemeProvider>
   </GridLayout>
 )
