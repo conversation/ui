@@ -19,13 +19,19 @@ const styles = theme => ({
   h1: {
     fontFamily: 'Montserrat',
     fontWeight: 700,
-    fontSize: '1.75rem'
+    fontSize: '1.75rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.75rem'
+    }
   },
 
   h2: {
     fontFamily: 'Montserrat',
     fontWeight: 700,
-    fontSize: '1.625rem'
+    fontSize: '1.625rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2rem'
+    }
   },
 
   h3: {
@@ -57,25 +63,37 @@ const styles = theme => ({
   body1: {
     fontFamily: 'Libre Baskerville',
     lineHeight: '1.5',
-    fontSize: '1rem'
+    fontSize: '1rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.125rem'
+    }
   },
 
   body2: {
     fontFamily: 'Noto Sans',
     lineHeight: '1.5',
-    fontSize: '1.125rem'
+    fontSize: '1.125rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.5rem'
+    }
   },
 
   button: {
     letterSpacing: 0.25,
     textTransform: 'none',
-    fontSize: '0.875rem'
+    fontSize: '0.875rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1rem'
+    }
   },
 
   overline: {
     letterSpacing: 0.25,
     textTransform: 'none',
-    fontSize: '0.875rem'
+    fontSize: '0.875rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1rem'
+    }
   },
 
   caption: {
