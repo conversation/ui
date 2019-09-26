@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Add responsive desktop-device font sizes to Typography component
 * Updates font sizes for Typography
 
 # 2.13.0 (2019-09-17)
