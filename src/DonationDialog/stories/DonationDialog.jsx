@@ -50,7 +50,7 @@ function ExampleDialog () {
           <DialogAvatar src={koala} />
           <DialogInlineTitle>Support close combat training for koalas</DialogInlineTitle>
           <DialogContent>
-            <Typography variant='body2'>{CONTENT}</Typography>
+            <Typography variant='subtitle1'>{CONTENT}</Typography>
             <MiniDivider />
             <Person name='Colonel Koala' caption='Leader of the Koala Freedom Collective' />
           </DialogContent>
