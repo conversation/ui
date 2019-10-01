@@ -94,7 +94,7 @@ export const StickyPopup = ({
   onClose
 }) => {
   const action = dismissable ? <StickyPopupDismiss onClose={onClose} /> : null
-  const clickAwayAction = clickAwayClose ? onClose : null
+  const clickAwayAction = clickAwayClose ? onClose : () => {}
   return (
     <Snackbar
       anchorOrigin={anchorOrigin}
