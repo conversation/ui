@@ -60,6 +60,7 @@ export { default as ThinBanner } from './ThinBanner'
 export { default as ThinDonationBanner } from './ThinDonationBanner'
 export { default as TimePicker } from './pickers/TimePicker'
 export { default as Typography } from './Typography'
+export { default as StickyPopup } from './StickyPopup'
 
 export { default as defaultTheme } from './styles/themes/default'
 export { default as accentTheme } from './styles/themes/accent'
