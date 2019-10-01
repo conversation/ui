@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Exported StickyPopup
+
 # 2.14.0 (2019-09-26)
 
 * Add responsive desktop-device font sizes to Typography component
