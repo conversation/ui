@@ -1,4 +1,4 @@
-## Unreleased
+# 2.15.0 (2019-10-01)
 
 * Exported StickyPopup
 
