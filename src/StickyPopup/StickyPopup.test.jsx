@@ -5,7 +5,39 @@ import SnackbarContent from '@material-ui/core/SnackbarContent'
 import StickyPopup from './StickyPopup'
 import StickyPopupDismiss from './StickyPopupDismiss'
 
+function fireBodyMouseEvent (name, properties = {}) {
+  const event = document.createEvent('MouseEvents')
+  event.initEvent(name, true, true)
+  Object.keys(properties).forEach(key => {
+    event[key] = properties[key]
+  })
+  document.body.dispatchEvent(event)
+  return event
+}
+
 describe('<StickyPopup />', () => {
+  describe('clickAwayClose', () => {
+    it('stops StickyPopup closing if clicked away from component if false', () => {
+      const onClose = jest.fn()
+
+      const wrapper = mount(<StickyPopup onClose={onClose}>A message</StickyPopup>)
+      expect(wrapper.find('StickyPopup').props().clickAwayClose).toBe(false)
+
+      fireBodyMouseEvent('click')
+      expect(onClose).not.toHaveBeenCalled()
+    })
+
+    it('closes StickyPopup if clicked away from component if true', () => {
+      const onClose = jest.fn()
+      const wrapper = mount(<StickyPopup onClose={onClose} clickAwayClose>A message</StickyPopup>)
+
+      expect(wrapper.find('StickyPopup').props().clickAwayClose).toBe(true)
+
+      fireBodyMouseEvent('click')
+      expect(onClose).toHaveBeenCalled()
+    })
+  })
+
   describe('dismissable', () => {
     it('shows a dismiss button if prop is provided', () => {
       const onClose = jest.fn()
