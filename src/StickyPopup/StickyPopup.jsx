@@ -86,6 +86,7 @@ export const StickyPopup = ({
   autoHideDuration,
   children,
   classes,
+  clickAwayClose,
   color,
   dismissable,
   open,
@@ -93,12 +94,14 @@ export const StickyPopup = ({
   onClose
 }) => {
   const action = dismissable ? <StickyPopupDismiss onClose={onClose} /> : null
+  const clickAwayAction = clickAwayClose ? onClose : null
   return (
     <Snackbar
       anchorOrigin={anchorOrigin}
       autoHideDuration={autoHideDuration}
       open={open}
       onClose={onClose}
+      ClickAwayListenerProps={{ onClickAway: clickAwayAction }}
     >
       <SnackbarContent
         classes={classes}
@@ -114,6 +117,7 @@ StickyPopup.defaultProps = {
   anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
   autoHideDuration: null,
   children: {},
+  clickAwayClose: false,
   color: 'inherit',
   dismissable: false,
   open: true,
@@ -139,6 +143,11 @@ StickyPopup.propTypes = {
   * The content of the StickyPopup.
   */
   children: PropTypes.node.isRequired,
+
+  /**
+  * Should clicking outside of the StickyPopup close it
+  */
+  clickAwayClose: PropTypes.bool,
 
   /**
    * Optional colour to override the default colour.
