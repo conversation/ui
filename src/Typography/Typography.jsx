@@ -79,7 +79,6 @@ const styles = theme => ({
   },
 
   button: {
-    letterSpacing: 0.25,
     textTransform: 'none',
     fontSize: '0.875rem',
     [theme.breakpoints.up('sm')]: {
