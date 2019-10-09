@@ -100,7 +100,8 @@ const styles = theme => ({
   },
 
   subtitle1: {
-    fontSize: '1rem'
+    fontSize: '1rem',
+    lineHeight: '1.3'
   },
 
   subtitle2: {
