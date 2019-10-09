@@ -1,3 +1,7 @@
+# 2.16.0 (2019-10-09)
+
+* StickyPopup fixes (https://github.com/conversation/ui/pull/108)
+
 # 2.15.0 (2019-10-01)
 
 * Exported StickyPopup
