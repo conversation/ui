@@ -31,8 +31,8 @@ const styles = theme => ({
       false: theme.spacing(1)
     }),
     margin: '0 auto',
-    paddingRight: theme.spacing(2),
-    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(3),
+    paddingLeft: theme.spacing(3),
     textAlign: 'center',
     maxWidth: 360,
     display: 'flex',
