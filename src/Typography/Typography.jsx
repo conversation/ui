@@ -79,7 +79,6 @@ const styles = theme => ({
   },
 
   button: {
-    letterSpacing: 0.25,
     textTransform: 'none',
     fontSize: '0.875rem',
     [theme.breakpoints.up('sm')]: {
@@ -101,7 +100,8 @@ const styles = theme => ({
   },
 
   subtitle1: {
-    fontSize: '1rem'
+    fontSize: '1rem',
+    lineHeight: '1.3'
   },
 
   subtitle2: {

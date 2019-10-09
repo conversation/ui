@@ -9,9 +9,9 @@ export const typography = {
   fontSize: 16,
 
   button: {
-    letterSpacing: 0.25,
     textTransform: 'none',
     fontSize: '0.875rem',
+    fontWeight: 700,
     [theme.breakpoints.up('sm')]: {
       fontSize: '1rem'
     }

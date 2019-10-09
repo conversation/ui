@@ -55,7 +55,7 @@ class RepublishingStickyPopup extends React.Component {
           </Typography>
 
           <Button variant='contained' color='secondary' onClick={action('click')}>
-            Republsh this article
+            Republish this article
           </Button>
         </StickyPopup>
       </ThemeProvider>
@@ -97,11 +97,11 @@ class DonationStickyPopup extends React.Component {
           onClose={this.handleClose}
           open={this.state.open}
         >
-          <Typography variant='subtitle2'>
+          <Typography variant='subtitle1'>
             The Conversation provides clean information in a world infected with spin.
           </Typography>
 
-          <Button variant='contained' onClick={action('click')}>
+          <Button variant='text' color='inherit' onClick={action('click')}>
             Donate now
           </Button>
         </StickyPopup>
@@ -143,13 +143,12 @@ class NewsletterStickyPopup extends React.Component {
           dismissable
           onClose={this.handleClose}
           open={this.state.open}
-          prominent
         >
-          <Typography variant='h5'>
+          <Typography variant='subtitle1'>
             Join over 100,000 Australians who value free evidence-based news.
           </Typography>
 
-          <Button variant='contained' color='secondary' onClick={action('click')}>
+          <Button variant='text' color='inherit' onClick={action('click')}>
             Sign up today
           </Button>
         </StickyPopup>
