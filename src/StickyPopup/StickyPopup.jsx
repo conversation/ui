@@ -70,7 +70,7 @@ const styles = theme => ({
     onClose={this.handleClose}
     dismissable={true}
   >
-    <Typography variant="subtitle1">
+    <Typography variant="h5">
       Join over 100,000 Australians who value free evidence-based news.
     </Typography>
 

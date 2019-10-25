@@ -1,3 +1,7 @@
+## Unreleased
+
+* Update docs in example
+
 # 2.16.0 (2019-10-09)
 
 * StickyPopup fixes (https://github.com/conversation/ui/pull/108)
