@@ -86,7 +86,7 @@ const styles = theme => ({
  *   <DialogAvatar src={koala} />
  *   <DialogInlineTitle>Support close combat training for koalas</DialogInlineTitle>
  *   <DialogContent>
- *     <Typography variant='body1'>{content}</Typography>
+ *     <Typography variant='subtitle1'>{content}</Typography>
  *     <MiniDivider />
  *     <Person name="Colonel Koala" caption="Leader of the Koala Freedom Collective" />
  *   </DialogContent>
