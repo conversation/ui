@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Adds a ThemeSelector component
 * Update docs in example
 
 # 2.16.0 (2019-10-09)
