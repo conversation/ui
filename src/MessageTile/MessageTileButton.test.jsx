@@ -1,11 +1,11 @@
 import MessageTileButton from './MessageTileButton'
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import Button from '../Button'
 
 describe('<MessageTileButton />', () => {
   it('button is rendered, with children as the button text', () => {
-    const wrapper = shallow(<MessageTileButton>Do the thing!</MessageTileButton>).dive()
+    const wrapper = mount(<MessageTileButton>Do the thing!</MessageTileButton>)
 
     expect(wrapper.find(Button).text()).toEqual('Do the thing!')
   })
