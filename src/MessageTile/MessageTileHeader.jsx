@@ -11,7 +11,7 @@ const styles = theme => ({
 
 export const MessageTileHeader = ({ children, classes }) => {
   return (
-    <Typography className={classes.title} variant='h3'>
+    <Typography className={classes.title} variant='h5'>
       { children }
     </Typography>
   )
