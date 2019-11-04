@@ -9,7 +9,10 @@ const styles = theme => ({
   box: {
     borderRadius: theme.spacing(0.5),
     marginBottom: theme.spacing(2),
-    padding: theme.spacing(2)
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2)
   }
 })
 
