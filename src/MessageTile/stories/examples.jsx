@@ -5,6 +5,7 @@ import MessageTile from '../MessageTile'
 import MessageTileHeader from '../MessageTileHeader'
 import MessageTileBody from '../MessageTileBody'
 import MessageTileButton from '../MessageTileButton'
+import MessageTileAttribution from '../MessageTileAttribution'
 import { action } from '@storybook/addon-actions'
 
 import Avatar from '../../Avatar'
@@ -101,12 +102,12 @@ export default () => (
             Donate now
           </MessageTileButton>
 
-          <div key='attribution'>
+          <MessageTileAttribution>
             <Typography gutterBottom>
               <Person name='Misha Ketchell' caption='Editor' />
             </Typography>
             <Avatar size={48} src='https://cdn.theconversation.com/avatars/13/width238/image-20181205-186070-f58pk2.jpg' />
-          </div>
+          </MessageTileAttribution>
         </MessageTile>
       </ThemeProvider>
     </div>
