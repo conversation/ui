@@ -2,6 +2,9 @@
 
 * Update docs in example
 * Change MessageTileHeader from h3 to h5
+* Changed padding on MessageTile
+* Removed margin on MessageTileButton
+* Added MessageTileAttribution component
 
 # 2.16.0 (2019-10-09)
 
