@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.17.0 (2019-11-07)
+
 * Adds a ThemeSelector component
 * Update docs in example
 * Change MessageTileHeader from h3 to h5
