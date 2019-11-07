@@ -2,6 +2,7 @@
 
 * Update docs in example
 * Change MessageTileHeader from h3 to h5
+* Minor padding change to MessageTile
 
 # 2.16.0 (2019-10-09)
 
