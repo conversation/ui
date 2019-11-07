@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Adds a ThemeSelector component
 * Update docs in example
 * Change MessageTileHeader from h3 to h5
 
