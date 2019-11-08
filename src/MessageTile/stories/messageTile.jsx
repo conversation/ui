@@ -5,33 +5,45 @@ import MessageTile, { MessageTile as UnwrappedMessageTile } from '../MessageTile
 import MessageTileHeader from '../MessageTileHeader'
 import MessageTileBody from '../MessageTileBody'
 import MessageTileButton from '../MessageTileButton'
+import MessageTileFooter from '../MessageTileFooter'
+
+import coreTheme from '../../styles/themes/core'
+
+import Avatar from '../../Avatar'
+import Person from '../../Person'
+import Typography from '../../Typography'
+
 import { action } from '@storybook/addon-actions'
-
-import by from './by.svg'
-import cc from './cc.svg'
-import nd from './nd.svg'
-
-import defaultTheme from '../../styles/themes/default'
 
 export default () => (
   <ComponentOverview heading='MessageTile' component={UnwrappedMessageTile}>
-    <div style={{ marginTop: 16, width: 220 }}>
-      <ThemeProvider theme={defaultTheme()}>
+    <div style={{ marginTop: 16, width: 552 }}>
+      <ThemeProvider theme={coreTheme()}>
         <MessageTile>
           <MessageTileHeader>
-            <img style={{ width: 26, marginRight: 6, marginBottom: 8 }} src={by} />
-            <img style={{ width: 26, marginRight: 6, marginBottom: 8 }} src={cc} />
-            <img style={{ width: 26, marginBottom: 8 }} src={nd} />
-            <div>We believe in the free flow of information.</div>
+            Before you go...
           </MessageTileHeader>
 
           <MessageTileBody>
-            All our articles can be republished for free, online or in print, under the Creative Commons licence.
+            <Typography variant='body1' paragraph>
+              It is easier than ever before for vested interests to spread
+              disinformation on vital matters of public interest. If you want
+              to know what's really going you need to hear from the experts
+              willing to drill down to the truth. But we can't do that vital
+              work unless readers donate. Please make a donation.
+            </Typography>
           </MessageTileBody>
 
-          <MessageTileButton onClick={action('clicked')}>
-            Republish for free
+          <MessageTileButton fullWidth={false} prominent onClick={action('clicked')}>
+            Donate now
           </MessageTileButton>
+
+          <MessageTileFooter>
+            <Typography gutterBottom>
+              <Person name='Misha Ketchell' caption='Editor' />
+            </Typography>
+            <Avatar size={48} src='https://cdn.theconversation.com/avatars/13/width238/image-20181205-186070-f58pk2.jpg' />
+          </MessageTileFooter>
         </MessageTile>
       </ThemeProvider>
     </div>

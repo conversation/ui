@@ -19,24 +19,43 @@ const styles = theme => ({
  * call-to-action button at the bottom.
  *
  * ```js
- * import { MessageTile, MessageTileHeader, MessageTileBody, MessageTileButton } from '@theconversation/ui'
+ * import {
+ *   MessageTile,
+ *   MessageTileHeader,
+ *   MessageTileBody,
+ *   MessageTileButton,
+ *   MessageTileFooter,
+ *   Avatar,
+ *   Person,
+ *   Typography
+ * } from '@theconversation/ui'
  *
  * <MessageTile>
- *  <MessageTileHeader>
- *    <img style={{ width: 26, marginRight: 6, marginBottom: 8 }} src={by} />
- *    <img style={{ width: 26, marginRight: 6, marginBottom: 8 }} src={cc} />
- *    <img style={{ width: 26, marginBottom: 8 }} src={nd} />
- *    <div>We believe in the free flow of information.</div>
- *  </MessageTileHeader>
+ *   <MessageTileHeader>
+ *     Before you go...
+ *   </MessageTileHeader>
  *
- *  <MessageTileBody>
- *    All our articles can be republished for free, online or in print, under the Creative Commons licence.
- *  </MessageTileBody>
-
- *  <MessageTileButton onClick={action('clicked')}>
- *    Republish for free
- *  </MessageTileButton>
- *</MessageTile>
+ *   <MessageTileBody>
+ *     <Typography variant='body1' paragraph>
+ *       It is easier than ever before for vested interests to spread
+ *       disinformation on vital matters of public interest. If you want
+ *       to know what's really going you need to hear from the experts
+ *       willing to drill down to the truth. But we can't do that vital
+ *       work unless readers donate. Please make a donation.
+ *     </Typography>
+ *   </MessageTileBody>
+ *
+ *   <MessageTileButton fullWidth={false} prominent onClick={action('clicked')}>
+ *     Donate now
+ *   </MessageTileButton>
+ *
+ *    <MessageTileFooter>
+ *      <Typography gutterBottom>
+ *        <Person name='Misha Ketchell' caption='Editor' />
+ *      </Typography>
+ *      <Avatar size={48} src='https://cdn.theconversation.com/avatars/13/width238/image-20181205-186070-f58pk2.jpg' />
+ *    </MessageTileFooter>
+ *  </MessageTile>
  * ```
  *
  * You can change the internal styling by wrapping the whole thing in a `ThemeProvider`
