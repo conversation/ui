@@ -52,7 +52,7 @@ function stringToTheme (theme) {
  * It'll also work moving forward with SSR, allowing us to pass down
  * the other ThemeProvider props: `sheetsRegistry`` & `generateClassName``
  */
-const ThemeSelector = ({ children, theme, ...other }) => {
+export default function ThemeSelector ({ children, theme, ...other }) {
   const selectedTheme = stringToTheme(theme)
 
   return (
@@ -77,5 +77,3 @@ ThemeSelector.propTypes = {
    */
   theme: PropTypes.oneOf(['accent', 'core', 'default'])
 }
-
-export default ThemeSelector
