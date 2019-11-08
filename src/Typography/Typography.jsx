@@ -15,8 +15,25 @@ import withStyles from '@material-ui/core/styles/withStyles'
  * </Typography>
  * ~~~
  */
+
+// Default overrides which prevent TC's legacy top level styles from having
+// a negative impact on typography components.
+//
+// Note that some properties have been skipped intentionally, such as margin.
+//
+// The margin is set via a different class on a Typography by MUI itself, which
+// is already specific enough to override TC's styles. Including a reset
+// for those properties (margin, color, etc) would cause more harm than good.
+const LEGACY_HEADING_RESETS = {
+  fontSize: 'initial',
+  fontWeight: 'initial',
+  textTransform: 'initial',
+  letterSpacing: 'initial'
+}
+
 const styles = theme => ({
   h1: {
+    ...LEGACY_HEADING_RESETS,
     fontFamily: 'Montserrat',
     fontWeight: 700,
     fontSize: '1.75rem',
@@ -26,6 +43,7 @@ const styles = theme => ({
   },
 
   h2: {
+    ...LEGACY_HEADING_RESETS,
     fontFamily: 'Montserrat',
     fontWeight: 700,
     fontSize: '1.625rem',
@@ -35,24 +53,28 @@ const styles = theme => ({
   },
 
   h3: {
+    ...LEGACY_HEADING_RESETS,
     fontFamily: 'Montserrat',
     fontWeight: 700,
     fontSize: '1.375rem'
   },
 
   h4: {
+    ...LEGACY_HEADING_RESETS,
     fontFamily: 'Montserrat',
     fontWeight: 600,
     fontSize: '1.25rem'
   },
 
   h5: {
+    ...LEGACY_HEADING_RESETS,
     fontFamily: 'Montserrat',
     fontWeight: 600,
     fontSize: '1.125rem'
   },
 
   h6: {
+    ...LEGACY_HEADING_RESETS,
     fontFamily: 'Montserrat',
     fontWeight: 700,
     lineHeight: 'normal',

@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Add stylesheet property resets to heading variants of Typography
+
 # 2.17.0 (2019-11-07)
 
 * Adds a ThemeSelector component
