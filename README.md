@@ -57,6 +57,7 @@ This will give you a hot reloading environment to rapidly develop in.
 
 If you want to test your newly developed components in a local app, the easiest
 way is likely going to be to use [npm link](https://docs.npmjs.com/cli/link.html).
+Just be certain that the version of node and npm matches or you might run into problems.
 
 First in the root directory of this library, call `npm link`. This sets up a symlink
 so that this library will behave as if it's been globally installed.
