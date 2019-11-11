@@ -10,6 +10,7 @@ be viewed in our [styleguide](http://styleguide.theconversation.com).
 ## Table of Contents
 
 * [Usage](#usage)
+* [Developing](#developing)
 * [Server-side Rendering](#server-side-rendering)
 * [Examples](#examples)
 * [Publishing a Release](#publishing-a-release)
@@ -44,6 +45,32 @@ const App = () => (
 )
 ```
 
+## Developing
+
+When working on components, you can run storybook locally:
+
+```sh
+make storybook
+```
+
+This will give you a hot reloading environment to rapidly develop in.
+
+If you want to test your newly developed components in a local app, the easiest
+way is likely going to be to use [npm link](https://docs.npmjs.com/cli/link.html).
+
+First in the root directory of this library, call `npm link`. This sets up a symlink
+so that this library will behave as if it's been globally installed.
+
+Next, in the project that you want to use the local version of this libray in, run
+`npm link @theconversation/ui`, which creates a symlink in that projects `node_modules/`
+to the global `@theconversation/ui`.
+
+From there it should just work, but if you run into issues at this point, try either
+resetting or deleting your `package-lock.json` then running `npm install` again.
+
+To undo the symlink, just run `npm unlink @theconversation/ui`.
+
+
 ## Server-side Rendering
 
 `<ThemeProvider>` supports two optional props, `sheetsRegistry` and
@@ -76,14 +103,6 @@ To run the example react app:
 > cd examples/react-app
 > npm i
 > npm start
-```
-
-## Storybook
-
-When working on components, you can run storybook locally:
-
-```sh
-make storybook
 ```
 
 ## Publishing a Release
