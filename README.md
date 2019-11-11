@@ -9,17 +9,21 @@ be viewed in our [styleguide](http://styleguide.theconversation.com).
 
 ## Table of Contents
 
-* [Getting Started](#getting-started)
+* [Usage](#usage)
 * [Server-side Rendering](#server-side-rendering)
 * [Examples](#examples)
 * [Publishing a Release](#publishing-a-release)
 * [Licence](#licence)
 
-## Getting Started
+## Usage
 
-You need to wrap all your react components in a top-level `ThemeProvider`
-component. This will provide the correct theme to all of the components in this
-library.
+```bash
+npm install --save-dev @theconversation/ui
+```
+
+Be sure to wrap any react components in a `ThemeProvider` component
+from `@theconversation/ui`. This will provide the correct theme to all of
+the components in this library.
 
 You will also need to install the typeface packages and import them into your
 project.
