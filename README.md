@@ -9,17 +9,22 @@ be viewed in our [styleguide](http://styleguide.theconversation.com).
 
 ## Table of Contents
 
-* [Getting Started](#getting-started)
+* [Usage](#usage)
+* [Developing](#developing)
 * [Server-side Rendering](#server-side-rendering)
 * [Examples](#examples)
 * [Publishing a Release](#publishing-a-release)
 * [Licence](#licence)
 
-## Getting Started
+## Usage
 
-You need to wrap all your react components in a top-level `ThemeProvider`
-component. This will provide the correct theme to all of the components in this
-library.
+```bash
+npm install --save-dev @theconversation/ui
+```
+
+Be sure to wrap any react components in a `ThemeProvider` component
+from `@theconversation/ui`. This will provide the correct theme to all of
+the components in this library.
 
 You will also need to install the typeface packages and import them into your
 project.
@@ -39,6 +44,33 @@ const App = () => (
   </ThemeProvider>
 )
 ```
+
+## Developing
+
+When working on components, you can run storybook locally:
+
+```sh
+make storybook
+```
+
+This will give you a hot reloading environment to rapidly develop in.
+
+If you want to test your newly developed components in a local app, the easiest
+way is likely going to be to use [npm link](https://docs.npmjs.com/cli/link.html).
+Just be certain that the version of node and npm matches or you might run into problems.
+
+First in the root directory of this library, call `npm link`. This sets up a symlink
+so that this library will behave as if it's been globally installed.
+
+Next, in the project that you want to use the local version of this libray in, run
+`npm link @theconversation/ui`, which creates a symlink in that projects `node_modules/`
+to the global `@theconversation/ui`.
+
+From there it should just work, but if you run into issues at this point, try either
+resetting or deleting your `package-lock.json` then running `npm install` again.
+
+To undo the symlink, just run `npm unlink @theconversation/ui`.
+
 
 ## Server-side Rendering
 
@@ -72,14 +104,6 @@ To run the example react app:
 > cd examples/react-app
 > npm i
 > npm start
-```
-
-## Storybook
-
-When working on components, you can run storybook locally:
-
-```sh
-make storybook
 ```
 
 ## Publishing a Release
