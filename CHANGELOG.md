@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.18.0 (2019-11-12)
+
 * Add stylesheet property resets to heading variants of Typography
 
 # 2.17.0 (2019-11-07)
