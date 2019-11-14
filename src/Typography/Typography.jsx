@@ -84,7 +84,7 @@ const styles = theme => ({
 
   body1: {
     fontFamily: 'Libre Baskerville',
-    lineHeight: '1.5',
+    lineHeight: '1.6',
     fontSize: '1rem',
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.125rem'
