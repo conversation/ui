@@ -41,8 +41,8 @@ export default () => (
             All our articles can be republished for free, online or in print, under the Creative Commons licence.
           </MessageTileBody>
 
-          <MessageTileButton onClick={action('clicked')}>
-            Republish for free
+          <MessageTileButton size='small' onClick={action('clicked')}>
+            Republish this article
           </MessageTileButton>
         </MessageTile>
       </ThemeProvider>
