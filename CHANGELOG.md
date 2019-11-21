@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Removed now-unused ThinDonationBanner component
+
 # 2.18.0 (2019-11-12)
 
 * Add stylesheet property resets to heading variants of Typography
