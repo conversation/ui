@@ -29,7 +29,7 @@
     "@material-ui/pickers": "3.2.2",
     "deepmerge": "4.0.0",
     "downshift": "3.2.7",
-    "lodash": "4.17.13",
+    "lodash": "4.17.19",
     "react-jss": "8.6.1"
   },
   "devDependencies": {
