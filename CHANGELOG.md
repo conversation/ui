@@ -1,6 +1,9 @@
 ## Unreleased
 
+# 2.19.0 (2020-07-20)
+
 * Removed now-unused ThinDonationBanner component
+* Dependabot updates
 
 # 2.18.0 (2019-11-12)
 
