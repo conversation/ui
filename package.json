@@ -74,5 +74,6 @@
   "standard": {
     "env": "jest",
     "parser": "babel-eslint"
-  }
+  },
+  "sideEffects": false
 }
