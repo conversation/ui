@@ -11,9 +11,12 @@
     "component",
     "ui"
   ],
-  "main": "dist/index.js",
+  "main": "dist/cjs",
+  "module": "dist/esm",
   "scripts": {
-    "prepare": "babel --out-dir dist src"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "babel --delete-dir-on-start --copy-files --out-dir dist/cjs src",
+    "build:esm": "babel --delete-dir-on-start --copy-files --env-name esm --out-dir dist/esm src"
   },
   "files": [
     "dist"
