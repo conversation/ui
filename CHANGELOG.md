@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Update "The Conversation" and "La Conversation" SVGs
+
 # 2.20.0 (2020-09-01)
 
 * Allow unused modules to be tree shaken
