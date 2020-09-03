@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.20.0 (2020-09-01)
+
 * Allow unused modules to be tree shaken
 
 # 2.19.0 (2020-07-20)
