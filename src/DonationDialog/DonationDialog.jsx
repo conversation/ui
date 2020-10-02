@@ -102,20 +102,22 @@ export const DonationDialog = ({
   onClick,
   onClose,
   onVisible,
-  open
+  open,
+  dialogProps
 }) => {
-  const dialogProps = {
+  const materialDialogProps = {
     open,
     onClose,
     onEnter: onVisible,
     classes: {
       container: classes.container,
       paper: classes.paper
-    }
+    },
+    ...dialogProps
   }
 
   return (
-    <MaterialDialog {...dialogProps}>
+    <MaterialDialog {...materialDialogProps}>
       <MaterialDialogActions className={classes.topActions}>
         <MaterialIconButton color='inherit' className={classes.close} onClick={onClose} aria-label={closeText}>
           <CloseIcon />
@@ -165,7 +167,12 @@ DonationDialog.propTypes = {
   /**
    * Accessibility alt text that is associated with the close icon button.
    */
-  closeText: PropTypes.string
+  closeText: PropTypes.string,
+
+  /**
+   * Props that will be forwarded to the Material UI dialog
+   */
+  dialogProps: PropTypes.object
 }
 
 DonationDialog.defaultProps = {

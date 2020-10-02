@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Allow passing custom props to MUI's Dialog on `DonationDialog`
+
 # 2.21.0 (2020-09-07)
 
 * Update "The Conversation" and "La Conversation" SVGs
