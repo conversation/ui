@@ -146,5 +146,11 @@ describe('<TextField />', () => {
 
       expect(wrapper.find(FormControl).prop('error')).toEqual(true)
     })
+
+    it('renders the maxLengthCountText prop', () => {
+      const wrapper = mount(<TextField maxLength={5} maxLengthCountText='Characters' />)
+
+      expect(wrapper.text()).toContain('0/5 Characters')
+    })
   })
 })

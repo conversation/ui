@@ -67,6 +67,7 @@ export const TextField = ({
   label,
   required,
   maxLength,
+  maxLengthCountText,
   ...other
 }) => {
   const [errorState, setErrorState] = useState(error)
@@ -75,7 +76,7 @@ export const TextField = ({
   // Max length validation with character count
   const [characterCount, setCharacterCount] = useState(0)
   const hasLengthValidation = maxLength > 0
-  const maxValidationHelperText = `${characterCount}/${maxLength}`
+  const maxValidationHelperText = `${characterCount}/${maxLength} ${maxLengthCountText}`
   const showHelperText = helperText || hasLengthValidation
 
   useEffect(() => {
@@ -219,6 +220,11 @@ TextField.propTypes = {
   maxLength: PropTypes.number,
 
   /**
+   * Text to be placed at the right side of character count. Example: `5/10 characters`
+   */
+  maxLengthCountText: PropTypes.string,
+
+  /**
    * The type of the text field.
    */
   type: PropTypes.oneOf(['email', 'text', 'password', 'number']),
@@ -235,6 +241,7 @@ TextField.defaultProps = {
   error: false,
   fullWidth: false,
   maxLength: 0,
+  maxLengthCountText: '',
   required: false,
   type: 'text'
 }

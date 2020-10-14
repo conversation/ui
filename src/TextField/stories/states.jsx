@@ -65,6 +65,7 @@ export default withDocs(md, () =>
       onChange={action('change')}
       placeholder='Placeholder text'
       maxLength={10}
+      maxLengthCountText='characters'
     />
   </GridLayout>
 )
