@@ -54,7 +54,6 @@ const styles = theme => {
  * ```
  */
 export const TextField = ({
-  InputProps,
   autoComplete,
   disabled,
   error,
