@@ -79,6 +79,14 @@ describe('<TextField />', () => {
     })
   })
 
+  describe('without the helper text', () => {
+    it('does not render the FormHelperText', () => {
+      const wrapper = mount(<TextField />)
+
+      expect(wrapper.find(FormHelperText)).toHaveLength(0)
+    })
+  })
+
   describe('events', () => {
     describe('when changed', () => {
       it('calls the callback', () => {
@@ -105,6 +113,38 @@ describe('<TextField />', () => {
         wrapper.find('input').simulate('blur')
         expect(onBlur).toHaveBeenCalled()
       })
+    })
+  })
+
+  describe('without max length validation', () => {
+    it('does not render the character count', () => {
+      const wrapper = mount(<TextField helperText='I am a text field' />)
+
+      expect(wrapper.text()).toEqual('I am a text field')
+    })
+  })
+
+  describe('with max length validation', () => {
+    describe('counts text field default value length', () => {
+      it('counts the defaultValue prop', () => {
+        const wrapper = mount(<TextField defaultValue='Hello world' maxLength={20} />)
+
+        expect(wrapper.text()).toContain('11/20')
+      })
+
+      it('counts the value prop', () => {
+        const wrapper = mount(<TextField value='Hello world' maxLength={20} />)
+
+        expect(wrapper.text()).toContain('11/20')
+      })
+    })
+
+    it('marks the form control with an error if input length is above limit', () => {
+      const wrapper = mount(<TextField maxLength={5} />)
+
+      wrapper.find('input').simulate('change', { target: { value: 'I am bigger than 5 characters' } })
+
+      expect(wrapper.find(FormControl).prop('error')).toEqual(true)
     })
   })
 })

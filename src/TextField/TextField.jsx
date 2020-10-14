@@ -2,11 +2,12 @@ import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import InputBase from '@material-ui/core/InputBase'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import isBoolean from 'lodash/isBoolean'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 import FormLabel from '../form/FormLabel'
+import { Grid } from '../index'
 
 const styles = theme => {
   const light = theme.palette.type === 'light'
@@ -25,6 +26,9 @@ const styles = theme => {
     formControl: {
       'label + &': {
         marginTop: 8
+      },
+      '& + .MuiFormHelperText-root': {
+        lineHeight: '1.5'
       }
     },
     focused: {
@@ -62,9 +66,46 @@ export const TextField = ({
   id,
   label,
   required,
+  maxLength,
   ...other
 }) => {
+  const [errorState, setErrorState] = useState(error)
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
+
+  // Max length validation with character count
+  const [characterCount, setCharacterCount] = useState(0)
+  const hasLengthValidation = maxLength > 0
+  const maxValidationHelperText = `${characterCount}/${maxLength}`
+  const showHelperText = helperText || hasLengthValidation
+
+  useEffect(() => {
+    if (hasLengthValidation) {
+      const { value: valueProp, defaultValue: defaultValueProp } = other
+      const inputValue = valueProp || defaultValueProp
+
+      if (inputValue) { setCharacterCount(inputValue.length) }
+    }
+  }, [])
+
+  const onChange = (event) => {
+    // Call the `other.onChange` prop function, if any
+    if (other.onChange) { other.onChange(event) }
+
+    if (hasLengthValidation) {
+      // We don't want to miscount controlled inputs
+      const { value: valueProp } = other
+
+      if (valueProp) {
+        setCharacterCount(valueProp.length)
+        return
+      }
+
+      const currentCharacterCount = event.target.value.length
+
+      setCharacterCount(currentCharacterCount)
+      setErrorState(currentCharacterCount > maxLength)
+    }
+  }
 
   // Sugar for setting autoComplete using a boolean value.
   if (isBoolean(autoComplete)) {
@@ -72,18 +113,25 @@ export const TextField = ({
   }
 
   return (
-    <FormControl aria-describedby={helperTextId} disabled={disabled} error={error} fullWidth={fullWidth}>
+    <FormControl aria-describedby={helperTextId} disabled={disabled} error={errorState} fullWidth={fullWidth}>
       {label && (
         <FormLabel htmlFor={id} required={required}>
           {label}
         </FormLabel>
       )}
 
-      <InputBase {...other} autoComplete={autoComplete} id={id} {...InputProps} />
+      <InputBase {...other} autoComplete={autoComplete} id={id} onChange={onChange} />
 
-      {helperText && (
+      {showHelperText && (
         <FormHelperText id={helperTextId}>
-          {helperText}
+          <Grid component='span' justify='space-between' container spacing={2}>
+            <Grid component='span' item xs>{helperText}</Grid>
+            {hasLengthValidation && (
+              <Grid component='span' item xs style={{ textAlign: 'right' }}>
+                {maxValidationHelperText}
+              </Grid>
+            )}
+          </Grid>
         </FormHelperText>
       )}
     </FormControl>
@@ -163,6 +211,14 @@ TextField.propTypes = {
   required: PropTypes.bool,
 
   /**
+   * The maximum number of characters allowed in the text field before it's marked as invalid.
+   * Defaults to 0.
+   *
+   * Any value above 0 will add a character counter to the text field helper text
+   */
+  maxLength: PropTypes.number,
+
+  /**
    * The type of the text field.
    */
   type: PropTypes.oneOf(['email', 'text', 'password', 'number']),
@@ -178,6 +234,7 @@ TextField.defaultProps = {
   disabled: false,
   error: false,
   fullWidth: false,
+  maxLength: 0,
   required: false,
   type: 'text'
 }
