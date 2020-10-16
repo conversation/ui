@@ -14,6 +14,11 @@ const styles = theme => {
   const borderColor = light ? 'rgba(0, 0, 0, 0.42)' : 'rgba(255, 255, 255, 0.7)'
 
   return {
+    // This is a bit confusing when you first look at it, but what we're doing here
+    // is treating the subcomponent InputBase as the root component so that we can
+    // take advantage of it's named css rules.
+    //
+    // https://material-ui.com/api/input-base/#css
     root: {
       backgroundColor: theme.palette.common.white,
       border: `1px solid ${borderColor}`,
@@ -23,14 +28,6 @@ const styles = theme => {
         duration: theme.transitions.duration.shorter
       })
     },
-    formControl: {
-      'label + &': {
-        marginTop: 8
-      },
-      '& + .MuiFormHelperText-root': {
-        lineHeight: '1.5'
-      }
-    },
     focused: {
       borderColor: theme.palette.primary.main
     },
@@ -39,6 +36,14 @@ const styles = theme => {
     },
     input: {
       padding: '10px 12px'
+    },
+    // From here on these are custom styles for components which are not descendents
+    // of InputBase.
+    formLabel: {
+      marginBottom: 8
+    },
+    formHelperText: {
+      lineHeight: '1.5'
     }
   }
 }
@@ -59,6 +64,7 @@ const styles = theme => {
  */
 export const TextField = ({
   autoComplete,
+  classes,
   disabled,
   error,
   fullWidth,
@@ -116,15 +122,15 @@ export const TextField = ({
   return (
     <FormControl aria-describedby={helperTextId} disabled={disabled} error={errorState} fullWidth={fullWidth}>
       {label && (
-        <FormLabel htmlFor={id} required={required}>
+        <FormLabel className={classes.formLabel} htmlFor={id} required={required}>
           {label}
         </FormLabel>
       )}
 
-      <InputBase {...other} autoComplete={autoComplete} id={id} onChange={onChange} />
+      <InputBase {...other} classes={classes} autoComplete={autoComplete} id={id} onChange={onChange} />
 
       {showHelperText && (
-        <FormHelperText id={helperTextId}>
+        <FormHelperText id={helperTextId} className={classes.formHelperText}>
           <Grid component='span' justify='space-between' container spacing={2}>
             <Grid component='span' item xs>{helperText}</Grid>
             {hasLengthValidation && (
