@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Allow text fields to have max length validation with character count
+
 # 2.22.0 (2020-10-02)
 
 * Allow passing custom props to MUI's Dialog on `DonationDialog`

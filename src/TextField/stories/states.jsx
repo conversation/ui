@@ -59,5 +59,13 @@ export default withDocs(md, () =>
       onChange={action('change')}
       placeholder='Placeholder text'
     />
+    <TextField
+      helperText='Helper text'
+      label='Maximum length validation'
+      onChange={action('change')}
+      placeholder='Placeholder text'
+      maxLength={10}
+      maxLengthCountText='characters'
+    />
   </GridLayout>
 )
