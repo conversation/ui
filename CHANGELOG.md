@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.23.0 (2020-10-19)
+
 * Allow text fields to have max length validation with character count
 
 # 2.22.0 (2020-10-02)
