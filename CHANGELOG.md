@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Allow the `Dropdown` component `value` prop to be of number or string types
+
 # 2.23.0 (2020-10-19)
 
 * Allow text fields to have max length validation with character count
