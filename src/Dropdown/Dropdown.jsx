@@ -167,7 +167,7 @@ Dropdown.propTypes = {
   /**
    * The value of the dropdown.
    */
-  value: PropTypes.string
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 }
 
 Dropdown.defaultProps = {
