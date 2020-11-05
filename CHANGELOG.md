@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.24.0 (2020-11-05)
+
 * Allow the `Dropdown` component `value` prop to be of number or string types
 
 # 2.23.0 (2020-10-19)
