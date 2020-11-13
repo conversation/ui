@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Upgrade @material-ui/core to 4.4.3
+
 # 2.24.0 (2020-11-05)
 
 * Allow the `Dropdown` component `value` prop to be of number or string types
