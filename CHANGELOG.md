@@ -1,6 +1,8 @@
 ## Unreleased
 
-* Upgrade @material-ui/core to 4.4.3
+# 2.25.0 (2020-11-13)
+
+* Upgrade @material-ui/core to v4.4.3
 
 # 2.24.0 (2020-11-05)
 
