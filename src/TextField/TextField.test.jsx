@@ -15,6 +15,22 @@ describe('<TextField />', () => {
     expect(wrapper.props().value).toBe('foo')
   })
 
+  describe('non-MUI classes', () => {
+    it('does not pass formLabel to the InputBase component', () => {
+      const wrapper = shallow(
+        <TextField />
+      ).dive().find(InputBase)
+      expect(wrapper.props().classes).not.toHaveProperty('formLabel')
+    })
+
+    it('does not pass formHelperText to the InputBase component', () => {
+      const wrapper = shallow(
+        <TextField />
+      ).dive().find(InputBase)
+      expect(wrapper.props().classes).not.toHaveProperty('formHelperText')
+    })
+  })
+
   describe('with autoComplete', () => {
     it('converts a true value to "on" for the autoComplete prop', () => {
       const wrapper = shallow(
