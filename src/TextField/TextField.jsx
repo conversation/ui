@@ -119,6 +119,9 @@ export const TextField = ({
     autoComplete = autoComplete ? 'on' : 'off'
   }
 
+  // Separate MUI classes to pass to MUI
+  const { formLabel, formHelperText, ...muiClasses } = classes
+
   return (
     <FormControl aria-describedby={helperTextId} disabled={disabled} error={errorState} fullWidth={fullWidth}>
       {label && (
@@ -127,7 +130,7 @@ export const TextField = ({
         </FormLabel>
       )}
 
-      <InputBase {...other} classes={classes} autoComplete={autoComplete} id={id} onChange={onChange} />
+      <InputBase {...other} classes={muiClasses} autoComplete={autoComplete} id={id} onChange={onChange} />
 
       {showHelperText && (
         <FormHelperText id={helperTextId} className={classes.formHelperText}>
