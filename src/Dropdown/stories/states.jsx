@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { withDocs } from 'storybook-readme'
 
 import { GridLayout } from '../../util'
-import { Dropdown, MenuItem } from '../../index'
+import { Dropdown } from '../../index'
 
 const md = `
 # States
@@ -44,9 +44,9 @@ class ExampleDropdown extends React.Component {
         onChange={this.handleChange}
         value={this.state.value}
       >
-        <MenuItem value='1'>One</MenuItem>
-        <MenuItem value='2'>Two</MenuItem>
-        <MenuItem value='3'>Three</MenuItem>
+        <option value='1'>One</option>
+        <option value='2'>Two</option>
+        <option value='3'>Three</option>
       </Dropdown>
     )
   }
