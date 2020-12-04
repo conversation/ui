@@ -40,7 +40,7 @@ const styles = theme => {
 
 /**
  * The `<Dropdown>` component allows users to select from a list of items,
- * , rendering MUI's native `Select` by default. Keep in mind that non-native
+ * rendering MUI's native `Select` by default. Keep in mind that non-native
  * `Select` components only allow `MenuItem` components as children.
  *
  * ```js
