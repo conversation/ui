@@ -39,13 +39,10 @@ const styles = theme => {
 }
 
 /**
- * The `<Dropdown>` component allows users to select from a list of items,
- * rendering MUI's native `Select` by default. Keep in mind that non-native
- * `Select` components only allow `MenuItem` components as children.
+ * The `<Dropdown>` component allows users to select from a list of items.
  *
  * ```js
- * // Native Dropdown
- * import { MenuItem, Dropdown } from '@theconversation/ui'
+ * import { Dropdown } from '@theconversation/ui'
  *
  * <Dropdown
  *   helperText='Select a colour'
@@ -55,22 +52,6 @@ const styles = theme => {
  *   <option value='red'>Red</option>
  *   <option value='green'>Green</option>
  *   <option value='blue'>Blue</option>
- * </Dropdown>
- * ```
- *
- * ```js
- * // Non-native Dropdown
- * import { MenuItem, Dropdown } from '@theconversation/ui'
- *
- * <Dropdown
- *   helperText='Select a colour'
- *   label='Colour'
- *   onChange={alert('change')}
- *   native={false}
- * >
- *   <MenuItem value='red'>Red</MenuItem>
- *   <MenuItem value='green'>Green</MenuItem>
- *   <MenuItem value='blue'>Blue</MenuItem>
  * </Dropdown>
  * ```
  */
