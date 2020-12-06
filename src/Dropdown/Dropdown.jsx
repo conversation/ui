@@ -42,16 +42,16 @@ const styles = theme => {
  * The `<Dropdown>` component allows users to select from a list of items.
  *
  * ```js
-  * import { MenuItem, Dropdown } from '@theconversation/ui'
-  *
+ * import { Dropdown } from '@theconversation/ui'
+ *
  * <Dropdown
  *   helperText='Select a colour'
  *   label='Colour'
  *   onChange={alert('change')}
  * >
- *   <MenuItem value='red'>Red</MenuItem>
- *   <MenuItem value='green'>Green</MenuItem>
- *   <MenuItem value='blue'>Blue</MenuItem>
+ *   <option value='red'>Red</option>
+ *   <option value='green'>Green</option>
+ *   <option value='blue'>Blue</option>
  * </Dropdown>
  * ```
  */
@@ -144,6 +144,11 @@ Dropdown.propTypes = {
   label: PropTypes.string,
 
   /**
+   * Defines if the Dropdown will be rendered as native.
+   */
+  native: PropTypes.bool,
+
+  /**
    * The callback function called when the dropdown value changes.
    */
   onChange: PropTypes.func,
@@ -174,6 +179,7 @@ Dropdown.defaultProps = {
   disabled: false,
   error: false,
   fullWidth: false,
+  native: true,
   required: false
 }
 

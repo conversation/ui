@@ -6,15 +6,14 @@ import { mount, shallow } from 'enzyme'
 
 import Dropdown from './Dropdown'
 import FormLabel from '../form/FormLabel'
-import MenuItem from '@material-ui/core/MenuItem'
 
 describe('<Dropdown />', () => {
   it('renders the children', () => {
     const wrapper = shallow(
       <Dropdown>
-        <MenuItem value='1'>one</MenuItem>
-        <MenuItem value='2'>two</MenuItem>
-        <MenuItem value='3'>two</MenuItem>
+        <option value='1'>one</option>
+        <option value='2'>two</option>
+        <option value='3'>two</option>
       </Dropdown>
     ).dive().find(Select)
     expect(wrapper.childAt(0).props().value).toBe('1')
@@ -25,7 +24,7 @@ describe('<Dropdown />', () => {
   it('passes props to the Select component', () => {
     const wrapper = shallow(
       <Dropdown value='foo'>
-        <MenuItem value='1'>one</MenuItem>
+        <option value='1'>one</option>
       </Dropdown>
     ).dive().find(Select)
     expect(wrapper.props().value).toBe('foo')
@@ -35,8 +34,8 @@ describe('<Dropdown />', () => {
     it('disables the form control', () => {
       const wrapper = shallow(
         <Dropdown disabled>
-          <MenuItem value='1'>one</MenuItem>
-          <MenuItem value='2'>two</MenuItem>
+          <option value='1'>one</option>
+          <option value='2'>two</option>
         </Dropdown>
       ).dive().find(FormControl)
       expect(wrapper.props().disabled).toBe(true)
@@ -47,7 +46,7 @@ describe('<Dropdown />', () => {
     it('renders a label', () => {
       const wrapper = shallow(
         <Dropdown label='lorem'>
-          <MenuItem value='1'>one</MenuItem>
+          <option value='1'>one</option>
         </Dropdown>
       ).dive().find(FormLabel)
       expect(wrapper.contains('lorem')).toBe(true)
@@ -56,7 +55,7 @@ describe('<Dropdown />', () => {
     it('sets the htmlFor prop', () => {
       const wrapper = shallow(
         <Dropdown id='foo' label='lorem'>
-          <MenuItem value='1'>one</MenuItem>
+          <option value='1'>one</option>
         </Dropdown>
       ).dive().find(FormLabel)
       expect(wrapper.props().htmlFor).toBe('foo')
@@ -67,7 +66,7 @@ describe('<Dropdown />', () => {
     it('renders helper text', () => {
       const wrapper = shallow(
         <Dropdown helperText='lorem'>
-          <MenuItem value='1'>one</MenuItem>
+          <option value='1'>one</option>
         </Dropdown>
       ).dive().find(FormHelperText)
       expect(wrapper.contains('lorem')).toBe(true)
@@ -76,7 +75,7 @@ describe('<Dropdown />', () => {
     it('sets the helper text ID', () => {
       const wrapper = shallow(
         <Dropdown helperText='lorem' id='foo'>
-          <MenuItem value='1'>one</MenuItem>
+          <option value='1'>one</option>
         </Dropdown>
       ).dive().find(FormHelperText)
       expect(wrapper.props().id).toBe('foo-helper-text')
@@ -89,12 +88,11 @@ describe('<Dropdown />', () => {
         const onChange = jest.fn()
         const wrapper = mount(
           <Dropdown value='' onChange={onChange}>
-            <MenuItem value='1'>one</MenuItem>
-            <MenuItem value='2'>two</MenuItem>
+            <option value='1'>one</option>
+            <option value='2'>two</option>
           </Dropdown>
         )
-        wrapper.find('[role="button"]').simulate('click')
-        wrapper.find(MenuItem).at(1).simulate('click')
+        wrapper.find('option').at(1).simulate('change', { target: { value: '1' } })
         expect(onChange).toHaveBeenCalled()
       })
     })
@@ -104,10 +102,10 @@ describe('<Dropdown />', () => {
         const onFocus = jest.fn()
         const wrapper = mount(
           <Dropdown value='' onFocus={onFocus}>
-            <MenuItem value='1'>one</MenuItem>
+            <option value='1'>one</option>
           </Dropdown>
         )
-        wrapper.find('div[role="button"]').simulate('focus')
+        wrapper.find('option').at(0).simulate('focus')
         expect(onFocus).toHaveBeenCalled()
       })
     })
@@ -117,10 +115,10 @@ describe('<Dropdown />', () => {
         const onBlur = jest.fn()
         const wrapper = mount(
           <Dropdown value='' onBlur={onBlur}>
-            <MenuItem value='1'>one</MenuItem>
+            <option value='1'>one</option>
           </Dropdown>
         )
-        wrapper.find('div[role="button"]').simulate('blur')
+        wrapper.find('option').at(0).simulate('blur')
         expect(onBlur).toHaveBeenCalled()
       })
     })
