@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.26.0 (2020-12-07)
+
 * `Dropdown` component now renders MUI native `Select` component by default
 
 # 2.25.1 (2020-11-19)
