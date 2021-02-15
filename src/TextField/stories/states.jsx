@@ -1,5 +1,6 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
+import { boolean } from '@storybook/addon-knobs'
 import { withDocs } from 'storybook-readme'
 
 import { GridLayout } from '../../util'
@@ -29,30 +30,37 @@ You can set the state of a text field using one (or more) boolean flags:
 export default withDocs(md, () =>
   <GridLayout>
     <TextField
+      error={boolean('Error', false)}
       helperText='Helper text'
       label='Default'
       onChange={action('change')}
       placeholder='Placeholder text'
     />
-    <TextField required
+    <TextField
+      error={boolean('Error', false)}
       helperText='Helper text'
       label='Required'
       onChange={action('change')}
       placeholder='Placeholder text'
+      required
     />
-    <TextField disabled
+    <TextField
+      disabled
+      error={boolean('Error', false)}
       helperText='Helper text'
       label='Disabled'
       onChange={action('change')}
       placeholder='Placeholder text'
     />
-    <TextField error
+    <TextField
+      error
       helperText='Helper text'
       label='Error'
       onChange={action('change')}
       placeholder='Placeholder text'
     />
     <TextField
+      error={boolean('Error', false)}
       inputProps={{ style: { background: 'lightyellow' } }}
       helperText='Helper text'
       label='Custom'
@@ -60,6 +68,7 @@ export default withDocs(md, () =>
       placeholder='Placeholder text'
     />
     <TextField
+      error={boolean('Error', false)}
       helperText='Helper text'
       label='Maximum length validation'
       onChange={action('change')}
