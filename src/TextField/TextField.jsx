@@ -76,11 +76,12 @@ export const TextField = ({
   maxLengthCountText,
   ...other
 }) => {
-  const [errorState, setErrorState] = useState(error)
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined
 
   // Max length validation with character count
   const [characterCount, setCharacterCount] = useState(0)
+  // This will be true if we're violating the length validation
+  const [excessChars, setExcessChars] = useState(false)
   const hasLengthValidation = maxLength > 0
   const maxValidationHelperText = `${characterCount}/${maxLength} ${maxLengthCountText}`
   const showHelperText = helperText || hasLengthValidation
@@ -110,7 +111,7 @@ export const TextField = ({
       const currentCharacterCount = event.target.value.length
 
       setCharacterCount(currentCharacterCount)
-      setErrorState(currentCharacterCount > maxLength)
+      setExcessChars(currentCharacterCount > maxLength)
     }
   }
 
@@ -122,8 +123,12 @@ export const TextField = ({
   // Separate MUI classes to pass to MUI
   const { formLabel, formHelperText, ...muiClasses } = classes
 
+  // We want to respect both `error` and `excessChars` when determining whether
+  // to show the component in an error state
+  const anyErrors = error || excessChars
+
   return (
-    <FormControl aria-describedby={helperTextId} disabled={disabled} error={errorState} fullWidth={fullWidth}>
+    <FormControl aria-describedby={helperTextId} disabled={disabled} error={anyErrors} fullWidth={fullWidth}>
       {label && (
         <FormLabel className={classes.formLabel} htmlFor={id} required={required}>
           {label}

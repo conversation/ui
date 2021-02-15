@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Fix bug introduced in 2.23.0 where `TextField` would appear to ignore changes to its `error` prop.
+
 # 2.26.0 (2020-12-07)
 
 * `Dropdown` component now renders MUI native `Select` component by default
