@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.26.1 (2021-02-15)
+
 * Fix bug introduced in 2.23.0 where `TextField` would appear to ignore changes to its `error` prop.
 
 # 2.26.0 (2020-12-07)
