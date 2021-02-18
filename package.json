@@ -28,7 +28,7 @@
   "dependencies": {
     "@material-ui/core": "4.5.2",
     "@material-ui/icons": "4.2.1",
-    "@material-ui/lab": "4.0.0-alpha.23",
+    "@material-ui/lab": "4.0.0-alpha.30",
     "@material-ui/pickers": "3.2.2",
     "deepmerge": "4.0.0",
     "downshift": "3.2.7",
