@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.27.0 (2021-02-18)
+
+* Update `@material-ui/core` from 4.4.3 to 4.5.0
+
 # 2.26.1 (2021-02-15)
 
 * Fix bug introduced in 2.23.0 where `TextField` would appear to ignore changes to its `error` prop.
