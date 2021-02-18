@@ -1,5 +1,5 @@
 import JssProvider from 'react-jss/lib/JssProvider'
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import React from 'react'
 
