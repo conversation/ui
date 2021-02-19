@@ -1,5 +1,10 @@
 ## Unreleased
 
+# 2.28.0 (2021-02-19)
+
+* Update `@material-ui/core` from 4.5.0 to 4.5.2
+* Update `@material-ui/lab` from 4.0.0-alpha.23 to 4.0.0-alpha.30
+
 # 2.27.0 (2021-02-18)
 
 * Update `@material-ui/core` from 4.4.3 to 4.5.0
