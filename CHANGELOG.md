@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.29.0 (2021-02-23)
+
+* Create the `SelectMenu` and `SelectMenuItem` components
+
 # 2.28.0 (2021-02-19)
 
 * Update `@material-ui/core` from 4.5.0 to 4.5.2
