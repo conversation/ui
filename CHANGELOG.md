@@ -1,5 +1,9 @@
 ## Unreleased
 
+* Add tabbed navigation components to the UI library
+    * Create the `Tab` component
+    * Export the `Tabs` MUI component
+
 # 2.29.0 (2021-02-23)
 
 * Create the `SelectMenu` and `SelectMenuItem` components
