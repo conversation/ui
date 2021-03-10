@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.30.0 (2021-03-10)
+
 * Add tabbed navigation components to the UI library
     * Create the `Tab` component
     * Create the `Tabs` component
