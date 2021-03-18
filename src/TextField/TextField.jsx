@@ -197,7 +197,7 @@ TextField.propTypes = {
   /**
    * The text displayed above the text field.
    */
-  label: PropTypes.string,
+  label: PropTypes.node,
 
   /**
    * The callback function called when the text field value changes.
