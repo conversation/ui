@@ -141,7 +141,7 @@ Dropdown.propTypes = {
   /**
    * The text displayed above the dropdown.
    */
-  label: PropTypes.string,
+  label: PropTypes.node,
 
   /**
    * Defines if the Dropdown will be rendered as native.
