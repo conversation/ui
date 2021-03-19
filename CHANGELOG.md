@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.30.1 (2021-03-19)
+
+* `Dropdown` and `TextField` labels prop types updated from `string` to `node`
+
 # 2.30.0 (2021-03-10)
 
 * Add tabbed navigation components to the UI library
