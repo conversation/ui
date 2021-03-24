@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.31.0 (2021-03-24)
+
+* Lock `@material-ui/styles` to same version as `@material-ui/core`
+
 # 2.30.1 (2021-03-19)
 
 * `Dropdown` and `TextField` labels prop types updated from `string` to `node`
