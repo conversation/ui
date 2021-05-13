@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Export MUI `Tooltip` and `ClickAwayListener`
+
 # 2.31.0 (2021-03-24)
 
 * Lock `@material-ui/styles` to same version as `@material-ui/core`
