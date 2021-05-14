@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.32.0 (2021-05-14)
+
 * Export MUI `Tooltip` and `ClickAwayListener`
 
 # 2.31.0 (2021-03-24)

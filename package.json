@@ -1,6 +1,6 @@
 {
   "name": "@theconversation/ui",
-  "version": "2.31.0",
+  "version": "2.32.0",
   "description": "A collection of React components used to build our apps at The Conversation",
   "homepage": "https://github.com/conversation/ui",
   "author": "The Conversation <platform@theconversation.com>",
