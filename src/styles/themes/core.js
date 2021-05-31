@@ -3,7 +3,7 @@ import memoize from 'lodash/memoize'
 import { deepmerge } from '@material-ui/utils'
 
 import core from '../palettes/core'
-import { typography, errorStateColours } from './common'
+import { typography, errorStateColours, zIndex } from './common'
 
 /**
  *  This theme contains 'core' coloured swatches
@@ -17,8 +17,10 @@ const theme = createMuiTheme(
         primary: { main: core[600] },
         secondary: { main: core[400] }
       },
-      typography
-    }, errorStateColours)
+      typography,
+      zIndex
+    }, errorStateColours
+  )
 )
 
 export default memoize(() => theme)

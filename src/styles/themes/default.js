@@ -3,7 +3,7 @@ import memoize from 'lodash/memoize'
 import { deepmerge } from '@material-ui/utils'
 
 import neutral from '../palettes/neutral'
-import { typography, errorStateColours } from './common'
+import { typography, errorStateColours, zIndex } from './common'
 
 /**
  * This theme contains the styles which represent the future design of our
@@ -18,8 +18,10 @@ const theme = createMuiTheme(
         primary: { main: neutral[600] },
         secondary: { main: neutral[50] }
       },
-      typography
-    }, errorStateColours)
+      typography,
+      zIndex
+    }, errorStateColours
+  )
 )
 
 export default memoize(() => theme)

@@ -3,7 +3,7 @@ import memoize from 'lodash/memoize'
 import { deepmerge } from '@material-ui/utils'
 
 import accent from '../palettes/accent'
-import { typography, errorStateColours } from './common'
+import { typography, errorStateColours, zIndex } from './common'
 
 /**
  * This theme contains 'accent' coloured swatches
@@ -16,7 +16,8 @@ const theme = createMuiTheme(
         primary: { main: accent[700] },
         secondary: { main: accent[600] }
       },
-      typography
+      typography,
+      zIndex
     }, errorStateColours
   )
 )
