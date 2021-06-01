@@ -1,5 +1,9 @@
 ## Unreleased
 
+* Decreased tooltip z-index value on all themes (tooltips will appear behind modals)
+* Remove `deepmerge` dependency
+    * We're using MUI's `@material-ui/utils` implementation, added on https://github.com/mui-org/material-ui/pull/17982
+
 # 2.32.0 (2021-05-14)
 
 * Export MUI `Tooltip` and `ClickAwayListener`

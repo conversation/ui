@@ -23,3 +23,18 @@ export const errorStateColours = {
     error: { main: core[700], border: core[600] }
   }
 }
+
+// Our themes will consider that modals will always appear on top of tooltips.
+// We're bringing all z-index variable as the documentation discourages customizing
+// individual values.
+//
+// Documentation: https://v4-5-2.material-ui.com/customization/z-index/#z-index
+export const zIndex = {
+  mobileStepper: 1000,
+  speedDial: 1050,
+  appBar: 1100,
+  drawer: 1200,
+  tooltip: 1300,
+  modal: 1400,
+  snackbar: 1500
+}
