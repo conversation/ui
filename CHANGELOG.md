@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.33.0 (2021-06-01)
+
 * Decreased tooltip z-index value on all themes (tooltips will appear behind modals)
 * Remove `deepmerge` dependency
     * We're using MUI's `@material-ui/utils` implementation, added on https://github.com/mui-org/material-ui/pull/17982
