@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Export MUI `Table`, `TableBody`, `TableCell`, `TableHead` and `TableRow`
+
 # 2.33.0 (2021-06-01)
 
 * Decreased tooltip z-index value on all themes (tooltips will appear behind modals)
