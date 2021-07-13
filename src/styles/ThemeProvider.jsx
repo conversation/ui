@@ -7,8 +7,8 @@ import defaultTheme from './themes/default'
 
 const theme = defaultTheme()
 
-const ThemeProvider = ({ children, sheetsRegistry, generateClassName, ...other }) => (
-  <JssProvider registry={sheetsRegistry} generateClassName={generateClassName} >
+const ThemeProvider = ({ children, generateClassName, ...other }) => (
+  <JssProvider generateClassName={generateClassName} >
     <MuiThemeProvider theme={theme} {...other} >
       {children}
     </MuiThemeProvider>
@@ -20,11 +20,6 @@ ThemeProvider.propTypes = {
    * The child components to which the theme will be applied.
    */
   children: PropTypes.node.isRequired,
-
-  /**
-   * A `sheetsRegistry` is used to keep track of the stylesheet.
-   */
-  sheetsRegistry: PropTypes.object,
 
   /**
    * Allows sharing of class name generator so that generated class names
