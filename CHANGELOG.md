@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.35.0 (2021-07-14)
+
+* Relaxing `lodash` dependency version (4.17.21 -> ^4.17.21)
+
 # 2.34.0 (2021-06-16)
 
 * Export MUI `Table`, `TableBody`, `TableCell`, `TableHead` and `TableRow`
