@@ -32,7 +32,7 @@
     "@material-ui/pickers": "3.2.2",
     "@material-ui/styles": "4.5.2",
     "downshift": "3.2.7",
-    "lodash": "4.17.21",
+    "lodash": "^4.17.21",
     "react-jss": "8.6.1"
   },
   "devDependencies": {
