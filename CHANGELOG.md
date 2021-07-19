@@ -1,5 +1,10 @@
 ## Unreleased
 
+# 2.36.0 (2021-07-19)
+
+* Switch JssProvider for StylesProvider
+* Remove react-jss
+
 # 2.35.0 (2021-07-14)
 
 * Relaxing `lodash` dependency version (4.17.21 -> ^4.17.21)
