@@ -23,6 +23,9 @@ doc:
 storybook:
 	@npx start-storybook -p 9001 -c .storybook --ci
 
+storybook-docker:
+	@docker-compose up
+
 publish:
 	@npm publish
 
