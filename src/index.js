@@ -38,7 +38,6 @@ export { default as withTheme } from '@material-ui/core/styles/withTheme'
 export { ThemeProvider } from './styles'
 export { colours }
 export { default as ArticleDonationBanner } from './ArticleDonationBanner'
-export { default as Autocomplete } from './Autocomplete'
 export { default as Avatar } from './Avatar'
 export { default as Button } from './Button'
 export { default as ChipInput } from './ChipInput'

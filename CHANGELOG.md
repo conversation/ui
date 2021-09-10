@@ -1,5 +1,8 @@
 ## Unreleased
 
+* Delete the `Autocomplete` component
+* Remove `downshift` dependency
+
 # 2.36.0 (2021-07-19)
 
 * Switch JssProvider for StylesProvider

@@ -31,7 +31,6 @@
     "@material-ui/lab": "4.0.0-alpha.30",
     "@material-ui/pickers": "3.2.2",
     "@material-ui/styles": "4.5.2",
-    "downshift": "3.2.7",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
