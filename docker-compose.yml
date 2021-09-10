@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app:
+    command: "npx start-storybook -p 9001 -c .storybook --ci"
+    build:
+      context: .
+      target: app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - "9001:9001"
+
+volumes:
+  node_modules:
+    name: ui-node-modules

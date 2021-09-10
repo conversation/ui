@@ -53,6 +53,12 @@ When working on components, you can run storybook locally:
 make storybook
 ```
 
+Alternatively, you can run storybook through Docker:
+
+```sh
+make storybook-docker
+```
+
 This will give you a hot reloading environment to rapidly develop in.
 
 If you want to test your newly developed components in a local app, the easiest
