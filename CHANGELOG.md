@@ -1,5 +1,7 @@
 ## Unreleased
 
+# 2.37.0 (2021-09-10)
+
 * Delete the `Autocomplete` component
 * Remove `downshift` dependency
 
