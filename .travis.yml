@@ -8,7 +8,7 @@ before_install: pip install --user awscli
 script: make lint test
 deploy:
   on:
-    branch: master
+    branch: main
     tags: true
   provider: script
   script: "cp .npmrc.template $HOME/.npmrc && make release"
