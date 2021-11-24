@@ -114,15 +114,21 @@ To run the example react app:
 
 ## Publishing a Release
 
-Tagged releases of this library will be automatically published to NPM by our
-build pipeline on Travis CI.
+Tagged releases of this library will be automatically published to NPM by a
+GitHub workflow.
 
-To release a new (major/minor/patch) version, first update the changelog. Then
+To create a new (major/minor/patch) release, first update the changelog. Then
 on the master branch:
 
 ```sh
 > npm version minor
 > git push --follow-tags
+```
+
+You can then create a release from the tag either using the web UI, or from the CLI:
+
+```sh
+> gh release create v1.2.3
 ```
 
 ## Licence

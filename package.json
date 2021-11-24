@@ -16,7 +16,9 @@
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "babel --delete-dir-on-start --copy-files --out-dir dist/cjs src",
-    "build:esm": "babel --delete-dir-on-start --copy-files --env-name esm --out-dir dist/esm src"
+    "build:esm": "babel --delete-dir-on-start --copy-files --env-name esm --out-dir dist/esm src",
+    "test": "jest",
+    "lint": "standard"
   },
   "files": [
     "dist"
