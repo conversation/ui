@@ -1,0 +1,12 @@
+# Documentation: https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    # We set this to 0 so PRs are only created for security updates, as these
+    # have "a separate, internal limit of ten open pull requests."
+    open-pull-requests-limit: 0
