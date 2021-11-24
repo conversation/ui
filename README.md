@@ -1,6 +1,6 @@
 # UI
 
-[![Build Status](https://travis-ci.com/conversation/ui.svg?branch=master)](https://travis-ci.com/conversation/ui)
+[![Build Status](https://github.com/conversation/ui/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/conversation/ui/actions/workflows/test.yml)
 
 This library contains a collection of React components used to build our apps
 at The Conversation. It is based on the excellent [Material
