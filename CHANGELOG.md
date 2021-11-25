@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.40.0 (2021-11-25)
+
+* Fix GitHub package workflow
+
 # 2.39.0 (2021-11-25)
 
 * Add new logo and icon variants
