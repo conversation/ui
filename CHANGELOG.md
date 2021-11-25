@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.39.0 (2021-11-25)
+
+* Add new logo and icon variants
+
 # 2.38.0 (2021-09-14)
 
 * More subtle shadows for buttons, aligning them with the brand guidelines for shadows (https://github.com/conversation/ui/pull/175)
