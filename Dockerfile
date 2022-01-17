@@ -1,4 +1,4 @@
-FROM theconversation/node AS app
+FROM theconversation/node-ubuntu:16.13.1
 
 # Add files required for storybook
 COPY package*.json /app/
