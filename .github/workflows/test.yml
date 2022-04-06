@@ -12,3 +12,4 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
+      - run: bin/package_lock_lint.sh
