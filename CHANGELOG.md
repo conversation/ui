@@ -1,5 +1,10 @@
 ## Unreleased
 
+# 2.41.0 (2021-11-25)
+
+* Update MUI core to 4.10.1 (https://github.com/conversation/ui/pull/201)
+  * **Note:** version 4.12.0 [deprecates `createMuiTheme`](https://github.com/mui/material-ui/blob/HEAD/CHANGELOG.old.md#material-uicore4120), which is a breaking change for us, so we'll need to stop at version 4.10.1.
+
 # 2.40.0 (2021-11-25)
 
 * Fix GitHub package workflow
