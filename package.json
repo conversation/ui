@@ -28,7 +28,7 @@
     "url": "git+ssh://git@github.com/conversation/ui.git"
   },
   "dependencies": {
-    "@material-ui/core": "4.5.2",
+    "@material-ui/core": "4.10.1",
     "@material-ui/icons": "4.2.1",
     "@material-ui/lab": "4.0.0-alpha.30",
     "@material-ui/pickers": "3.2.2",
@@ -56,9 +56,9 @@
     "react-dom": "^16.8.6",
     "standard": "^12.0.1",
     "storybook-readme": "^4.0.5",
-    "typeface-libre-baskerville": "0.0.54",
+    "typeface-libre-baskerville": "0.0.72",
     "typeface-montserrat": "0.0.54",
-    "typeface-noto-sans": "0.0.54"
+    "typeface-noto-sans": "0.0.72"
   },
   "peerDependencies": {
     "prop-types": "^15.6.2",

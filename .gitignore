@@ -1,6 +1,7 @@
 .idea
 .cache
 .node-version
+.vscode
 dist
 doc
 node_modules
