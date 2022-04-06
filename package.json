@@ -56,7 +56,7 @@
     "react-dom": "^16.8.6",
     "standard": "^12.0.1",
     "storybook-readme": "^4.0.5",
-    "typeface-libre-baskerville": "0.0.54",
+    "typeface-libre-baskerville": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typeface-noto-sans": "0.0.54"
   },
