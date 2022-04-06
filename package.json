@@ -58,7 +58,7 @@
     "storybook-readme": "^4.0.5",
     "typeface-libre-baskerville": "0.0.72",
     "typeface-montserrat": "0.0.54",
-    "typeface-noto-sans": "0.0.54"
+    "typeface-noto-sans": "0.0.72"
   },
   "peerDependencies": {
     "prop-types": "^15.6.2",
