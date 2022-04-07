@@ -23,10 +23,11 @@ describe('<Dropdown />', () => {
 
   it('passes props to the Select component', () => {
     const wrapper = shallow(
-      <Dropdown value='foo'>
+      <Dropdown id='abc-1' value='foo'>
         <option value='1'>one</option>
       </Dropdown>
     ).dive().find(Select)
+    expect(wrapper.props().id).toBe('abc-1')
     expect(wrapper.props().value).toBe('foo')
   })
 

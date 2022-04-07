@@ -79,6 +79,7 @@ export const Dropdown = ({
         </FormLabel>
       )}
       <Select
+        id={id}
         {...other}
         input={InputElement}
         MenuProps={{
