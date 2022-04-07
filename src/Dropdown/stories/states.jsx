@@ -56,18 +56,21 @@ export default withDocs(md, () =>
   <GridLayout>
     <ExampleDropdown
       helperText='Helper text'
+      id='dropdown-1'
       label='Default'
       onChange={action('change')}
     />
     <ExampleDropdown
       required
       helperText='Helper text'
+      id='dropdown-2'
       label='Required'
       onChange={action('change')}
     />
     <ExampleDropdown
       disabled
       helperText='Helper text'
+      id='dropdown-3'
       label='Disabled'
       onChange={action('change')}
     />
