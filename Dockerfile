@@ -1,4 +1,4 @@
-FROM theconversation/node-ubuntu:16.13.1
+FROM us-docker.pkg.dev/tc-platform-artifacts/theconversation/node:16.14.2
 
 # Add files required for storybook
 COPY package*.json /app/
