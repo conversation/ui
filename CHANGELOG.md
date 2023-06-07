@@ -1,6 +1,10 @@
 ## Unreleased
 
-# 2.41.0 (2022-04-07)
+# 2.42.0 (2023-06-07)
+
+* Allow whitespace in typeography component
+
+# 2.41.1 (2022-04-07)
 
 * Pass `id` to `Select` in `Dropdown` component (https://github.com/conversation/ui/pull/202)
 
