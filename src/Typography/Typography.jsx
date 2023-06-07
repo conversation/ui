@@ -88,7 +88,8 @@ const styles = theme => ({
     fontSize: '1rem',
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.125rem'
-    }
+    },
+    whiteSpace: 'pre-line'
   },
 
   body2: {
@@ -97,7 +98,8 @@ const styles = theme => ({
     fontSize: '1.125rem',
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.5rem'
-    }
+    },
+    whiteSpace: 'pre-line'
   },
 
   button: {

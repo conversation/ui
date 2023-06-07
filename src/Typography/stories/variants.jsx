@@ -4,7 +4,7 @@ import { withDocs } from 'storybook-readme'
 import { Typography } from '../../index'
 
 const VARIANTS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'button', 'caption', 'overline', 'inherit']
-const LIPSUM = 'Lorem ipsum'
+const LIPSUM = 'Lorem ipsum\ndolor'
 
 const md = `
 # Variants
