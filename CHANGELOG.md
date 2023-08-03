@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.43.0 (2024-08-03)
+
+* Add square logo variant
+
 # 2.42.0 (2023-06-07)
 
 * Allow whitespace in typeography component
