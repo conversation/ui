@@ -1,5 +1,9 @@
 ## Unreleased
 
+# 2.44.0 (2024-08-03)
+
+* Fixing square logo variant SVG format
+
 # 2.43.0 (2024-08-03)
 
 * Add square logo variant
