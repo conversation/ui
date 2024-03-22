@@ -1,6 +1,5 @@
 .idea
 .cache
-.node-version
 .vscode
 dist
 doc

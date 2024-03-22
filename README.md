@@ -102,16 +102,6 @@ const App = () => (
 <style type="text/css" id="ssr-styles">${sheetsRegistry.toString()}</style>
 ```
 
-## Examples
-
-To run the example react app:
-
-```sh
-> cd examples/react-app
-> npm i
-> npm start
-```
-
 ## Publishing a Release
 
 Tagged releases of this library will be automatically published to NPM by a
